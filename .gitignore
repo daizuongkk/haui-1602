@@ -41,3 +41,6 @@ desktop.ini
 # ===== Log & tạm =====
 *.log
 tmp/
+
+# Runtime SQLite state (seed/generate on demand)
+data/app.db

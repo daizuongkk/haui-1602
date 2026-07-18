@@ -34,9 +34,7 @@ export function AIWarningCenter({ alerts }: { alerts: AlertRecord[] }) {
             <WarningListItem
               key={`${r.location_id}-${r.date}`}
               record={r}
-              onClick={() =>
-                router.push(`/dashboard/broadcast?loc=${r.location_id}&date=${encodeURIComponent(r.date)}`)
-              }
+              onClick={() => router.push(`/dashboard/broadcast?id=${r.id}`)}
             />
           ))
         )}

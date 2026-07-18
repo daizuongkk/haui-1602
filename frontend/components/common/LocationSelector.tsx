@@ -1,13 +1,13 @@
 "use client";
 import { MapPin } from "lucide-react";
-import type { LocationOut } from "@/lib/types";
+import type { Commune } from "@/lib/types";
 
 export function LocationSelector({
   locations,
   value,
   onChange,
 }: {
-  locations: LocationOut[];
+  locations: Commune[];
   value: string;
   onChange: (id: string) => void;
 }) {

@@ -3,14 +3,14 @@ import Link from "next/link";
 import { ShieldAlert, LayoutDashboard } from "lucide-react";
 import { LanguageSelector } from "@/components/common/LanguageSelector";
 import { LocationSelector } from "@/components/common/LocationSelector";
-import type { LocationOut } from "@/lib/types";
+import type { Commune } from "@/lib/types";
 
 export function CitizenHeader({
   locations,
   locationId,
   onLocationChange,
 }: {
-  locations: LocationOut[];
+  locations: Commune[];
   locationId: string;
   onLocationChange: (id: string) => void;
 }) {

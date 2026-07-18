@@ -1,60 +1,52 @@
 "use client";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { api } from "@/lib/api";
-import { useApi } from "@/lib/useApi";
-import { dateSortKey } from "@/lib/utils";
-import { LEVELS } from "@/lib/levels";
 import { DashboardTopbar } from "@/components/dashboard/DashboardTopbar";
 import { WarningListItem } from "@/components/dashboard/WarningListItem";
-import { BroadcastCenter } from "@/components/dashboard/BroadcastCenter";
+import { AlertOpsPanel } from "@/components/dashboard/AlertOpsPanel";
+import { OfficerSelector } from "@/components/common/OfficerSelector";
 import { Card } from "@/components/ui/primitives";
 import { EmptyState, ErrorState, LoadingCards } from "@/components/common/States";
 import type { AlertRecord } from "@/lib/types";
 
 function BroadcastInner() {
   const params = useSearchParams();
-  const { data: alerts, loading, error } = useApi(api.activeAlerts);
-  const [key, setKey] = useState<string | null>(null);
+  const [alerts, setAlerts] = useState<AlertRecord[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [selected, setSelected] = useState<number | null>(null);
 
-  const sorted = [...(alerts ?? [])].sort(
-    (a, b) =>
-      LEVELS[b.highest_alert_level].priority - LEVELS[a.highest_alert_level].priority ||
-      dateSortKey(a.date).localeCompare(dateSortKey(b.date))
-  );
-  const recKey = (r: AlertRecord) => `${r.location_id}|${r.date}`;
+  const refresh = useCallback(() => {
+    api.alerts()
+      .then((list) => {
+        const actionable = list.filter((a) => a.status !== "closed");
+        setAlerts(actionable);
+        setSelected((cur) => cur ?? (Number(params.get("id")) || actionable[0]?.id || null));
+      })
+      .catch((e) => setError(e.message));
+  }, [params]);
 
-  // Preselect từ query (?loc&date) hoặc mục đầu tiên.
   useEffect(() => {
-    if (key || sorted.length === 0) return;
-    const loc = params.get("loc");
-    const date = params.get("date");
-    const match = sorted.find((r) => r.location_id === loc && r.date === date);
-    setKey(recKey(match ?? sorted[0]));
-  }, [sorted, key, params]);
-
-  const selected = sorted.find((r) => recKey(r) === key) ?? null;
+    refresh();
+  }, [refresh]);
 
   if (error) return <ErrorState message={error} />;
-  if (loading) return <LoadingCards count={2} />;
-  if (sorted.length === 0) return <EmptyState hint="Không có cảnh báo nào cần phát." />;
+  if (!alerts) return <LoadingCards count={2} />;
+  if (alerts.length === 0) return <EmptyState hint="Không có cảnh báo nào cần xử lý." />;
 
   return (
     <div className="grid gap-4 lg:grid-cols-3">
-      <Card className="flex max-h-[75vh] flex-col p-3 lg:col-span-1">
-        <p className="px-1 pb-2 text-sm font-semibold text-slate-600">Cảnh báo chờ xử lý</p>
+      <Card className="flex max-h-[78vh] flex-col p-3 lg:col-span-1">
+        <p className="px-1 pb-2 text-sm font-semibold text-slate-600">Cảnh báo ({alerts.length})</p>
         <div className="space-y-2 overflow-y-auto">
-          {sorted.map((r) => (
-            <WarningListItem
-              key={recKey(r)}
-              record={r}
-              selected={recKey(r) === key}
-              onClick={() => setKey(recKey(r))}
-            />
+          {alerts.map((r) => (
+            <WarningListItem key={r.id} record={r} selected={r.id === selected} onClick={() => setSelected(r.id)} />
           ))}
         </div>
       </Card>
-      <div className="lg:col-span-2">{selected && <BroadcastCenter key={key} record={selected} />}</div>
+      <div className="lg:col-span-2">
+        {selected != null && <AlertOpsPanel key={selected} alertId={selected} onChanged={refresh} />}
+      </div>
     </div>
   );
 }
@@ -62,7 +54,7 @@ function BroadcastInner() {
 export default function BroadcastPage() {
   return (
     <>
-      <DashboardTopbar title="Trung tâm phát thông báo" />
+      <DashboardTopbar title="Trung tâm phê duyệt & phát cảnh báo" right={<OfficerSelector />} />
       <div className="p-5">
         <Suspense fallback={<LoadingCards count={2} />}>
           <BroadcastInner />

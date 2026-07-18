@@ -37,6 +37,32 @@ class Location:
         )
 
 
+@dataclass(frozen=True)
+class Commune:
+    """Đơn vị dự báo vi mô (xã/cụm xã). Superset của Location + thông tin huyện."""
+    id: str
+    name: str
+    lat: float
+    lon: float
+    real_elevation: float
+    landslide_risk_factor: float
+    district_id: str
+    district_name: str
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Commune":
+        return cls(
+            id=data["id"],
+            name=data["name"],
+            lat=data["lat"],
+            lon=data["lon"],
+            real_elevation=data["real_elevation"],
+            landslide_risk_factor=data["landslide_risk_factor"],
+            district_id=data["district_id"],
+            district_name=data["district_name"],
+        )
+
+
 class DailySummary(TypedDict):
     max_temp_adjusted: float
     min_temp_adjusted: float

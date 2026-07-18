@@ -1,4 +1,10 @@
-"""CLI entry point for the forecasting pipeline (console report + active_alerts.json)."""
+"""CLI: forecast report + tiện ích seed/communes cho lớp DB.
+
+  python -m backend.presentation.cli            # chạy pipeline, in báo cáo, ghi active_alerts.json
+  python -m backend.presentation.cli communes   # sinh data/communes.json
+  python -m backend.presentation.cli seed        # tạo bảng + seed cán bộ + nạp cảnh báo demo vào DB
+"""
+import sys
 from itertools import groupby
 
 from backend.application.forecast_pipeline import ForecastPipeline, ForecastRun
@@ -11,7 +17,29 @@ _HEADER = "=" * 72
 _LEVEL_ICON = {alert_levels.RED: "🔴", alert_levels.ORANGE: "🟠", alert_levels.YELLOW: "🟡"}
 
 
+def _cmd_communes() -> None:
+    from backend.application.communes import generate_and_save
+    communes = generate_and_save()
+    print(f"✔ Đã sinh {len(communes)} xã/cụm xã tại: {settings.COMMUNES_FILE}")
+
+
+def _cmd_seed() -> None:
+    from backend.application import seed
+    from backend.infrastructure.db.session import init_db, session_scope
+    init_db()
+    with session_scope() as session:
+        stats = seed.seed_all(session)
+    print(f"✔ Seed DB xong: {stats['officers']} cán bộ, {stats['communes']} xã, "
+          f"{stats['alerts']} cảnh báo demo (pending_approval) tại: {settings.DB_FILE}")
+
+
 def main() -> None:
+    command = sys.argv[1] if len(sys.argv) > 1 else "run"
+    if command == "communes":
+        return _cmd_communes()
+    if command == "seed":
+        return _cmd_seed()
+
     print(_HEADER)
     print("   HỆ THỐNG AI DỰ BÁO THỜI TIẾT VI MÔ & CẢNH BÁO THIÊN TAI ĐIỆN BIÊN")
     print(_HEADER + "\n")

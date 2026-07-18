@@ -10,6 +10,7 @@ import { AIWarningBulletin } from "@/components/citizen/AIWarningBulletin";
 import { ActionRecommendations } from "@/components/citizen/ActionRecommendations";
 import { SimpleWeatherStats } from "@/components/citizen/SimpleWeatherStats";
 import { SevenDayForecast } from "@/components/citizen/SevenDayForecast";
+import { FeedbackButtons } from "@/components/citizen/FeedbackButtons";
 import { GoogleRiskMap } from "@/components/common/GoogleRiskMap";
 import { ErrorState, LoadingCards } from "@/components/common/States";
 
@@ -48,6 +49,7 @@ export default function CitizenPage() {
             </div>
 
             <ActionRecommendations record={current} />
+            {current && <FeedbackButtons alertId={current.id} />}
             <SimpleWeatherStats record={current} />
             <SevenDayForecast days={sorted} />
 

@@ -37,7 +37,9 @@ export function WarningListItem({
         <p className="mt-0.5 truncate text-sm font-medium text-slate-700">{top?.hazard}</p>
         <p className="mt-0.5 flex items-center gap-1 text-xs text-slate-400">
           <Clock className="h-3 w-3" /> {record.date}
-          {!record.has_translation && <span className="ml-1 text-amber-600">• chưa có bản dịch</span>}
+          {record.status_label && (
+            <span className="ml-1 rounded-full bg-slate-100 px-1.5 py-0.5 text-slate-600">{record.status_label}</span>
+          )}
         </p>
       </div>
       {onClick && <ChevronRight className="mt-3 h-4 w-4 shrink-0 text-slate-400" />}

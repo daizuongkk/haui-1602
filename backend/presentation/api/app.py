@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from backend.config import settings
+from backend.infrastructure.db.session import init_db, session_scope
 from backend.presentation.api.routes import router
 
 API_DESCRIPTION = """
@@ -23,10 +24,15 @@ và mô phỏng phân phối đa kênh cho giao diện người dân + dashboard
 """
 
 TAGS_METADATA = [
-    {"name": "Địa điểm", "description": "Danh mục huyện được giám sát và toạ độ."},
-    {"name": "Cảnh báo", "description": "Tổng quan mức cảnh báo và danh sách cảnh báo đang hiệu lực."},
-    {"name": "Dự báo", "description": "Chuỗi dự báo 3–7 ngày theo huyện."},
-    {"name": "Phân phối", "description": "Mô phỏng gửi cảnh báo qua SMS / Zalo OA / loa phát thanh (không gửi thật)."},
+    {"name": "Địa điểm", "description": "Danh mục xã/cụm xã được giám sát và toạ độ."},
+    {"name": "Cán bộ", "description": "Danh sách cán bộ (xác thực nhẹ qua header X-Officer-Id)."},
+    {"name": "Cảnh báo", "description": "Tổng quan, danh sách và chi tiết cảnh báo theo vòng đời."},
+    {"name": "Dự báo", "description": "Chuỗi dự báo 3–7 ngày theo xã."},
+    {"name": "Phê duyệt", "description": "Cán bộ duyệt/từ chối/cập nhật trạng thái cảnh báo."},
+    {"name": "Phân phối", "description": "Phát cảnh báo qua SMS / Zalo OA / loa (mô phỏng, có lưu log)."},
+    {"name": "Phản hồi", "description": "Người dân gửi phản hồi; theo dõi tình hình tiếp nhận."},
+    {"name": "Pipeline", "description": "Kích hoạt chạy phân tích dự báo → sinh cảnh báo."},
+    {"name": "Dashboard", "description": "Chỉ số điều hành tổng hợp."},
     {"name": "Hệ thống", "description": "Kiểm tra tình trạng dịch vụ."},
 ]
 
@@ -53,6 +59,16 @@ def create_app() -> FastAPI:
         app.mount("/audio", StaticFiles(directory=str(settings.AUDIO_ROOT)), name="audio")
 
     app.include_router(router)
+
+    @app.on_event("startup")
+    def _bootstrap() -> None:
+        # Tạo bảng + seed cán bộ + đảm bảo có communes.json. Idempotent.
+        from backend.application import seed
+        init_db()
+        with session_scope() as session:
+            seed.seed_officers(session)
+        seed.ensure_communes()
+
     return app
 
 

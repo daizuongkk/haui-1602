@@ -15,12 +15,29 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 DATA_DIR = PROJECT_ROOT / "data"
-LOCATIONS_FILE = DATA_DIR / "locations.json"
+LOCATIONS_FILE = DATA_DIR / "locations.json"          # 3 huyện (nguồn để sinh xã)
+COMMUNES_FILE = DATA_DIR / "communes.json"            # xã/cụm xã — đơn vị dự báo vi mô
 ACTIVE_ALERTS_FILE = DATA_DIR / "active_alerts.json"
 OUTPUT_DIR = DATA_DIR / "output"
 ALERT_MESSAGES_FILE = OUTPUT_DIR / "alert.json"
 AUDIO_ROOT = OUTPUT_DIR / "audio"
 ENV_FILE = PROJECT_ROOT / ".env"
+
+# --------------------------------------------------------------------------- #
+# Cơ sở dữ liệu trạng thái/vòng đời (SQLite) — tách khỏi artifact JSON pipeline.
+# --------------------------------------------------------------------------- #
+DB_FILE = DATA_DIR / "app.db"
+DB_URL = os.getenv("DB_URL", f"sqlite:///{DB_FILE}")
+
+# Cán bộ mẫu (xác thực nhẹ qua header X-Officer-Id — không mật khẩu).
+OFFICERS_SEED = [
+    {"id": "officer_pcln", "name": "Nguyễn Văn A", "role": "Trực ban PCTT&TKCN tỉnh"},
+    {"id": "officer_mn", "name": "Lò Thị B", "role": "Cán bộ huyện Mường Nhé"},
+    {"id": "officer_tg", "name": "Vừ A C", "role": "Cán bộ huyện Tuần Giáo"},
+]
+
+# Số xã đại diện sinh cho mỗi huyện khi chưa có dữ liệu xã thật.
+COMMUNES_PER_DISTRICT = 4
 
 # --------------------------------------------------------------------------- #
 # Weather data source (Open-Meteo)

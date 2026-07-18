@@ -1,151 +1,312 @@
-"""HTTP routes — thin adapters over application use cases (fully documented for OpenAPI)."""
-from typing import List
+"""HTTP routes — adapter mỏng trên các use case. Cấp xã + vòng đời cảnh báo."""
+from datetime import datetime
+from typing import List, Optional
 
-from fastapi import APIRouter, HTTPException, Path
+from fastapi import APIRouter, Depends, Header, HTTPException, Query
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
-from backend.application.alert_merging import load_merged
-from backend.application.broadcasting import build_broadcast
-from backend.infrastructure import json_store
-from backend.presentation.api.schemas import (
-    AlertRecord,
-    BroadcastRequest,
-    BroadcastResponse,
-    ErrorResponse,
-    HealthResponse,
-    LocationOut,
-    SummaryResponse,
+from backend.application import (
+    alert_service,
+    dispatch_service,
+    feedback_service,
+    seed,
 )
-from backend.shared import alert_levels
+from backend.application.run_pipeline import PipelineError, run_pipeline
+from backend.infrastructure import json_store
+from backend.infrastructure.db.models import Alert, Officer
+from backend.infrastructure.db.session import SessionLocal
+from backend.presentation.api import schemas
+from backend.shared import alert_levels, alert_status
 
 router = APIRouter(prefix="/api")
 
-_NOT_FOUND = {404: {"model": ErrorResponse, "description": "Không tìm thấy tài nguyên"}}
+
+# --------------------------------------------------------------------------- #
+# Dependencies
+# --------------------------------------------------------------------------- #
+def get_db() -> Session:
+    session = SessionLocal()
+    try:
+        yield session
+        session.commit()
+    except Exception:
+        session.rollback()
+        raise
+    finally:
+        session.close()
 
 
-def _date_sort_key(record: dict):
-    return tuple(reversed(record["date"].split("/")))  # dd/mm/yyyy → (yyyy, mm, dd)
+def require_officer(
+    x_officer_id: str = Header(..., alias="X-Officer-Id", description="Mã cán bộ đang thao tác"),
+    db: Session = Depends(get_db),
+) -> Officer:
+    officer = db.get(Officer, x_officer_id)
+    if officer is None:
+        raise HTTPException(status_code=401, detail=f"Cán bộ không hợp lệ: '{x_officer_id}'")
+    return officer
 
 
-@router.get(
-    "/locations",
-    response_model=List[LocationOut],
-    tags=["Địa điểm"],
-    summary="Danh sách huyện được giám sát",
-    description="Trả về 3 huyện demo (Mường Nhé, Mường Chà, Tuần Giáo) kèm toạ độ, độ cao và hệ số rủi ro sạt lở.",
-)
+def _raise(exc: alert_service.AlertError):
+    msg = str(exc)
+    raise HTTPException(status_code=404 if msg.startswith("Không tìm thấy") else 400, detail=msg)
+
+
+# --------------------------------------------------------------------------- #
+# Serializers (ORM → dict)
+# --------------------------------------------------------------------------- #
+def _iso(dt: Optional[datetime]) -> Optional[str]:
+    return dt.isoformat() if dt else None
+
+
+def _alert_dict(db: Session, a: Alert, detail: bool = False) -> dict:
+    data = {
+        "id": a.id,
+        "commune_id": a.commune_id,
+        "commune_name": a.commune_name,
+        "district_id": a.district_id,
+        "district_name": a.district_name,
+        "latitude": a.latitude,
+        "longitude": a.longitude,
+        "elevation": a.elevation,
+        "date": a.date,
+        "highest_alert_level": a.highest_alert_level,
+        "status": a.status,
+        "status_label": alert_status.LABELS.get(a.status, a.status),
+        "weather_summary": a.weather_summary or {},
+        "hazards": a.hazards or [],
+        "messages": a.messages or {},
+        "audio": a.audio or {},
+        "has_translation": a.has_translation,
+        "approved_by": a.approved_by,
+        "approved_at": _iso(a.approved_at),
+        "rejected_reason": a.rejected_reason,
+        "note": a.note,
+        "feedback_counts": feedback_service.counts_for_alert(db, a.id),
+        "dispatch_count": len(a.dispatches),
+        "created_at": _iso(a.created_at),
+        "updated_at": _iso(a.updated_at),
+    }
+    if detail:
+        data["dispatches"] = [_dispatch_dict(d) for d in
+                              dispatch_service.list_dispatches(db, a.id)]
+        data["feedback"] = [_feedback_dict(f) for f in
+                           feedback_service.list_feedback(db, a.id)]
+    return data
+
+
+def _dispatch_dict(d) -> dict:
+    return {
+        "id": d.id, "alert_id": d.alert_id, "channel": d.channel, "status": d.status,
+        "payload": d.payload or {}, "officer_id": d.officer_id, "error": d.error,
+        "created_at": _iso(d.created_at),
+    }
+
+
+def _feedback_dict(f) -> dict:
+    return {
+        "id": f.id, "alert_id": f.alert_id, "kind": f.kind,
+        "kind_label": alert_status.FEEDBACK_LABELS.get(f.kind, f.kind),
+        "note": f.note, "contact": f.contact, "created_at": _iso(f.created_at),
+    }
+
+
+# --------------------------------------------------------------------------- #
+# Địa điểm & cán bộ
+# --------------------------------------------------------------------------- #
+@router.get("/communes", response_model=List[schemas.CommuneOut], tags=["Địa điểm"],
+            summary="Danh sách xã/cụm xã được giám sát")
+def get_communes():
+    return seed.ensure_communes()
+
+
+@router.get("/locations", response_model=List[schemas.CommuneOut], tags=["Địa điểm"],
+            summary="Alias của /communes (tương thích ngược)")
 def get_locations():
-    return json_store.load_locations()
+    return seed.ensure_communes()
 
 
-@router.get(
-    "/summary",
-    response_model=SummaryResponse,
-    tags=["Cảnh báo"],
-    summary="Tổng quan mức cảnh báo theo huyện",
-    description=(
-        "Mức cảnh báo cao nhất hiện tại của **từng huyện** (dùng để tô màu bản đồ) và **số huyện theo từng mức** "
-        "(KPI cho dashboard). Ưu tiên mức: Red > Orange > Yellow > Green."
-    ),
-)
-def get_summary():
-    locations, merged = load_merged()
-    worst_by_location = {}
-    for record in merged:
-        current = worst_by_location.get(record["location_id"])
-        if current is None or alert_levels.PRIORITY[record["highest_alert_level"]] > alert_levels.PRIORITY[current]:
-            worst_by_location[record["location_id"]] = record["highest_alert_level"]
+@router.get("/officers", response_model=List[schemas.OfficerOut], tags=["Cán bộ"],
+            summary="Danh sách cán bộ (chọn danh tính khi phê duyệt/phát)")
+def get_officers(db: Session = Depends(get_db)):
+    return list(db.scalars(select(Officer)))
 
-    districts = []
-    for location in locations:
-        level = worst_by_location.get(location["id"], alert_levels.GREEN)
-        districts.append({
-            "location_id": location["id"],
-            "location": location["name"],
-            "latitude": location["lat"],
-            "longitude": location["lon"],
-            "elevation": location["real_elevation"],
-            "highest_alert_level": level,
-            "level_label": alert_levels.LABELS[level],
+
+# --------------------------------------------------------------------------- #
+# Tổng quan bản đồ
+# --------------------------------------------------------------------------- #
+_ACTIVE = {alert_status.PENDING, alert_status.APPROVED, alert_status.DISTRIBUTED}
+
+
+@router.get("/summary", response_model=schemas.SummaryResponse, tags=["Cảnh báo"],
+            summary="Mức cảnh báo cao nhất mỗi xã + đếm theo mức (tô bản đồ, KPI)")
+def get_summary(db: Session = Depends(get_db)):
+    communes = seed.ensure_communes()
+    worst: dict = {}
+    for a in db.scalars(select(Alert).where(Alert.status.in_(_ACTIVE))):
+        cur = worst.get(a.commune_id)
+        if cur is None or alert_levels.PRIORITY[a.highest_alert_level] > alert_levels.PRIORITY[cur]:
+            worst[a.commune_id] = a.highest_alert_level
+
+    out, counts = [], {lv: 0 for lv in alert_levels.PRIORITY}
+    for c in communes:
+        level = worst.get(c["id"], alert_levels.GREEN)
+        counts[level] += 1
+        out.append({
+            "commune_id": c["id"], "commune_name": c["name"],
+            "district_id": c["district_id"], "district_name": c["district_name"],
+            "latitude": c["lat"], "longitude": c["lon"], "elevation": c["real_elevation"],
+            "highest_alert_level": level, "level_label": alert_levels.LABELS[level],
         })
-
-    counts = {level: 0 for level in alert_levels.PRIORITY}
-    for district in districts:
-        counts[district["highest_alert_level"]] += 1
-    return {"districts": districts, "counts": counts}
+    return {"communes": out, "counts": counts}
 
 
-@router.get(
-    "/alerts/active",
-    response_model=List[AlertRecord],
-    tags=["Cảnh báo"],
-    summary="Các ngày đang có cảnh báo",
-    description=(
-        "Tất cả bản ghi cảnh báo đang hiệu lực (mức ≥ Vàng), đã hợp nhất số liệu thời tiết, danh sách hiểm họa, "
-        "bản tin đa ngôn ngữ và URL audio."
-    ),
-)
-def get_active_alerts():
-    _, merged = load_merged()
-    return [r for r in merged if alert_levels.PRIORITY[r["highest_alert_level"]] >= alert_levels.PRIORITY[alert_levels.YELLOW]]
-
-
-@router.get(
-    "/forecast/{location_id}",
-    response_model=List[AlertRecord],
-    tags=["Dự báo"],
-    summary="Dự báo 3–7 ngày của một huyện",
-    description="Chuỗi dự báo theo ngày (đã sắp xếp tăng dần) cho một huyện, mỗi ngày là một bản ghi đã làm giàu.",
-    responses=_NOT_FOUND,
-)
-def get_forecast(
-    location_id: str = Path(
-        description="Mã huyện",
-        examples=["muong_nhe"],
-        openapi_examples={
-            "muong_nhe": {"summary": "Huyện Mường Nhé", "value": "muong_nhe"},
-            "muong_cha": {"summary": "Huyện Mường Chà", "value": "muong_cha"},
-            "tuan_giao": {"summary": "Huyện Tuần Giáo", "value": "tuan_giao"},
-        },
-    ),
+# --------------------------------------------------------------------------- #
+# Cảnh báo — danh sách / chi tiết / dự báo
+# --------------------------------------------------------------------------- #
+@router.get("/alerts", response_model=List[schemas.AlertOut], tags=["Cảnh báo"],
+            summary="Danh sách cảnh báo (lọc theo trạng thái/xã/huyện/ngày)")
+def list_alerts(
+    db: Session = Depends(get_db),
+    status: Optional[schemas.AlertStatus] = Query(None),
+    commune_id: Optional[str] = Query(None),
+    district_id: Optional[str] = Query(None),
+    date: Optional[str] = Query(None),
 ):
-    locations, merged = load_merged()
-    if not any(loc["id"] == location_id for loc in locations):
-        raise HTTPException(status_code=404, detail=f"Không tìm thấy địa điểm '{location_id}'")
-    days = [r for r in merged if r["location_id"] == location_id]
-    days.sort(key=_date_sort_key)
-    return days
+    alerts = alert_service.list_alerts(db, status=status, commune_id=commune_id,
+                                       district_id=district_id, date=date)
+    return [_alert_dict(db, a) for a in alerts]
 
 
-@router.post(
-    "/alerts/broadcast",
-    response_model=BroadcastResponse,
-    response_model_exclude_none=True,
-    tags=["Phân phối"],
-    summary="Mô phỏng phân phối cảnh báo đa kênh",
-    description=(
-        "Dựng sẵn nội dung sẽ gửi qua **SMS / Zalo OA / loa phát thanh** cho một cảnh báo, để minh hoạ lớp phân phối. "
-        "⚠️ **Chỉ mô phỏng — hệ thống không gửi tin thật.**"
-    ),
-    responses=_NOT_FOUND,
-)
-def broadcast_alert(request: BroadcastRequest):
-    _, merged = load_merged()
-    record = next(
-        (r for r in merged if r["location_id"] == request.location_id and r["date"] == request.date),
-        None,
-    )
-    if record is None:
-        raise HTTPException(status_code=404, detail="Không tìm thấy bản ghi cảnh báo cho địa điểm/ngày này")
-    return build_broadcast(record, request.channels)
+@router.get("/alerts/{alert_id}", response_model=schemas.AlertDetailOut, tags=["Cảnh báo"],
+            summary="Chi tiết một cảnh báo (kèm dispatch + phản hồi)")
+def get_alert(alert_id: int, db: Session = Depends(get_db)):
+    a = alert_service.get_alert(db, alert_id)
+    if a is None:
+        raise HTTPException(404, f"Không tìm thấy cảnh báo #{alert_id}")
+    return _alert_dict(db, a, detail=True)
 
 
-@router.get(
-    "/health",
-    response_model=HealthResponse,
-    tags=["Hệ thống"],
-    summary="Kiểm tra tình trạng dịch vụ",
-    description="Trạng thái dịch vụ và số bản ghi cảnh báo hiện có.",
-)
-def health():
-    _, merged = load_merged()
-    return {"status": "ok", "records": len(merged)}
+@router.get("/forecast/{commune_id}", response_model=List[schemas.AlertOut], tags=["Dự báo"],
+            summary="Chuỗi dự báo/cảnh báo theo ngày của một xã")
+def get_forecast(commune_id: str, db: Session = Depends(get_db)):
+    alerts = alert_service.list_alerts(db, commune_id=commune_id)
+    alerts.sort(key=lambda a: a.iso_date)
+    return [_alert_dict(db, a) for a in alerts]
+
+
+# --------------------------------------------------------------------------- #
+# Vòng đời: duyệt / từ chối / trạng thái
+# --------------------------------------------------------------------------- #
+@router.post("/alerts/{alert_id}/approve", response_model=schemas.AlertOut, tags=["Phê duyệt"],
+             summary="Cán bộ duyệt cảnh báo")
+def approve(alert_id: int, officer: Officer = Depends(require_officer), db: Session = Depends(get_db)):
+    try:
+        a = alert_service.approve(db, alert_id, officer.id)
+    except alert_service.AlertError as exc:
+        _raise(exc)
+    return _alert_dict(db, a)
+
+
+@router.post("/alerts/{alert_id}/reject", response_model=schemas.AlertOut, tags=["Phê duyệt"],
+             summary="Cán bộ từ chối cảnh báo (kèm lý do)")
+def reject(alert_id: int, body: schemas.RejectRequest,
+           officer: Officer = Depends(require_officer), db: Session = Depends(get_db)):
+    try:
+        a = alert_service.reject(db, alert_id, officer.id, body.reason)
+    except alert_service.AlertError as exc:
+        _raise(exc)
+    return _alert_dict(db, a)
+
+
+@router.patch("/alerts/{alert_id}/status", response_model=schemas.AlertOut, tags=["Phê duyệt"],
+              summary="Cập nhật trạng thái (distributed/closed)")
+def set_status(alert_id: int, body: schemas.StatusRequest,
+               officer: Officer = Depends(require_officer), db: Session = Depends(get_db)):
+    try:
+        a = alert_service.set_status(db, alert_id, body.status)
+    except alert_service.AlertError as exc:
+        _raise(exc)
+    return _alert_dict(db, a)
+
+
+# --------------------------------------------------------------------------- #
+# Phân phối đa kênh (mô phỏng, có log)
+# --------------------------------------------------------------------------- #
+@router.post("/alerts/{alert_id}/dispatch", response_model=schemas.DispatchResponse, tags=["Phân phối"],
+             summary="Phát cảnh báo qua SMS/Zalo/loa (mô phỏng, lưu trạng thái)")
+def dispatch(alert_id: int, body: schemas.DispatchRequest,
+             officer: Officer = Depends(require_officer), db: Session = Depends(get_db)):
+    try:
+        result = dispatch_service.dispatch(db, alert_id, body.channels, officer.id)
+    except alert_service.AlertError as exc:
+        _raise(exc)
+    return {"alert": _alert_dict(db, result["alert"]),
+            "dispatches": [_dispatch_dict(d) for d in result["dispatches"]]}
+
+
+@router.get("/alerts/{alert_id}/dispatches", response_model=List[schemas.DispatchOut], tags=["Phân phối"],
+            summary="Lịch sử phân phối của một cảnh báo")
+def list_dispatches(alert_id: int, db: Session = Depends(get_db)):
+    return [_dispatch_dict(d) for d in dispatch_service.list_dispatches(db, alert_id)]
+
+
+# --------------------------------------------------------------------------- #
+# Phản hồi người dân
+# --------------------------------------------------------------------------- #
+@router.post("/alerts/{alert_id}/feedback", response_model=schemas.FeedbackOut, tags=["Phản hồi"],
+             summary="Người dân gửi phản hồi (đã nhận / an toàn / cần hỗ trợ)")
+def create_feedback(alert_id: int, body: schemas.FeedbackCreate, db: Session = Depends(get_db)):
+    try:
+        f = feedback_service.record_feedback(db, alert_id, body.kind, body.note, body.contact)
+    except alert_service.AlertError as exc:
+        _raise(exc)
+    return _feedback_dict(f)
+
+
+@router.get("/alerts/{alert_id}/feedback", response_model=List[schemas.FeedbackOut], tags=["Phản hồi"],
+            summary="Danh sách phản hồi của một cảnh báo")
+def list_feedback(alert_id: int, db: Session = Depends(get_db)):
+    return [_feedback_dict(f) for f in feedback_service.list_feedback(db, alert_id)]
+
+
+# --------------------------------------------------------------------------- #
+# Pipeline & dashboard & health
+# --------------------------------------------------------------------------- #
+@router.post("/pipeline/run", response_model=schemas.PipelineRunResponse, tags=["Pipeline"],
+             summary="Chạy pipeline: fetch → đánh giá → dịch → TTS → lưu (pending_approval)")
+def pipeline_run(body: schemas.PipelineRunRequest, db: Session = Depends(get_db)):
+    try:
+        return run_pipeline(db, do_translate=body.do_translate, do_tts=body.do_tts)
+    except PipelineError as exc:
+        raise HTTPException(400, str(exc))
+
+
+@router.get("/dashboard/overview", response_model=schemas.DashboardOverview, tags=["Dashboard"],
+            summary="KPI điều hành: đếm theo mức/trạng thái, chờ duyệt, cần hỗ trợ")
+def dashboard_overview(db: Session = Depends(get_db)):
+    alerts = list(db.scalars(select(Alert)))
+    level_counts = {lv: 0 for lv in alert_levels.PRIORITY}
+    status_counts = {st: 0 for st in alert_status.ALL}
+    for a in alerts:
+        level_counts[a.highest_alert_level] += 1
+        status_counts[a.status] += 1
+
+    at_risk = {a.commune_id for a in alerts
+               if a.status in _ACTIVE and a.highest_alert_level != alert_levels.GREEN}
+    return {
+        "total_alerts": len(alerts),
+        "level_counts": level_counts,
+        "status_counts": status_counts,
+        "pending_approval": status_counts[alert_status.PENDING],
+        "distributed": status_counts[alert_status.DISTRIBUTED],
+        "communes_at_risk": len(at_risk),
+        "need_help": feedback_service.total_need_help(db),
+    }
+
+
+@router.get("/health", response_model=schemas.HealthResponse, tags=["Hệ thống"])
+def health(db: Session = Depends(get_db)):
+    from sqlalchemy import func
+    total = db.scalar(select(func.count()).select_from(Alert)) or 0
+    return {"status": "ok", "alerts": total}

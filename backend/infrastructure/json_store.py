@@ -26,6 +26,13 @@ def load_locations() -> list:
     return read_json(settings.LOCATIONS_FILE)
 
 
+def load_communes() -> list:
+    """Xã/cụm xã (đơn vị dự báo vi mô). Rỗng nếu chưa sinh communes.json."""
+    if not settings.COMMUNES_FILE.exists():
+        return []
+    return read_json(settings.COMMUNES_FILE)
+
+
 def load_active_alerts() -> list:
     return read_json(settings.ACTIVE_ALERTS_FILE)
 

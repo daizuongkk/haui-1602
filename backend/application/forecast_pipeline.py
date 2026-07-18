@@ -62,7 +62,9 @@ class ForecastPipeline:
 
     @staticmethod
     def _load_locations() -> List[Location]:
-        return [Location.from_dict(d) for d in json_store.load_locations()]
+        # Ưu tiên xã/cụm xã (dự báo vi mô); fallback về huyện nếu chưa sinh communes.
+        source = json_store.load_communes() or json_store.load_locations()
+        return [Location.from_dict(d) for d in source]
 
     def _process_location(self, location: Location, run: ForecastRun) -> None:
         raw = self._weather.fetch(location.lat, location.lon)
