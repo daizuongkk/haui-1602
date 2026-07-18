@@ -2,9 +2,13 @@ import { level } from '../domain/levels'
 
 // Bản đồ sơ đồ hoá (schematic) tỉnh Điện Biên — không phụ thuộc tile ngoài,
 // hoạt động offline. Các huyện được định vị theo lat/lon và tô màu theo mức cảnh báo.
+// Kích thước marker theo mức nghiêm trọng; khu vực nguy hiểm nhất có hiệu ứng pulse nhẹ.
 const W = 460
 const H = 360
 const PAD = 60
+
+// Bán kính marker theo mức cảnh báo (nặng hơn = to hơn) — hỗ trợ đọc nhanh.
+const RADIUS_BY_PRIORITY = { 3: 22, 2: 18, 1: 15, 0: 12 }
 
 export default function DistrictMap({ districts, selectedId, onSelect }) {
   if (!districts || districts.length === 0) return null
@@ -16,6 +20,9 @@ export default function DistrictMap({ districts, selectedId, onSelect }) {
   const spanLat = maxLat - minLat || 1
   const spanLon = maxLon - minLon || 1
 
+  // Ưu tiên cao nhất -> khu vực nguy hiểm nhất (để làm pulse).
+  const worstPriority = Math.max(...districts.map((d) => level(d.highest_alert_level).priority))
+
   const project = (lat, lon) => {
     const x = PAD + ((lon - minLon) / spanLon) * (W - 2 * PAD)
     const y = PAD + ((maxLat - lat) / spanLat) * (H - 2 * PAD) // lat cao -> y nhỏ (lên trên)
@@ -24,7 +31,7 @@ export default function DistrictMap({ districts, selectedId, onSelect }) {
 
   return (
     <div className="map-card card">
-      <h3 style={{ marginTop: 0 }}>Bản đồ cảnh báo — Tỉnh Điện Biên</h3>
+      <h3 style={{ marginTop: 0 }}>Bản đồ nguy cơ — Điện Biên</h3>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label="Bản đồ mức cảnh báo các huyện">
         {/* Nền tỉnh cách điệu */}
         <rect x="10" y="10" width={W - 20} height={H - 20} rx="20"
@@ -45,12 +52,25 @@ export default function DistrictMap({ districts, selectedId, onSelect }) {
           const [x, y] = project(d.latitude, d.longitude)
           const l = level(d.highest_alert_level)
           const selected = d.location_id === selectedId
+          const r = RADIUS_BY_PRIORITY[l.priority] ?? 15
+          const isWorst = l.priority === worstPriority && l.priority > 0
+          const name = d.location.replace('Huyện ', '')
           return (
-            <g key={d.location_id} className="map-district" onClick={() => onSelect?.(d.location_id)}>
-              {selected && <circle cx={x} cy={y} r="26" fill="none" stroke={l.color} strokeWidth="3" opacity="0.5" />}
-              <circle cx={x} cy={y} r="18" fill={l.color} stroke="#fff" strokeWidth="3" />
-              <text className="map-label" x={x} y={y + 38} textAnchor="middle">
-                {d.location.replace('Huyện ', '')}
+            <g
+              key={d.location_id}
+              className="map-district"
+              onClick={() => onSelect?.(d.location_id)}
+              role="button"
+              aria-label={`${name}: ${l.label}`}
+            >
+              <title>{`${name} — ${l.label}`}</title>
+              {isWorst && (
+                <circle className="map-pulse" cx={x} cy={y} r={r} fill={l.color} opacity="0.35" />
+              )}
+              {selected && <circle cx={x} cy={y} r={r + 8} fill="none" stroke={l.color} strokeWidth="3" opacity="0.5" />}
+              <circle cx={x} cy={y} r={r} fill={l.color} stroke="#fff" strokeWidth="3" fillOpacity="0.9" />
+              <text className="map-label" x={x} y={y + r + 20} textAnchor="middle">
+                {name}
               </text>
             </g>
           )

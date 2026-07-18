@@ -1,163 +1,206 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { api } from '../services/api'
-import { level, LEVEL_ORDER, LANG_LABELS } from '../domain/levels'
-import { hazardMeta, dayGlyph } from '../domain/icons'
-import LevelBadge from '../components/LevelBadge'
-import DistrictMap from '../components/DistrictMap'
-import BroadcastPanel from '../components/BroadcastPanel'
-import AudioPlayer from '../components/AudioPlayer'
+import { level } from '../domain/levels'
+import { hazardMeta } from '../domain/icons'
+import LocationSelector from '../components/LocationSelector'
+import CurrentAlertCard from '../components/CurrentAlertCard'
+import LocationSummaryCard from '../components/LocationSummaryCard'
+import RiskMap from '../components/RiskMap'
+import RiskSidePanel from '../components/RiskSidePanel'
+import ConfirmSendModal from '../components/ConfirmSendModal'
+import Toast from '../components/Toast'
 
-// Giao diện cho BAN CHỈ HUY PCTT / cán bộ xã — giám sát tổng thể.
-export default function DashboardView({ locations }) {
-  const [summary, setSummary] = useState(null)
-  const [alerts, setAlerts] = useState([])
-  const [mapSelected, setMapSelected] = useState(null)
-  const [drawer, setDrawer] = useState(null)
+// dd/mm/yyyy → khoá so sánh (yyyy, mm, dd) để chọn ngày gần nhất.
+const dateKey = (s) => (s || '').split('/').reverse().join('')
 
-  useEffect(() => {
-    api.summary().then(setSummary)
-    api.activeAlerts().then(setAlerts)
-  }, [])
+// Bản ghi r có "đáng chọn" hơn cur không: ưu tiên mức cao hơn, rồi ngày sớm hơn.
+function isBetter(r, cur) {
+  const dp = level(r.highest_alert_level).priority - level(cur.highest_alert_level).priority
+  if (dp !== 0) return dp > 0
+  return dateKey(r.date) < dateKey(cur.date)
+}
 
-  const visibleAlerts = mapSelected
-    ? alerts.filter((a) => a.location_id === mapSelected)
-    : alerts
+// Với mỗi huyện, chọn bản ghi cảnh báo tiêu biểu: mức cao nhất, rồi ngày sớm nhất.
+function pickRepresentative(records) {
+  const byLoc = {}
+  for (const r of records) {
+    const cur = byLoc[r.location_id]
+    if (!cur || isBetter(r, cur)) byLoc[r.location_id] = r
+  }
+  return byLoc
+}
+
+function nowStamp() {
+  return new Date().toLocaleString('vi-VN', {
+    hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric',
+  })
+}
+
+// Giao diện BAN CHỈ HUY PCTT — dashboard giám sát 3 khu vực bằng dữ liệu thật từ backend.
+export default function DashboardView() {
+  const [districts, setDistricts] = useState([])
+  const [recordByLoc, setRecordByLoc] = useState({})
+  const [selectedId, setSelectedId] = useState(null)
+  const [updatedAt, setUpdatedAt] = useState(nowStamp())
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const [error, setError] = useState(false)
+  const [modal, setModal] = useState(null) // { channel }
+  const [toast, setToast] = useState('')
+  const [panelId, setPanelId] = useState(null) // khu vực đang mở side panel
+
+  async function load(isRefresh = false) {
+    if (isRefresh) setIsRefreshing(true)
+    try {
+      const [summary, active] = await Promise.all([api.summary(), api.activeAlerts()])
+      const list = summary.districts
+      setDistricts(list)
+      setRecordByLoc(pickRepresentative(active))
+      setError(false)
+      // Mặc định chọn khu vực nguy hiểm nhất (đọc nhanh: đâu là nơi nguy hiểm).
+      setSelectedId((cur) => {
+        if (cur && list.some((d) => d.location_id === cur)) return cur
+        const worst = [...list].sort(
+          (a, b) => level(b.highest_alert_level).priority - level(a.highest_alert_level).priority,
+        )[0]
+        return worst?.location_id ?? null
+      })
+      setUpdatedAt(nowStamp())
+    } catch {
+      setError(true)
+    } finally {
+      if (isRefresh) setIsRefreshing(false)
+    }
+  }
+
+  useEffect(() => { load() }, [])
+
+  async function refresh() {
+    const started = Date.now()
+    await load(true)
+    const wait = Math.max(0, 700 - (Date.now() - started))
+    setTimeout(() => setToast('Đã cập nhật dữ liệu mới nhất'), wait)
+  }
+
+  const selectedDistrict = useMemo(
+    () => districts.find((d) => d.location_id === selectedId) || null,
+    [districts, selectedId],
+  )
+  const selectedRecord = selectedId ? recordByLoc[selectedId] : null
+  const panelDistrict = panelId ? districts.find((d) => d.location_id === panelId) : null
+
+  // Click bản đồ / card chi tiết: chọn khu vực và mở side panel.
+  function openPanel(id) {
+    setSelectedId(id)
+    setPanelId(id)
+  }
+
+  function confirmSend() {
+    const channel = modal?.channel
+    setModal(null)
+    setToast(channel === 'zalo' ? 'Đã giả lập gửi cảnh báo qua Zalo' : 'Đã giả lập gửi cảnh báo qua SMS')
+  }
+
+  const previewText = useMemo(() => {
+    if (!selectedDistrict) return ''
+    const r = selectedRecord
+    if (r?.messages?.vi) return r.messages.vi
+    const haz = r?.alerts?.map((h) => hazardMeta(h.hazard).label).join(', ') || 'Theo dõi thời tiết'
+    return `${selectedDistrict.location} — ${level(selectedDistrict.highest_alert_level).label}. ${haz}.`
+  }, [selectedDistrict, selectedRecord])
+
+  if (error) {
+    return (
+      <div className="container">
+        <div className="empty-state card">
+          <p>Chưa có dữ liệu thời tiết. Hãy chạy backend rồi thử lại.</p>
+          <button className="btn-primary" onClick={() => load()}>Thử tải lại</button>
+        </div>
+      </div>
+    )
+  }
+
+  if (!districts.length) {
+    return <div className="loading">Đang tải dữ liệu…</div>
+  }
 
   return (
     <div className="container">
-      {/* KPI */}
-      {summary && (
-        <div className="kpi-row">
-          {LEVEL_ORDER.map((k) => {
-            const l = level(k)
-            return (
-              <div className="kpi" key={k} style={{ background: l.color }}>
-                <div className="n">{summary.counts[k]}</div>
-                <div className="l">{l.label}</div>
-              </div>
-            )
-          })}
-          <div className="kpi" style={{ background: '#37474f' }}>
-            <div className="n">{alerts.length}</div>
-            <div className="l">Ngày có cảnh báo</div>
-          </div>
-        </div>
-      )}
-
-      <div className="dash-grid">
-        {/* Bản đồ */}
-        {summary && (
-          <DistrictMap
-            districts={summary.districts}
-            selectedId={mapSelected}
-            onSelect={(id) => setMapSelected((cur) => (cur === id ? null : id))}
-          />
-        )}
-
-        {/* Danh sách cảnh báo */}
-        <div className="panel card">
-          <h3>
-            Cảnh báo đang hiệu lực
-            {mapSelected && (
-              <button
-                onClick={() => setMapSelected(null)}
-                style={{ float: 'right', fontSize: 12, border: 0, background: '#eef1f6', borderRadius: 8, padding: '4px 10px' }}
-              >
-                ✕ Bỏ lọc
-              </button>
-            )}
-          </h3>
-          <div className="alert-list">
-            {visibleAlerts.map((a) => {
-              const l = level(a.highest_alert_level)
-              return (
-                <div className="alert-row" key={`${a.location_id}-${a.date}`} onClick={() => setDrawer(a)}>
-                  <div className="stripe" style={{ background: l.color }} />
-                  <div style={{ fontSize: 22 }}>{dayGlyph(a.alerts)}</div>
-                  <div className="meta">
-                    <div className="top">{a.location.replace('Huyện ', '')} · {a.date}</div>
-                    <div className="haz">{a.alerts.map((h) => h.hazard).join(', ')}</div>
-                  </div>
-                  <LevelBadge levelKey={a.highest_alert_level} short />
-                </div>
-              )
-            })}
-          </div>
+      {/* Thanh chọn địa điểm + thời gian cập nhật */}
+      <div className="dash-top">
+        <LocationSelector districts={districts} selectedId={selectedId} onSelect={setSelectedId} />
+        <div className="last-updated">
+          <span className="lu-text">Cập nhật lúc {updatedAt}</span>
+          <button
+            type="button"
+            className="refresh-btn"
+            onClick={refresh}
+            disabled={isRefreshing}
+            aria-label="Làm mới dữ liệu"
+          >
+            <span className={isRefreshing ? 'spin' : ''} aria-hidden="true">🔄</span>
+            {isRefreshing ? 'Đang cập nhật…' : 'Làm mới'}
+          </button>
         </div>
       </div>
 
-      {drawer && <DetailDrawer record={drawer} onClose={() => setDrawer(null)} />}
-    </div>
-  )
-}
-
-function DetailDrawer({ record, onClose }) {
-  const [lang, setLang] = useState('vi')
-  const l = level(record.highest_alert_level)
-  const ws = record.weather_summary || {}
-  const message = record.messages?.[lang]
-
-  return (
-    <div className="drawer-backdrop" onClick={onClose}>
-      <div className="drawer" onClick={(e) => e.stopPropagation()}>
-        <button className="close" onClick={onClose}>✕ Đóng</button>
-        <h2 style={{ margin: '0 0 4px' }}>{record.location}</h2>
-        <div style={{ color: 'var(--ink-soft)', marginBottom: 10 }}>{record.date}</div>
-        <LevelBadge levelKey={record.highest_alert_level} />
-
-        {/* Số liệu thời tiết */}
-        <div className="metrics">
-          <Metric k="Nhiệt độ" v={`${Math.round(ws.min_temp)}°–${Math.round(ws.max_temp)}°C`} />
-          <Metric k="Tổng mưa 24h" v={`${ws.total_rain ?? 0} mm`} />
-          <Metric k="Mưa 1h lớn nhất" v={`${ws.max_rain_1h ?? 0} mm`} />
-          <Metric k="Gió giật" v={`${ws.max_wind_gust ?? 0} km/h`} />
-          <Metric k="Tầm nhìn" v={`${ws.min_visibility ?? 0} m`} />
-          <Metric k="Độ ẩm đất sâu" v={`${ws.deep_soil_moisture ?? 0}`} />
+      {/* Nội dung chính: cảnh báo + hướng dẫn (trái) · bản đồ (phải) */}
+      <div className="dash-main">
+        <div className="dash-left">
+          {selectedDistrict && (
+            <CurrentAlertCard
+              district={selectedDistrict}
+              record={selectedRecord}
+              onSend={(channel) => setModal({ channel })}
+              onToast={setToast}
+            />
+          )}
         </div>
+        <div className="dash-right">
+          <RiskMap
+            districts={districts}
+            recordByLoc={recordByLoc}
+            selectedId={selectedId}
+            onSelect={openPanel}
+          />
+        </div>
+      </div>
 
-        {/* Danh sách hiểm họa */}
-        <h4 style={{ margin: '14px 0 8px' }}>Chi tiết hiểm họa</h4>
-        {record.alerts.map((a, i) => {
-          const hl = level(a.level)
-          return (
-            <div key={i} style={{ borderLeft: `4px solid ${hl.color}`, padding: '6px 10px', marginBottom: 8, background: hl.bg, borderRadius: 8 }}>
-              <div style={{ fontWeight: 700, fontSize: 14 }}>{hazardMeta(a.hazard).glyph} {a.hazard} — {hl.label}</div>
-              <div style={{ fontSize: 13, color: 'var(--ink)' }}>{a.description}</div>
-            </div>
-          )
-        })}
-
-        {/* Bản tin đa ngôn ngữ */}
-        <h4 style={{ margin: '14px 0 8px' }}>Bản tin</h4>
-        <div className="lang-toggle" style={{ marginBottom: 10 }}>
-          {['vi', 'thai', 'hmong'].map((lk) => (
-            <button key={lk} className={lang === lk ? 'active' : ''} onClick={() => setLang(lk)}>
-              {LANG_LABELS[lk]}
-            </button>
+      {/* Chi tiết nhanh các khu vực */}
+      <div className="summary-section">
+        <div className="summary-section-head">
+          <h3>Chi tiết khu vực</h3>
+        </div>
+        <div className="summary-grid">
+          {districts.map((d) => (
+            <LocationSummaryCard
+              key={d.location_id}
+              district={d}
+              record={recordByLoc[d.location_id]}
+              active={d.location_id === selectedId}
+              onSelect={openPanel}
+            />
           ))}
         </div>
-        {message ? (
-          <p style={{ lineHeight: 1.55, fontSize: 14 }}>{message}</p>
-        ) : (
-          <p style={{ color: 'var(--ink-soft)', fontStyle: 'italic', fontSize: 14 }}>
-            Bản dịch đang được cập nhật cho ngày/địa điểm này.
-          </p>
-        )}
-        <AudioPlayer audio={record.audio} lang={lang} />
-
-        {/* Phân phối đa kênh */}
-        <h4 style={{ margin: '18px 0 4px' }}>Phân phối cảnh báo</h4>
-        <BroadcastPanel record={record} />
       </div>
-    </div>
-  )
-}
 
-function Metric({ k, v }) {
-  return (
-    <div className="metric">
-      <div className="v">{v}</div>
-      <div className="k">{k}</div>
+      {panelDistrict && (
+        <RiskSidePanel
+          district={panelDistrict}
+          onClose={() => setPanelId(null)}
+          onSend={(channel) => setModal({ channel })}
+          onToast={setToast}
+        />
+      )}
+
+      {modal && (
+        <ConfirmSendModal
+          channel={modal.channel}
+          preview={previewText}
+          onConfirm={confirmSend}
+          onClose={() => setModal(null)}
+        />
+      )}
+      {toast && <Toast message={toast} onClose={() => setToast('')} />}
     </div>
   )
 }

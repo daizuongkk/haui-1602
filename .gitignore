@@ -1,17 +1,43 @@
+# ===== Python =====
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
 
-# Môi trường và mật khẩu (Secrets)
+# ===== Node / Frontend =====
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ===== Bí mật & môi trường =====
 .env
 .env.*
+!.env.example
 
-
-
-.env
-__pycache__/
-node_modules/
+# ===== Cơ sở dữ liệu =====
 *.db
 
-# Frontend build output
-frontend/dist/
-.pytest_cache/
+# ===== Công cụ Claude Code / plugin (không thuộc dự án) =====
+.claude/
+.agents/
+skills-lock.json
+
+# ===== Hệ điều hành =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== Log & tạm =====
+*.log
+tmp/
