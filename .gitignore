@@ -9,7 +9,6 @@ env/
 .env
 
 # Secrets & Local configs
-.env
 .env.*
 secrets.json
 
@@ -25,8 +24,18 @@ logs/
 # Claude / AI Assistants
 .claude/
 
+# Node / frontend
+node_modules/
+frontend/dist/
+
+# Test cache
+.pytest_cache/
+
 # IDEs & OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local databases
+*.db
