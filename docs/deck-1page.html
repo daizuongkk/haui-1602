@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deck 1 trang — Cảnh báo Thời tiết Vi mô Điện Biên</title>
+<style>
+  :root{
+    --brand:#0b5cad; --brand-d:#0a4a8c;
+    --green:#2E7D32; --yellow:#F9A825; --orange:#EF6C00; --red:#C62828;
+    --ink:#1a2233; --soft:#5b6472; --line:#e2e6ec; --bg:#eef2f7; --card:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);padding:20px;line-height:1.4}
+  .page{max-width:1120px;margin:0 auto;background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 8px 30px rgba(20,33,61,.12)}
+  header{background:linear-gradient(135deg,var(--brand),var(--brand-d));color:#fff;padding:22px 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  header h1{font-size:23px;font-weight:800}
+  header .tag{font-size:13px;opacity:.9;margin-top:4px}
+  header .badge{background:rgba(255,255,255,.18);padding:8px 14px;border-radius:10px;font-size:13px;font-weight:700;text-align:right}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:22px 30px}
+  .box{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:#fbfcfe}
+  .box h2{font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--brand);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box p,.box li{font-size:14px;color:var(--ink)}
+  .box.problem{background:#fff5f5;border-color:#f3d0d0}
+  .box.problem h2{color:var(--red)}
+  ul{padding-left:18px} li{margin:3px 0}
+  .layers{display:flex;flex-direction:column;gap:6px}
+  .layer{display:flex;align-items:center;gap:10px;font-size:13px;padding:7px 10px;border-radius:8px;background:#fff;border:1px solid var(--line)}
+  .layer .n{width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:0 0 auto}
+  .scale{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+  .chip{flex:1;min-width:70px;color:#fff;border-radius:8px;padding:8px 6px;text-align:center;font-size:12px;font-weight:700}
+  .full{grid-column:1 / -1}
+  .flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;font-size:12.5px;font-weight:600}
+  .flow .step{background:#eef5fc;border:1px solid #cfe0f2;border-radius:8px;padding:8px 12px;color:var(--brand-d)}
+  .flow .arr{color:var(--soft);font-weight:800}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}
+  th{color:var(--soft);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+  .road{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+  .road .r{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:12px}
+  .road .r b{display:block;color:var(--brand);font-size:12px;margin-bottom:3px}
+  .road .r span{color:var(--soft);font-size:11px}
+  footer{padding:14px 30px;background:#f4f6f9;border-top:1px solid var(--line);font-size:12px;color:var(--soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .ok{color:var(--green);font-weight:800}
+  @media print{body{background:#fff;padding:0}.page{box-shadow:none;border-radius:0}}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}.road{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>🌦️ AI Cảnh báo &amp; Dự báo Thời tiết Vi mô — Điện Biên</h1>
+      <div class="tag">Dự báo cấp huyện/cụm bản · Cảnh báo tự động · Bản tin đa ngôn ngữ · Phân phối đa kênh</div>
+    </div>
+    <div class="badge">"Đúng người<br/>Đúng lúc<br/>Đúng ngôn ngữ"</div>
+  </header>
+
+  <div class="grid">
+    <div class="box problem">
+      <h2>⚠️ Bài toán</h2>
+      <p>Điện Biên địa hình chia cắt, thời tiết cực đoan diễn ra nhanh (sương mù, lũ quét, sương muối, dông lốc). Dự báo hiện <b>chỉ ở cấp tỉnh</b> — đến chậm, thiếu chi tiết theo vùng, và <b>khó hiểu với đồng bào dân tộc thiểu số</b> không đọc thạo chữ.</p>
+    </div>
+
+    <div class="box">
+      <h2>💡 Giải pháp — Pipeline AI 4 lớp</h2>
+      <div class="layers">
+        <div class="layer"><span class="n">1</span> Thu thập Open-Meteo → <b>hạ độ phân giải theo địa hình</b> (lapse rate)</div>
+        <div class="layer"><span class="n">2</span> <b>Rule engine</b> phát hiện 7 nhóm hiểm họa theo ngưỡng cấu hình</div>
+        <div class="layer"><span class="n">3</span> <b>LLM</b> sinh bản tin + dịch Việt→Thái→H'Mông + <b>TTS audio</b></div>
+        <div class="layer"><span class="n">4</span> API + phân phối <b>SMS · Zalo OA · Loa xã · Dashboard</b></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>🎨 Giao diện không cần đọc chữ</h2>
+      <p>Mức nguy hiểm thể hiện đồng thời bằng <b>màu + biểu tượng + nhãn</b>, kèm pictogram hành động và nút nghe giọng nói.</p>
+      <div class="scale">
+        <div class="chip" style="background:var(--green)">🟢 Bình thường</div>
+        <div class="chip" style="background:var(--yellow)">🟡 Chú ý</div>
+        <div class="chip" style="background:var(--orange)">🟠 Nguy hiểm</div>
+        <div class="chip" style="background:var(--red)">🔴 Khẩn cấp</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>🔎 7 nhóm hiểm họa được giám sát</h2>
+      <ul style="columns:2;font-size:13px">
+        <li>Mưa lớn &amp; Ngập úng</li>
+        <li>Lũ quét &amp; Sạt lở</li>
+        <li>Dông, lốc, sét</li>
+        <li>Mưa đá</li>
+        <li>Sương muối &amp; Băng giá</li>
+        <li>Rét đậm, rét hại</li>
+        <li>Sương mù dày đặc</li>
+        <li>Cháy rừng</li>
+      </ul>
+    </div>
+
+    <div class="box full">
+      <h2>🧭 Luồng dữ liệu</h2>
+      <div class="flow">
+        <span class="step">Open-Meteo API</span><span class="arr">→</span>
+        <span class="step">Downscaling địa hình</span><span class="arr">→</span>
+        <span class="step">Rule Engine (ngưỡng)</span><span class="arr">→</span>
+        <span class="step">LLM bản tin + dịch</span><span class="arr">→</span>
+        <span class="step">TTS audio</span><span class="arr">→</span>
+        <span class="step">FastAPI</span><span class="arr">→</span>
+        <span class="step">SMS · Zalo · Loa · Dashboard</span>
+      </div>
+    </div>
+
+    <div class="box full">
+      <h2>🗺️ Lộ trình triển khai sau hackathon</h2>
+      <div class="road">
+        <div class="r"><b>Pilot · T1–3</b><span>1 huyện trọng điểm, kết nối Đài KTTV, Zalo OA 5–10 xã</span></div>
+        <div class="r"><b>Hiệu chỉnh · T3–6</b><span>Thu phản hồi đúng/sai, hiệu chỉnh downscaling, mở rộng huyện</span></div>
+        <div class="r"><b>Đa ngôn ngữ · T4–7</b><span>Bộ từ vựng chuẩn Thái/H'Mông, kiểm định dịch</span></div>
+        <div class="r"><b>Loa xã · T6–9</b><span>Tích hợp truyền thanh thông minh, tự động phát</span></div>
+        <div class="r"><b>Nhân rộng · T9–12</b><span>SMS chính thức, đánh giá tác động, mở sang tỉnh khác</span></div>
+      </div>
+    </div>
+
+    <div class="box full">
+      <h2>✅ Đáp ứng yêu cầu tối thiểu</h2>
+      <table>
+        <tr><th>Yêu cầu</th><th>Đáp ứng</th></tr>
+        <tr><td>Demo dự báo 3–7 ngày cho ≥3 địa điểm</td><td><span class="ok">✔</span> 3 huyện × 7 ngày (Mường Nhé · Mường Chà · Tuần Giáo)</td></tr>
+        <tr><td>Cảnh báo tự động theo ngưỡng</td><td><span class="ok">✔</span> Rule engine 7 hiểm họa × 3 mức, ngưỡng cấu hình được</td></tr>
+        <tr><td>Giao diện đơn giản cho người không đọc bản tin khí tượng</td><td><span class="ok">✔</span> Thang màu 4 cấp + icon + pictogram + audio 3 ngôn ngữ</td></tr>
+        <tr><td>Architecture document + 1-page deck</td><td><span class="ok">✔</span> docs/architecture.md + tài liệu này</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    <span>Nguồn dữ liệu: Open-Meteo (mở rộng: OpenWeatherMap, Đài KTTV Điện Biên, dữ liệu lịch sử Ban Chỉ huy PCTT)</span>
+    <span>Stack: Python · FastAPI · React + Vite · LLM · gTTS</span>
+  </footer>
+</div>
+</body>
+</html>

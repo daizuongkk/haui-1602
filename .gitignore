@@ -7,3 +7,11 @@ __pycache__/
 
 
 
+.env
+__pycache__/
+node_modules/
+*.db
+
+# Frontend build output
+frontend/dist/
+.pytest_cache/
