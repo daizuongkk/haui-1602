@@ -1,0 +1,21 @@
+# Render Blueprint — backend FastAPI (Điện Biên Weather Alert API).
+# Deploy: Render Dashboard → New → Blueprint → chọn repo này. Frontend deploy riêng trên Vercel.
+services:
+  - type: web
+    name: dienbien-weather-api
+    runtime: python
+    plan: free
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m uvicorn backend.presentation.api.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      # Frontend gọi backend qua Next.js rewrites (server-side) nên CORS không bắt buộc;
+      # để "*" cho trường hợp gọi trực tiếp API/Swagger từ trình duyệt.
+      - key: API_CORS_ORIGINS
+        value: "*"
+      # Tuỳ chọn: có key thì bản tin được dịch Thái/H'Mông; không có vẫn chạy (chỉ tiếng Việt).
+      - key: GEMINI_API_KEY
+        sync: false

@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 An AI weather-hazard forecasting and multilingual alert system for **Điện Biên province, Vietnam**. It fetches weather forecasts, applies terrain-corrected rules to detect natural-disaster hazards, translates the alerts into Vietnamese, Thái (Điện Biên dialect) and H'Mông, renders them to audio, and serves everything to a React frontend (resident view + official dashboard) through a FastAPI backend. Most code comments, console output, and docs are in Vietnamese.
 
-The pieces communicate **through JSON files on disk** — `active_alerts.json` (pipeline output) → `translation_agent/output/alert.json` (bulletins) + audio, which the API merges by the key `(location name, date)`.
+The pieces communicate **through JSON files on disk** — `data/active_alerts.json` (pipeline output) → `data/output/alert.json` (bulletins) + audio under `data/output/audio/`, which the API merges by the key `(location name, date)`.
+
+**Canonical code lives under `backend/`.** The top-level `pipeline_core/`, `translation_agent/`, and `gui_emailll/` directories are the pre-refactor legacy versions — nothing imports them and they are not wired into any current entry point. Don't edit them expecting an effect; work in `backend/` instead.
 
 ## Architecture — Clean Architecture layers
 

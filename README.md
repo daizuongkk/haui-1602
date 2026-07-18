@@ -8,7 +8,7 @@
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white">
   <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white">
-  <img alt="React" src="https://img.shields.io/badge/React-Vite-61DAFB?logo=react&logoColor=black">
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js%2015-React%2019-000000?logo=nextdotjs&logoColor=white">
   <img alt="AI" src="https://img.shields.io/badge/AI-Downscaling·RuleEngine·LLM·TTS-8A2BE2">
   <img alt="Challenge" src="https://img.shields.io/badge/Vietnam-AI%20Innovation%20Challenge-red">
 </p>
@@ -38,6 +38,7 @@ Open-Meteo API
 - 🏔️ **Dự báo vi mô** cấp huyện/cụm bản, hiệu chỉnh nhiệt độ theo độ cao thực từng xã.
 - 🈯 **Cảnh báo đa ngôn ngữ dân tộc** (Thái Tai Dam/Tai Don, H'Mông RPA) + **giọng nói**, có ràng buộc chống bịa số liệu.
 - 🎨 **Giao diện không cần đọc chữ**: thang 4 màu (🟢🟡🟠🔴) + biểu tượng hiểm họa + pictogram hành động.
+- 🔄 **Quy trình khép kín có kiểm duyệt**: mỗi cảnh báo đi qua vòng đời *chờ duyệt → duyệt → phát → đóng* (SQLite), có ghi nhận phản hồi từ cơ sở — không chỉ sinh bản tin mà quản lý cả việc phê duyệt & phân phối.
 - 📊 **Đo lường được**: bộ benchmark báo cáo POD/FAR/CSI trên kịch bản lịch sử.
 
 ## 🖼️ Demo
@@ -73,19 +74,35 @@ Mở **http://localhost:5173** → tab **Người dân** và **Ban Chỉ huy PCT
 ```bash
 # (Tuỳ chọn) Sinh lại dữ liệu & đánh giá thuật toán
 python -m backend.presentation.cli          # dự báo → data/active_alerts.json
+python -m backend.presentation.cli seed     # khởi tạo SQLite + cán bộ + cảnh báo demo (offline, không cần LLM)
 python -m backend.presentation.benchmark    # POD / FAR / CSI
 python -m pytest backend/tests              # kiểm thử
 ```
 
-> Bước dịch đa ngôn ngữ cần `GEMINI_API_KEY` trong file `.env` ở thư mục gốc. Repo đã kèm sẵn kết quả (`data/output/`) nên demo chạy được ngay không cần API key.
+> Bước dịch đa ngôn ngữ cần `GEMINI_API_KEY` trong file `.env` ở thư mục gốc. Repo đã kèm sẵn kết quả (`data/output/`) và lệnh `seed` nạp 21 bản tin thực vào SQLite, nên toàn bộ quy trình (kể cả duyệt & phân phối trên dashboard) chạy được ngay không cần mạng/API key.
+
+## ☁️ Deploy (Frontend Vercel · Backend Render)
+
+Kiến trúc: **frontend Next.js trên Vercel**, **backend FastAPI trên Render**. Frontend gọi backend qua Next.js rewrites (`BACKEND_URL`) nên trình duyệt chỉ dùng đường dẫn tương đối — không vướng CORS.
+
+**1) Backend → Render** (đã có sẵn [`render.yaml`](render.yaml)):
+- Render Dashboard → **New → Blueprint** → chọn repo này → Apply.
+- (Tuỳ chọn) đặt `GEMINI_API_KEY` để bật dịch Thái/H'Mông. Không có key backend vẫn tự lấy dữ liệu Open-Meteo lúc khởi động và sinh cảnh báo tiếng Việt.
+- Ghi lại URL, ví dụ `https://dienbien-weather-api.onrender.com`.
+
+**2) Frontend → Vercel:**
+- Vercel → **Add New → Project** → import repo → đặt **Root Directory = `frontend`** (Next.js tự nhận diện).
+- Thêm biến môi trường **`BACKEND_URL`** = URL Render ở bước 1 → **Deploy**.
+
+> Render gói free ngủ sau ~15 phút không dùng → lần gọi đầu chờ ~50s (cold start). Trạng thái SQLite bền trong lúc instance chạy; muốn bền vĩnh viễn thì gắn Persistent Disk (trả phí). Xem `.env.example` và `frontend/.env.example` để biết các biến.
 
 ## 📁 Cấu trúc dự án
 
 ```
 backend/     # Toàn bộ mã server-side (Clean Architecture)
   config/  shared/  domain/  infrastructure/  application/  presentation/  tests/
-frontend/    # Giao diện React + Vite (domain / services / components / views)
-data/        # Dữ liệu chạy + sản phẩm sinh ra (JSON + audio)
+frontend/    # Giao diện Next.js 15 (App Router) + React 19 + TypeScript + Tailwind (app / components / lib)
+data/        # Dữ liệu chạy + sản phẩm sinh ra (JSON + audio) + SQLite lifecycle (app.db)
 docs/        # Hồ sơ dự thi, kiến trúc, deck, ảnh demo
 ```
 

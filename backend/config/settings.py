@@ -132,4 +132,10 @@ GEMINI_API_KEY_ENV = "GEMINI_API_KEY"
 # --------------------------------------------------------------------------- #
 # HTTP API
 # --------------------------------------------------------------------------- #
-API_CORS_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+# Deploy: đặt API_CORS_ORIGINS="*" hoặc "https://ten-app.vercel.app,..." qua biến môi trường.
+_cors_env = os.getenv("API_CORS_ORIGINS")
+API_CORS_ORIGINS = (
+    [o.strip() for o in _cors_env.split(",") if o.strip()]
+    if _cors_env
+    else ["http://localhost:5173", "http://127.0.0.1:5173"]
+)
