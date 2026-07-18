@@ -217,28 +217,6 @@ def main():
                         "description": desc
                     })
                     
-                # 8. Đọc thông số chi tiết của từng giờ trong ngày này từ DB
-                conn = sqlite3.connect(DB_PATH)
-                conn.row_factory = sqlite3.Row
-                cursor = conn.cursor()
-                cursor.execute("""
-                    SELECT * FROM weather_forecast 
-                    WHERE location_id = ? AND timestamp LIKE ?
-                    ORDER BY timestamp ASC
-                """, (loc_id, f"{date_str}%"))
-                hourly_rows = cursor.fetchall()
-                conn.close()
-                
-                hourly_forecast = []
-                for r in hourly_rows:
-                    # Đánh giá cảnh báo và hạ nhiệt độ tích hợp cho giờ
-                    temp_adj, alert_level = evaluate_hourly_hazard_level(r, real_elevation, model_elevation)
-                    hourly_forecast.append({
-                        "time": r["timestamp"].split("T")[1][:5], # định dạng "HH:MM"
-                        "temperature": temp_adj,
-                        "level": alert_level
-                    })
-                    
                 loc_alert = {
                     "location": loc_name,
                     "location_id": loc_id,
@@ -257,8 +235,7 @@ def main():
                         "min_visibility": round(summary["min_visibility"], 0),
                         "deep_soil_moisture": round(summary["avg_soil_moisture_27_to_81cm"], 2)
                     },
-                    "alerts": alert_items,
-                    "hourly_forecast": hourly_forecast
+                    "alerts": alert_items
                 }
                 
                 pending_alerts.append(loc_alert)
