@@ -36,10 +36,23 @@ def run_translation_pipeline() -> None:
     logger.info("Initializing multi-lingual weather alert translation pipeline.")
 
     project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    input_file = os.path.join(project_root, "active_alerts.json")
     
-    if not os.path.exists(input_file):
-        input_file = os.path.join(project_root, "forecast.json")
+    # Tìm file input theo thứ tự ưu tiên
+    candidates = [
+        os.path.join(project_root, "data", "activealerts.json"),
+        os.path.join(project_root, "data", "active_alerts.json"),
+        os.path.join(project_root, "active_alerts.json"),
+        os.path.join(project_root, "forecast.json"),
+    ]
+    input_file = None
+    for candidate in candidates:
+        if os.path.exists(candidate):
+            input_file = candidate
+            break
+    
+    if input_file is None:
+        logger.error("No input file found. Searched: %s", [os.path.basename(c) for c in candidates])
+        return
 
     logger.info("Reading input data from %s", os.path.basename(input_file))
 

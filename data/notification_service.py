@@ -27,7 +27,8 @@ import pyodbc
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+load_dotenv(os.path.join(PROJECT_ROOT, ".env"))
 
 # ---------------------------------------------------------------------------
 # Cau hinh
@@ -53,7 +54,8 @@ ETHNIC_LANG_MAP = {
 }
 
 CANDIDATE_ALERT_PATHS = [
-    os.path.join(BASE_DIR, "translation_agent", "output", "alert.json"),
+    os.path.join(BASE_DIR, "output", "alert.json"),
+    os.path.join(PROJECT_ROOT, "translation_agent", "output", "alert.json"),
     os.path.join(BASE_DIR, "alert.json"),
 ]
 
