@@ -1,0 +1,12 @@
+[
+  {
+    "location": "Huyện Mường Nhé",
+    "date": "18/07/2026",
+    "highest_alert_level": "Yellow",
+    "messages": {
+      "vi": "Huyện Mường Nhé, ngày 18/07/2026. Dự báo nhiệt độ từ 21.5°C đến 26.1°C, tổng lượng mưa 21.5mm. Cảnh báo cấp độ Vàng: Chú ý mưa dông kèm sấm sét cục bộ vào chiều tối (Điểm: 48.8). Người dân cần đề phòng dông, lốc, sét nguy hiểm, hạn chế ra ngoài khi có mưa lớn.",
+      "thai": "Huyện Mường Nhé, mự 18/07/2026. Dự báo độ nồng té 21.5°C rọt 26.1°C, fạ phưn tấc 21.5mm. Cảnh báo tàng hông: Chú ý fạ phưn dông, fạ lăm dệt dại bang bón pày chại hăm (Điểm: 48.8). Po mẻ dân khút sà phông dông, lốc, fạ lăm hại, báu pày oóc hoọc dơ fạ phưn luông.",
+      "hmong": "Huyện Mường Nhé, hnub 18/07/2026. Ntsuas kub txias li 21.5°C txog 26.1°C, nag tshuav 21.5mm. Ceeb toom theem daj: Ceev faj nag tsub nag cua thiab xob laim ib txhia chaw thaum tsaus ntuj (Điểm: 48.8). Pej xeem yuav tsum ceev faj cua daj cua dub, xob laim, tsis txhob tawm mus nraum zoov thaum nag loj."
+    }
+  }
+]

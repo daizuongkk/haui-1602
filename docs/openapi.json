@@ -1,0 +1,1098 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Điện Biên Weather Alert API",
+    "description": "\nAPI của **Hệ thống AI Cảnh báo & Dự báo Thời tiết Vi mô — Điện Biên**.\n\nCung cấp dữ liệu dự báo/cảnh báo thiên tai cấp huyện, bản tin đa ngôn ngữ (Việt · Thái · H'Mông),\nvà mô phỏng phân phối đa kênh cho giao diện người dân + dashboard chỉ huy.\n\n### Khái niệm chính\n- **Mức cảnh báo (4 cấp):** `Green` (Bình thường) · `Yellow` (Chú ý) · `Orange` (Nguy hiểm) · `Red` (Cực kỳ nguy hiểm).\n- **Khoá dữ liệu:** mỗi bản ghi định danh bằng `(location_id, date)` với `date` dạng `dd/mm/yyyy`.\n- **Audio:** các URL `/audio/...` trỏ tới file mp3 tĩnh (giọng đọc bản tin theo ngôn ngữ).\n\n### Ghi chú\n- API **chỉ đọc**; endpoint phân phối **chỉ mô phỏng**, không gửi SMS/Zalo/loa thật.\n- Tài liệu tương tác: **Swagger UI** tại `/docs`, **ReDoc** tại `/redoc`, đặc tả JSON tại `/openapi.json`.\n",
+    "contact": {
+      "name": "Đội dự thi — Vietnam AI Innovation Challenge"
+    },
+    "license": {
+      "name": "MIT"
+    },
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/locations": {
+      "get": {
+        "tags": [
+          "Địa điểm"
+        ],
+        "summary": "Danh sách huyện được giám sát",
+        "description": "Trả về 3 huyện demo (Mường Nhé, Mường Chà, Tuần Giáo) kèm toạ độ, độ cao và hệ số rủi ro sạt lở.",
+        "operationId": "get_locations_api_locations_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/LocationOut"
+                  },
+                  "type": "array",
+                  "title": "Response Get Locations Api Locations Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/summary": {
+      "get": {
+        "tags": [
+          "Cảnh báo"
+        ],
+        "summary": "Tổng quan mức cảnh báo theo huyện",
+        "description": "Mức cảnh báo cao nhất hiện tại của **từng huyện** (dùng để tô màu bản đồ) và **số huyện theo từng mức** (KPI cho dashboard). Ưu tiên mức: Red > Orange > Yellow > Green.",
+        "operationId": "get_summary_api_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SummaryResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/alerts/active": {
+      "get": {
+        "tags": [
+          "Cảnh báo"
+        ],
+        "summary": "Các ngày đang có cảnh báo",
+        "description": "Tất cả bản ghi cảnh báo đang hiệu lực (mức ≥ Vàng), đã hợp nhất số liệu thời tiết, danh sách hiểm họa, bản tin đa ngôn ngữ và URL audio.",
+        "operationId": "get_active_alerts_api_alerts_active_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/AlertRecord"
+                  },
+                  "type": "array",
+                  "title": "Response Get Active Alerts Api Alerts Active Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/forecast/{location_id}": {
+      "get": {
+        "tags": [
+          "Dự báo"
+        ],
+        "summary": "Dự báo 3–7 ngày của một huyện",
+        "description": "Chuỗi dự báo theo ngày (đã sắp xếp tăng dần) cho một huyện, mỗi ngày là một bản ghi đã làm giàu.",
+        "operationId": "get_forecast_api_forecast__location_id__get",
+        "parameters": [
+          {
+            "name": "location_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Mã huyện",
+              "examples": [
+                "muong_nhe"
+              ],
+              "title": "Location Id"
+            },
+            "description": "Mã huyện",
+            "examples": {
+              "muong_nhe": {
+                "summary": "Huyện Mường Nhé",
+                "value": "muong_nhe"
+              },
+              "muong_cha": {
+                "summary": "Huyện Mường Chà",
+                "value": "muong_cha"
+              },
+              "tuan_giao": {
+                "summary": "Huyện Tuần Giáo",
+                "value": "tuan_giao"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AlertRecord"
+                  },
+                  "title": "Response Get Forecast Api Forecast  Location Id  Get"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Không tìm thấy tài nguyên",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/alerts/broadcast": {
+      "post": {
+        "tags": [
+          "Phân phối"
+        ],
+        "summary": "Mô phỏng phân phối cảnh báo đa kênh",
+        "description": "Dựng sẵn nội dung sẽ gửi qua **SMS / Zalo OA / loa phát thanh** cho một cảnh báo, để minh hoạ lớp phân phối. ⚠️ **Chỉ mô phỏng — hệ thống không gửi tin thật.**",
+        "operationId": "broadcast_alert_api_alerts_broadcast_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BroadcastRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BroadcastResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Không tìm thấy tài nguyên",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": [
+          "Hệ thống"
+        ],
+        "summary": "Kiểm tra tình trạng dịch vụ",
+        "description": "Trạng thái dịch vụ và số bản ghi cảnh báo hiện có.",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AlertRecord": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location",
+            "examples": [
+              "Huyện Mường Nhé"
+            ]
+          },
+          "location_id": {
+            "type": "string",
+            "title": "Location Id",
+            "examples": [
+              "muong_nhe"
+            ]
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude",
+            "examples": [
+              22.1989
+            ]
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude",
+            "examples": [
+              102.4481
+            ]
+          },
+          "elevation": {
+            "type": "integer",
+            "title": "Elevation",
+            "examples": [
+              900
+            ]
+          },
+          "date": {
+            "type": "string",
+            "title": "Date",
+            "description": "Ngày dạng dd/mm/yyyy",
+            "examples": [
+              "20/07/2026"
+            ]
+          },
+          "highest_alert_level": {
+            "type": "string",
+            "enum": [
+              "Green",
+              "Yellow",
+              "Orange",
+              "Red"
+            ],
+            "title": "Highest Alert Level",
+            "description": "Mức cảnh báo cao nhất trong ngày"
+          },
+          "weather_summary": {
+            "$ref": "#/components/schemas/WeatherSummary"
+          },
+          "alerts": {
+            "items": {
+              "$ref": "#/components/schemas/HazardAlertOut"
+            },
+            "type": "array",
+            "title": "Alerts",
+            "description": "Danh sách hiểm họa được phát hiện"
+          },
+          "messages": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "vi",
+                "thai",
+                "hmong"
+              ]
+            },
+            "type": "object",
+            "title": "Messages",
+            "description": "Bản tin đa ngôn ngữ. Rỗng nếu ngày đó chưa có bản dịch (has_translation=false)."
+          },
+          "audio": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "propertyNames": {
+              "enum": [
+                "vi",
+                "thai",
+                "hmong"
+              ]
+            },
+            "type": "object",
+            "title": "Audio",
+            "description": "URL file mp3 theo ngôn ngữ (chỉ gồm ngôn ngữ có audio thực tế). Phục vụ tại /audio/..."
+          },
+          "has_translation": {
+            "type": "boolean",
+            "title": "Has Translation",
+            "description": "Ngày này đã có bản tin đa ngôn ngữ hay chưa"
+          }
+        },
+        "type": "object",
+        "required": [
+          "location",
+          "location_id",
+          "latitude",
+          "longitude",
+          "elevation",
+          "date",
+          "highest_alert_level",
+          "weather_summary",
+          "alerts",
+          "has_translation"
+        ],
+        "title": "AlertRecord",
+        "example": {
+          "alerts": [
+            {
+              "description": "Đất ngậm nước bão hòa kết hợp mưa lớn. Nguy cơ lũ quét và sạt lở núi cực cao!",
+              "hazard": "Lũ quét & Sạt lở",
+              "level": "Red"
+            }
+          ],
+          "audio": {
+            "vi": "/audio/Huy%E1%BB%87n_M%C6%B0%E1%BB%9Dng_Nh%C3%A9/20072026/vi.mp3"
+          },
+          "date": "20/07/2026",
+          "elevation": 900,
+          "has_translation": true,
+          "highest_alert_level": "Red",
+          "latitude": 22.1989,
+          "location": "Huyện Mường Nhé",
+          "location_id": "muong_nhe",
+          "longitude": 102.4481,
+          "messages": {
+            "hmong": "...",
+            "thai": "...",
+            "vi": "Mường Nhé ngày 20/07/2026: Cảnh báo đỏ về lũ quét và sạt lở..."
+          },
+          "weather_summary": {
+            "deep_soil_moisture": 0.42,
+            "max_cape": 1620.0,
+            "max_rain_1h": 12.0,
+            "max_temp": 28.5,
+            "max_wind_gust": 19.8,
+            "min_temp": 21.0,
+            "min_visibility": 800.0,
+            "total_rain": 59.5
+          }
+        }
+      },
+      "BroadcastChannels": {
+        "properties": {
+          "sms": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SmsChannel"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "zalo": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ZaloChannel"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "loudspeaker": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LoudspeakerChannel"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "BroadcastChannels"
+      },
+      "BroadcastRequest": {
+        "properties": {
+          "location_id": {
+            "type": "string",
+            "title": "Location Id",
+            "description": "Mã huyện",
+            "examples": [
+              "muong_nhe"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "title": "Date",
+            "description": "Ngày dạng dd/mm/yyyy",
+            "examples": [
+              "20/07/2026"
+            ]
+          },
+          "channels": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "sms",
+                "zalo",
+                "loudspeaker"
+              ]
+            },
+            "type": "array",
+            "title": "Channels",
+            "description": "Các kênh muốn tạo nội dung mô phỏng",
+            "default": [
+              "sms",
+              "zalo",
+              "loudspeaker"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "location_id",
+          "date"
+        ],
+        "title": "BroadcastRequest",
+        "example": {
+          "channels": [
+            "sms",
+            "zalo",
+            "loudspeaker"
+          ],
+          "date": "20/07/2026",
+          "location_id": "muong_nhe"
+        }
+      },
+      "BroadcastResponse": {
+        "properties": {
+          "location": {
+            "type": "string",
+            "title": "Location",
+            "examples": [
+              "Huyện Mường Nhé"
+            ]
+          },
+          "date": {
+            "type": "string",
+            "title": "Date",
+            "examples": [
+              "20/07/2026"
+            ]
+          },
+          "highest_alert_level": {
+            "type": "string",
+            "enum": [
+              "Green",
+              "Yellow",
+              "Orange",
+              "Red"
+            ],
+            "title": "Highest Alert Level"
+          },
+          "level_label": {
+            "type": "string",
+            "title": "Level Label",
+            "examples": [
+              "Cực kỳ nguy hiểm"
+            ]
+          },
+          "channels": {
+            "$ref": "#/components/schemas/BroadcastChannels"
+          },
+          "simulated": {
+            "type": "boolean",
+            "title": "Simulated",
+            "description": "Luôn true — hệ thống KHÔNG gửi tin thật",
+            "examples": [
+              true
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "location",
+          "date",
+          "highest_alert_level",
+          "level_label",
+          "channels",
+          "simulated"
+        ],
+        "title": "BroadcastResponse"
+      },
+      "DistrictSummary": {
+        "properties": {
+          "location_id": {
+            "type": "string",
+            "title": "Location Id",
+            "description": "Mã huyện",
+            "examples": [
+              "muong_nhe"
+            ]
+          },
+          "location": {
+            "type": "string",
+            "title": "Location",
+            "description": "Tên huyện",
+            "examples": [
+              "Huyện Mường Nhé"
+            ]
+          },
+          "latitude": {
+            "type": "number",
+            "title": "Latitude",
+            "examples": [
+              22.1989
+            ]
+          },
+          "longitude": {
+            "type": "number",
+            "title": "Longitude",
+            "examples": [
+              102.4481
+            ]
+          },
+          "elevation": {
+            "type": "integer",
+            "title": "Elevation",
+            "description": "Độ cao thực tế (m)",
+            "examples": [
+              900
+            ]
+          },
+          "highest_alert_level": {
+            "type": "string",
+            "enum": [
+              "Green",
+              "Yellow",
+              "Orange",
+              "Red"
+            ],
+            "title": "Highest Alert Level",
+            "description": "Mức cảnh báo cao nhất hiện tại của huyện"
+          },
+          "level_label": {
+            "type": "string",
+            "title": "Level Label",
+            "description": "Nhãn tiếng Việt của mức cảnh báo",
+            "examples": [
+              "Cực kỳ nguy hiểm"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "location_id",
+          "location",
+          "latitude",
+          "longitude",
+          "elevation",
+          "highest_alert_level",
+          "level_label"
+        ],
+        "title": "DistrictSummary"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "detail": {
+            "type": "string",
+            "title": "Detail",
+            "description": "Thông báo lỗi",
+            "examples": [
+              "Không tìm thấy địa điểm 'xyz'"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "detail"
+        ],
+        "title": "ErrorResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HazardAlertOut": {
+        "properties": {
+          "hazard": {
+            "type": "string",
+            "title": "Hazard",
+            "description": "Tên nhóm hiểm họa",
+            "examples": [
+              "Lũ quét & Sạt lở"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": [
+              "Green",
+              "Yellow",
+              "Orange",
+              "Red"
+            ],
+            "title": "Level",
+            "description": "Mức cảnh báo của hiểm họa"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Mô tả chi tiết + khuyến cáo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "hazard",
+          "level",
+          "description"
+        ],
+        "title": "HazardAlertOut"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "examples": [
+              "ok"
+            ]
+          },
+          "records": {
+            "type": "integer",
+            "title": "Records",
+            "description": "Số bản ghi cảnh báo đang có",
+            "examples": [
+              21
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "status",
+          "records"
+        ],
+        "title": "HealthResponse"
+      },
+      "LocationOut": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Mã định danh huyện",
+            "examples": [
+              "muong_nhe"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Tên huyện",
+            "examples": [
+              "Huyện Mường Nhé"
+            ]
+          },
+          "lat": {
+            "type": "number",
+            "title": "Lat",
+            "description": "Vĩ độ",
+            "examples": [
+              22.1989
+            ]
+          },
+          "lon": {
+            "type": "number",
+            "title": "Lon",
+            "description": "Kinh độ",
+            "examples": [
+              102.4481
+            ]
+          },
+          "real_elevation": {
+            "type": "integer",
+            "title": "Real Elevation",
+            "description": "Độ cao thực tế (m) — dùng để hạ độ phân giải nhiệt độ",
+            "examples": [
+              900
+            ]
+          },
+          "landslide_risk_factor": {
+            "type": "number",
+            "title": "Landslide Risk Factor",
+            "description": "Hệ số rủi ro sạt lở riêng của huyện",
+            "examples": [
+              1.2
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "lat",
+          "lon",
+          "real_elevation",
+          "landslide_risk_factor"
+        ],
+        "title": "LocationOut"
+      },
+      "LoudspeakerChannel": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type",
+            "examples": [
+              "village_loudspeaker_webhook"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "title": "To"
+          },
+          "instructions": {
+            "type": "string",
+            "title": "Instructions",
+            "examples": [
+              "Phát 3 lần liên tiếp, ưu tiên giờ cao điểm sáng/chiều"
+            ]
+          },
+          "audio": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "propertyNames": {
+              "enum": [
+                "vi",
+                "thai",
+                "hmong"
+              ]
+            },
+            "type": "object",
+            "title": "Audio",
+            "description": "URL audio theo 3 ngôn ngữ"
+          },
+          "has_translation": {
+            "type": "boolean",
+            "title": "Has Translation"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "to",
+          "instructions",
+          "audio",
+          "has_translation"
+        ],
+        "title": "LoudspeakerChannel"
+      },
+      "SmsChannel": {
+        "properties": {
+          "to": {
+            "type": "string",
+            "title": "To",
+            "examples": [
+              "Hộ dân đã đăng ký (mô phỏng)"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "description": "Nội dung SMS ngắn có mã cảnh báo emoji"
+          },
+          "length": {
+            "type": "integer",
+            "title": "Length",
+            "description": "Số ký tự",
+            "examples": [
+              144
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "to",
+          "text",
+          "length"
+        ],
+        "title": "SmsChannel"
+      },
+      "SummaryResponse": {
+        "properties": {
+          "districts": {
+            "items": {
+              "$ref": "#/components/schemas/DistrictSummary"
+            },
+            "type": "array",
+            "title": "Districts",
+            "description": "Mức cảnh báo hiện tại theo từng huyện (tô màu bản đồ)"
+          },
+          "counts": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "propertyNames": {
+              "enum": [
+                "Green",
+                "Yellow",
+                "Orange",
+                "Red"
+              ]
+            },
+            "type": "object",
+            "title": "Counts",
+            "description": "Số huyện theo từng mức cảnh báo"
+          }
+        },
+        "type": "object",
+        "required": [
+          "districts",
+          "counts"
+        ],
+        "title": "SummaryResponse",
+        "example": {
+          "counts": {
+            "Green": 0,
+            "Orange": 2,
+            "Red": 1,
+            "Yellow": 0
+          },
+          "districts": [
+            {
+              "elevation": 900,
+              "highest_alert_level": "Red",
+              "latitude": 22.1989,
+              "level_label": "Cực kỳ nguy hiểm",
+              "location": "Huyện Mường Nhé",
+              "location_id": "muong_nhe",
+              "longitude": 102.4481
+            }
+          ]
+        }
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WeatherSummary": {
+        "properties": {
+          "min_temp": {
+            "type": "number",
+            "title": "Min Temp",
+            "description": "Nhiệt độ thấp nhất đã hiệu chỉnh (°C)",
+            "examples": [
+              21.0
+            ]
+          },
+          "max_temp": {
+            "type": "number",
+            "title": "Max Temp",
+            "description": "Nhiệt độ cao nhất đã hiệu chỉnh (°C)",
+            "examples": [
+              28.5
+            ]
+          },
+          "total_rain": {
+            "type": "number",
+            "title": "Total Rain",
+            "description": "Tổng lượng mưa 24h (mm)",
+            "examples": [
+              59.5
+            ]
+          },
+          "max_rain_1h": {
+            "type": "number",
+            "title": "Max Rain 1H",
+            "description": "Cường độ mưa lớn nhất trong 1h (mm)",
+            "examples": [
+              12.0
+            ]
+          },
+          "max_wind_gust": {
+            "type": "number",
+            "title": "Max Wind Gust",
+            "description": "Gió giật mạnh nhất (km/h)",
+            "examples": [
+              19.8
+            ]
+          },
+          "max_cape": {
+            "type": "number",
+            "title": "Max Cape",
+            "description": "CAPE lớn nhất (J/kg) — chỉ số đối lưu",
+            "examples": [
+              1620.0
+            ]
+          },
+          "min_visibility": {
+            "type": "number",
+            "title": "Min Visibility",
+            "description": "Tầm nhìn xa thấp nhất (m)",
+            "examples": [
+              800.0
+            ]
+          },
+          "deep_soil_moisture": {
+            "type": "number",
+            "title": "Deep Soil Moisture",
+            "description": "Độ ẩm đất tầng sâu 27–81cm (m³/m³)",
+            "examples": [
+              0.42
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "min_temp",
+          "max_temp",
+          "total_rain",
+          "max_rain_1h",
+          "max_wind_gust",
+          "max_cape",
+          "min_visibility",
+          "deep_soil_moisture"
+        ],
+        "title": "WeatherSummary"
+      },
+      "ZaloChannel": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type",
+            "examples": [
+              "zalo_oa_notification"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "title": "To"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subtitle": {
+            "type": "string",
+            "title": "Subtitle"
+          },
+          "body": {
+            "type": "string",
+            "title": "Body",
+            "description": "Bản tin tiếng Việt"
+          },
+          "audio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Audio",
+            "description": "URL audio tiếng Việt (nếu có)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type",
+          "to",
+          "title",
+          "subtitle",
+          "body"
+        ],
+        "title": "ZaloChannel"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Địa điểm",
+      "description": "Danh mục huyện được giám sát và toạ độ."
+    },
+    {
+      "name": "Cảnh báo",
+      "description": "Tổng quan mức cảnh báo và danh sách cảnh báo đang hiệu lực."
+    },
+    {
+      "name": "Dự báo",
+      "description": "Chuỗi dự báo 3–7 ngày theo huyện."
+    },
+    {
+      "name": "Phân phối",
+      "description": "Mô phỏng gửi cảnh báo qua SMS / Zalo OA / loa phát thanh (không gửi thật)."
+    },
+    {
+      "name": "Hệ thống",
+      "description": "Kiểm tra tình trạng dịch vụ."
+    }
+  ]
+}

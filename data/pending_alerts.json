@@ -1,0 +1,733 @@
+[
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-18",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.5,
+      "max_temp": 25.9,
+      "total_rain": 22.1,
+      "max_rain_1h": 7.2,
+      "max_wind_gust": 20.5,
+      "max_cape": 2110.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.37
+    },
+    "alerts": [
+      {
+        "hazard": "Mưa lớn & Ngập úng",
+        "level": "Yellow",
+        "description": "Chú ý mưa lớn tích lũy diện rộng gây trơn trượt (Điểm: 39.1)."
+      },
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 61.8). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 77.5). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-19",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.5,
+      "max_temp": 25.8,
+      "total_rain": 16.7,
+      "max_rain_1h": 2.3,
+      "max_wind_gust": 14.8,
+      "max_cape": 2120.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.37
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 56.0). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 84.8). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-20",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.3,
+      "max_temp": 25.1,
+      "total_rain": 16.1,
+      "max_rain_1h": 1.8,
+      "max_wind_gust": 18.7,
+      "max_cape": 1520.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 56.6). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 72.9). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-21",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.3,
+      "max_temp": 29.8,
+      "total_rain": 3.2,
+      "max_rain_1h": 0.8,
+      "max_wind_gust": 18.4,
+      "max_cape": 2860.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 41.8). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 89.6). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-22",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 19.8,
+      "max_temp": 29.0,
+      "total_rain": 4.3,
+      "max_rain_1h": 2.3,
+      "max_wind_gust": 22.3,
+      "max_cape": 2560.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 42.1). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 89.4). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-23",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 20.3,
+      "max_temp": 28.7,
+      "total_rain": 23.4,
+      "max_rain_1h": 2.3,
+      "max_wind_gust": 22.0,
+      "max_cape": 2800.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 64.2). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 89.7). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Nhé",
+    "location_id": "muong_nhe",
+    "latitude": 22.1989,
+    "longitude": 102.4481,
+    "elevation": 900,
+    "date": "2026-07-24",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 20.4,
+      "max_temp": 25.8,
+      "total_rain": 30.1,
+      "max_rain_1h": 2.3,
+      "max_wind_gust": 27.7,
+      "max_cape": 1770.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Orange",
+        "description": "Đất đồi dốc ngậm nhiều nước, liên kết yếu (Điểm: 70.0). Đề phòng sạt trượt đất taluy đường sườn núi."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 81.4). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-18",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.2,
+      "max_temp": 26.8,
+      "total_rain": 8.9,
+      "max_rain_1h": 1.1,
+      "max_wind_gust": 27.7,
+      "max_cape": 750.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.4
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 44.9). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Yellow",
+        "description": "Chú ý mưa dông kèm sấm sét cục bộ vào chiều tối (Điểm: 61.6)."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-19",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.0,
+      "max_temp": 25.3,
+      "total_rain": 17.3,
+      "max_rain_1h": 2.4,
+      "max_wind_gust": 19.4,
+      "max_cape": 1590.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.39
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 52.5). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 80.5). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-20",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.5,
+      "max_temp": 25.5,
+      "total_rain": 17.6,
+      "max_rain_1h": 2.5,
+      "max_wind_gust": 19.8,
+      "max_cape": 1780.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.39
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 51.6). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 77.8). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-21",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.6,
+      "max_temp": 30.2,
+      "total_rain": 1.4,
+      "max_rain_1h": 0.3,
+      "max_wind_gust": 19.1,
+      "max_cape": 1470.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.39
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 84.3). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-22",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.4,
+      "max_temp": 29.7,
+      "total_rain": 12.6,
+      "max_rain_1h": 3.3,
+      "max_wind_gust": 18.7,
+      "max_cape": 2260.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 44.3). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 86.9). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-23",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.5,
+      "max_temp": 29.6,
+      "total_rain": 25.2,
+      "max_rain_1h": 3.2,
+      "max_wind_gust": 17.6,
+      "max_cape": 1460.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 57.0). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 78.4). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Mường Chà",
+    "location_id": "muong_cha",
+    "latitude": 21.7278,
+    "longitude": 103.0803,
+    "elevation": 650,
+    "date": "2026-07-24",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.5,
+      "max_temp": 28.4,
+      "total_rain": 14.1,
+      "max_rain_1h": 1.9,
+      "max_wind_gust": 19.8,
+      "max_cape": 1710.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 45.0). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 81.4). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-18",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.7,
+      "max_temp": 28.1,
+      "total_rain": 3.9,
+      "max_rain_1h": 0.5,
+      "max_wind_gust": 29.9,
+      "max_cape": 520.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.39
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Yellow",
+        "description": "Chú ý mưa dông kèm sấm sét cục bộ vào chiều tối (Điểm: 56.4)."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-19",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.8,
+      "max_temp": 27.0,
+      "total_rain": 21.7,
+      "max_rain_1h": 2.7,
+      "max_wind_gust": 20.5,
+      "max_cape": 1280.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 46.2). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 73.8). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-20",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.8,
+      "max_temp": 27.7,
+      "total_rain": 18.6,
+      "max_rain_1h": 5.6,
+      "max_wind_gust": 25.2,
+      "max_cape": 1670.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Lũ quét & Sạt lở",
+        "level": "Yellow",
+        "description": "Đất ẩm ướt nhão (Điểm: 42.5). Đề phòng sạt lở cục bộ ở các vị trí dốc đứng khi mưa tiếp tục kéo dài."
+      },
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 77.0). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-21",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 22.3,
+      "max_temp": 30.3,
+      "total_rain": 1.3,
+      "max_rain_1h": 0.2,
+      "max_wind_gust": 19.4,
+      "max_cape": 1140.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.38
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 73.3). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-22",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.6,
+      "max_temp": 30.2,
+      "total_rain": 8.3,
+      "max_rain_1h": 2.3,
+      "max_wind_gust": 15.8,
+      "max_cape": 2350.0,
+      "min_visibility": 300.0,
+      "deep_soil_moisture": 0.37
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 87.1). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Orange",
+        "description": "Sương mù dày hạn chế tầm nhìn dưới 500m (Điểm sương mù: 75.0). Bật đèn sương mù và đi chậm trên các tuyến đèo."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-23",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.7,
+      "max_temp": 28.9,
+      "total_rain": 9.5,
+      "max_rain_1h": 1.3,
+      "max_wind_gust": 23.8,
+      "max_cape": 1980.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.37
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Red",
+        "description": "Khí quyển cực kỳ bất ổn định đối lưu mạnh (Điểm: 85.9). Nguy cơ cực cao xảy ra sét đánh dữ dội và gió lốc phá hoại mái nhà."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  },
+  {
+    "location": "Huyện Tuần Giáo",
+    "location_id": "tuan_giao",
+    "latitude": 21.5928,
+    "longitude": 103.4092,
+    "elevation": 570,
+    "date": "2026-07-24",
+    "expert_status": "Pending",
+    "weather_summary": {
+      "min_temp": 21.6,
+      "max_temp": 29.1,
+      "total_rain": 10.5,
+      "max_rain_1h": 1.4,
+      "max_wind_gust": 21.6,
+      "max_cape": 1790.0,
+      "min_visibility": 150.0,
+      "deep_soil_moisture": 0.37
+    },
+    "alerts": [
+      {
+        "hazard": "Dông, lốc, sét",
+        "level": "Orange",
+        "description": "Mây đối lưu dông phát triển mạnh kèm gió giật lớn (Điểm: 79.1). Đề phòng dông lốc mạnh đột ngột."
+      },
+      {
+        "hazard": "Sương mù dày đặc",
+        "level": "Red",
+        "description": "Sương mù đặc biệt dày đặc hạn chế tầm nhìn dưới 200m (Điểm sương mù: 85.6). Giao thông trên đèo cực kỳ nguy hiểm."
+      }
+    ]
+  }
+]

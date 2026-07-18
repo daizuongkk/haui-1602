@@ -1,0 +1,46 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# ===== Node / Frontend =====
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# ===== Bí mật & môi trường =====
+.env
+.env.*
+!.env.example
+
+# ===== Cơ sở dữ liệu =====
+*.db
+
+# ===== Công cụ Claude Code / plugin (không thuộc dự án) =====
+.claude/
+.agents/
+skills-lock.json
+
+# ===== Hệ điều hành =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+*.swp
+*~
+
+# ===== Log & tạm =====
+*.log
+tmp/
+
+# Runtime SQLite state (seed/generate on demand)
+data/app.db

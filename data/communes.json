@@ -1,0 +1,32 @@
+[
+  {
+    "id": "muong_nhe",
+    "name": "Huyện Mường Nhé",
+    "district_id": "muong_nhe",
+    "district_name": "Huyện Mường Nhé",
+    "lat": 22.1989,
+    "lon": 102.4481,
+    "real_elevation": 900,
+    "landslide_risk_factor": 1.2
+  },
+  {
+    "id": "muong_cha",
+    "name": "Huyện Mường Chà",
+    "district_id": "muong_cha",
+    "district_name": "Huyện Mường Chà",
+    "lat": 21.7278,
+    "lon": 103.0803,
+    "real_elevation": 650,
+    "landslide_risk_factor": 1.1
+  },
+  {
+    "id": "tuan_giao",
+    "name": "Huyện Tuần Giáo",
+    "district_id": "tuan_giao",
+    "district_name": "Huyện Tuần Giáo",
+    "lat": 21.5928,
+    "lon": 103.4092,
+    "real_elevation": 570,
+    "landslide_risk_factor": 1.0
+  }
+]

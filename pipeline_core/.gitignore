@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Databases (Local SQLite files)
+voai_database.db
+
+# Generated weather warning JSON outputs (Local runs)
+pending_alerts.json
+active_alerts.json
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# OS/IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
