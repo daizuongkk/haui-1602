@@ -1,0 +1,505 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v26.1.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\My Project\haui-1602\.npmrc
+5 silly config load:file:C:\Users\Admin\.npmrc
+6 silly config load:file:C:\Users\Admin\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_37_22_300Z-
+10 verbose logfile D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_37_22_300Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4395630592 maxSize:1098907648 maxEntrySize:549453824
+13 silly idealTree buildDeps
+14 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\acorn-loose' ]
+15 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\acorn-import-phases' ]
+16 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\aria-query' ]
+17 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array-includes' ]
+18 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\acorn' ]
+19 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlast' ]
+20 silly reify mark retired [
+20 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlastindex'
+20 silly reify ]
+21 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array-buffer-byte-length' ]
+22 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flatmap' ]
+23 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.tosorted' ]
+24 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\ast-types-flow' ]
+25 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\async-function' ]
+26 silly reify mark retired [
+26 silly reify   'D:\\My Project\\haui-1602\\node_modules\\arraybuffer.prototype.slice'
+26 silly reify ]
+27 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\axe-core' ]
+28 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\base64-js' ]
+29 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\baseline-browser-mapping' ]
+30 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\axobject-query' ]
+31 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\blake3-wasm' ]
+32 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\browserslist' ]
+33 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\camelize' ]
+34 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\caniuse-lite' ]
+35 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flat' ]
+36 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\client-only' ]
+37 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-background-parser' ]
+38 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-box-shadow' ]
+39 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-color-keywords' ]
+40 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-gradient-parser' ]
+41 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\damerau-levenshtein' ]
+42 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-buffer' ]
+43 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-length' ]
+44 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-to-react-native' ]
+45 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-offset' ]
+46 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\define-properties' ]
+47 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\drizzle-kit' ]
+48 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\doctrine' ]
+49 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\drizzle-orm' ]
+50 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\electron-to-chromium' ]
+51 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\emoji-regex-xs' ]
+52 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-abstract' ]
+53 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-iterator-helpers' ]
+54 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-module-lexer' ]
+55 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-shim-unscopables' ]
+56 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\error-stack-parser-es' ]
+57 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\esbuild' ]
+58 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint' ]
+59 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-config-next' ]
+60 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-to-primitive' ]
+61 silly reify mark retired [
+61 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-typescript'
+61 silly reify ]
+62 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-module-utils' ]
+63 silly reify mark retired [
+63 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-node'
+63 silly reify ]
+64 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-import' ]
+65 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-jsx-a11y' ]
+66 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-react' ]
+67 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\estree-walker' ]
+68 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\fast-glob' ]
+69 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\fflate' ]
+70 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\function.prototype.name' ]
+71 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\functions-have-names' ]
+72 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\get-symbol-description' ]
+73 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\get-tsconfig' ]
+74 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\globalthis' ]
+75 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\globrex' ]
+76 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\has-bigints' ]
+77 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\has-proto' ]
+78 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\hex-rgb' ]
+79 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\image-size' ]
+80 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\internal-slot' ]
+81 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-array-buffer' ]
+82 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-async-function' ]
+83 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-bigint' ]
+84 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-boolean-object' ]
+85 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-bun-module' ]
+86 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-data-view' ]
+87 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-finalizationregistry' ]
+88 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-map' ]
+89 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-negative-zero' ]
+90 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-number-object' ]
+91 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-shared-array-buffer' ]
+92 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-string' ]
+93 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-symbol' ]
+94 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakmap' ]
+95 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-set' ]
+96 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakref' ]
+97 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakset' ]
+98 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\iterator.prototype' ]
+99 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\isarray' ]
+100 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\jiti' ]
+101 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\js-yaml' ]
+102 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\jsesc' ]
+103 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\json5' ]
+104 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\language-subtag-registry' ]
+105 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\jsx-ast-utils' ]
+106 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\language-tags' ]
+107 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\lightningcss' ]
+108 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\linebreak' ]
+109 silly reify mark retired [
+109 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss-win32-x64-msvc'
+109 silly reify ]
+110 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\loose-envify' ]
+111 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\miniflare' ]
+112 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\nanoid' ]
+113 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\napi-postinstall' ]
+114 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\next' ]
+115 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\node-exports-info' ]
+116 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object-keys' ]
+117 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.assign' ]
+118 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.entries' ]
+119 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.fromentries' ]
+120 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.groupby' ]
+121 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.values' ]
+122 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\own-keys' ]
+123 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\pako' ]
+124 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\parse-css-color' ]
+125 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\postcss-value-parser' ]
+126 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\react-server-dom-webpack' ]
+127 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\reflect.getprototypeof' ]
+128 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\regexp.prototype.flags' ]
+129 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\react-loading-skeleton' ]
+130 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\resolve' ]
+131 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\rolldown' ]
+132 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\resolve-pkg-maps' ]
+133 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\safe-push-apply' ]
+134 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\safe-array-concat' ]
+135 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\satori' ]
+136 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\semver' ]
+137 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\set-function-name' ]
+138 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\sharp' ]
+139 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\set-proto' ]
+140 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\srvx' ]
+141 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\stable-hash' ]
+142 silly reify mark retired [
+142 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.codepointat'
+142 silly reify ]
+143 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\stop-iteration-iterator' ]
+144 silly reify mark retired [
+144 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.matchall'
+144 silly reify ]
+145 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.repeat' ]
+146 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimend' ]
+147 silly reify mark retired [
+147 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.includes'
+147 silly reify ]
+148 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trim' ]
+149 silly reify mark retired [
+149 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimstart'
+149 silly reify ]
+150 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\styled-jsx' ]
+151 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tailwindcss' ]
+152 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\strip-literal' ]
+153 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\terser' ]
+154 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\terser-webpack-plugin' ]
+155 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tiny-inflate' ]
+156 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsconfck' ]
+157 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsconfig-paths' ]
+158 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\turbo-stream' ]
+159 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-buffer' ]
+160 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-length' ]
+161 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsx' ]
+162 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-offset' ]
+163 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-length' ]
+164 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unbox-primitive' ]
+165 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typescript' ]
+166 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\undici' ]
+167 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unicode-trie' ]
+168 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unrs-resolver' ]
+169 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unenv' ]
+170 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unpic' ]
+171 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\update-browserslist-db' ]
+172 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-commonjs' ]
+173 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vinext' ]
+174 silly reify mark retired [
+174 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-dynamic-import'
+174 silly reify ]
+175 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vitefu' ]
+176 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vite' ]
+177 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vite-tsconfig-paths' ]
+178 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\webpack' ]
+179 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\web-vitals' ]
+180 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which' ]
+181 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-boxed-primitive' ]
+182 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-builtin-type' ]
+183 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-collection' ]
+184 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\workerd' ]
+185 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\wrangler' ]
+186 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\yoga-layout' ]
+187 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\youch-core' ]
+188 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\youch' ]
+189 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@alloc\\quick-lru' ]
+190 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\brocli' ]
+191 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\ws' ]
+192 silly reify mark retired [
+192 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\kv-asset-handler'
+192 silly reify ]
+193 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@babel\\parser' ]
+194 silly reify mark retired [
+194 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\unenv-preset'
+194 silly reify ]
+195 silly reify mark retired [
+195 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\workerd-windows-64'
+195 silly reify ]
+196 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\vite-plugin' ]
+197 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\win32-x64' ]
+198 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\esm-loader' ]
+199 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\core-utils' ]
+200 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@img\\colour' ]
+201 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@next\\env' ]
+202 silly reify mark retired [
+202 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\eslint-plugin-next'
+202 silly reify ]
+203 silly reify mark retired [
+203 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\swc-win32-x64-msvc'
+203 silly reify ]
+204 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@img\\sharp-win32-x64' ]
+205 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\dumper' ]
+206 silly reify mark retired [
+206 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\is-core-module'
+206 silly reify ]
+207 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\colors' ]
+208 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\exception' ]
+209 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\scc' ]
+210 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\is' ]
+211 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\core' ]
+212 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@resvg\\resvg-wasm' ]
+213 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@shuding\\opentype.js' ]
+214 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@swc\\helpers' ]
+215 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\node' ]
+216 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide' ]
+217 silly reify mark retired [
+217 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc'
+217 silly reify ]
+218 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\postcss' ]
+219 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@types\\json5' ]
+220 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@types\\node' ]
+221 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\core' ]
+222 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\react' ]
+223 silly reify mark retired [
+223 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unrs\\resolver-binding-win32-x64-msvc'
+223 silly reify ]
+224 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@vercel\\og' ]
+225 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\plugin-rsc' ]
+226 silly reify mark retired [
+226 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver'
+226 silly reify ]
+227 silly reify moves {
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn-loose': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-loose-gckeAV6Y',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn-import-phases': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-import-phases-3H192pQ2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\aria-query': 'D:\\My Project\\haui-1602\\node_modules\\.aria-query-geCJ6UyK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array-includes': 'D:\\My Project\\haui-1602\\node_modules\\.array-includes-3Vku7yAQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-IEXRuSeB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlast': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.findlast-G4hHj25F',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlastindex': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.findlastindex-zyse1rGJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array-buffer-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.array-buffer-byte-length-FCngkLds',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flatmap': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.flatmap-NxAsiiar',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.tosorted': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.tosorted-3swau2QF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\ast-types-flow': 'D:\\My Project\\haui-1602\\node_modules\\.ast-types-flow-s69XUrQ3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\async-function': 'D:\\My Project\\haui-1602\\node_modules\\.async-function-6P84BUWx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\arraybuffer.prototype.slice': 'D:\\My Project\\haui-1602\\node_modules\\.arraybuffer.prototype.slice-GJS5vN9J',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\axe-core': 'D:\\My Project\\haui-1602\\node_modules\\.axe-core-oEt4LnBh',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\base64-js': 'D:\\My Project\\haui-1602\\node_modules\\.base64-js-sSFkKEzK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\baseline-browser-mapping': 'D:\\My Project\\haui-1602\\node_modules\\.baseline-browser-mapping-L5nHaxx2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\axobject-query': 'D:\\My Project\\haui-1602\\node_modules\\.axobject-query-Yw6eC4DS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\blake3-wasm': 'D:\\My Project\\haui-1602\\node_modules\\.blake3-wasm-FAVEs18X',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\browserslist': 'D:\\My Project\\haui-1602\\node_modules\\.browserslist-49yQbZZr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\camelize': 'D:\\My Project\\haui-1602\\node_modules\\.camelize-2yrZecdj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\caniuse-lite': 'D:\\My Project\\haui-1602\\node_modules\\.caniuse-lite-rpsVZxgm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flat': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.flat-PyzLQqXc',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\client-only': 'D:\\My Project\\haui-1602\\node_modules\\.client-only-bwngD96d',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-background-parser': 'D:\\My Project\\haui-1602\\node_modules\\.css-background-parser-6TrpaP1n',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-box-shadow': 'D:\\My Project\\haui-1602\\node_modules\\.css-box-shadow-LSx1BIJP',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-color-keywords': 'D:\\My Project\\haui-1602\\node_modules\\.css-color-keywords-b00aDmpP',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-gradient-parser': 'D:\\My Project\\haui-1602\\node_modules\\.css-gradient-parser-OzEoMeFU',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\damerau-levenshtein': 'D:\\My Project\\haui-1602\\node_modules\\.damerau-levenshtein-25ZgIHyz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-buffer-0vVo2ZcW',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-byte-length-5LBSLulB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-to-react-native': 'D:\\My Project\\haui-1602\\node_modules\\.css-to-react-native-9i7vgmFJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-offset': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-byte-offset-EmhLaXW3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\define-properties': 'D:\\My Project\\haui-1602\\node_modules\\.define-properties-g4IQQBV5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\drizzle-kit': 'D:\\My Project\\haui-1602\\node_modules\\.drizzle-kit-E48sSWbT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\doctrine': 'D:\\My Project\\haui-1602\\node_modules\\.doctrine-QmdgTRBN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\drizzle-orm': 'D:\\My Project\\haui-1602\\node_modules\\.drizzle-orm-QNwVZ6TH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\electron-to-chromium': 'D:\\My Project\\haui-1602\\node_modules\\.electron-to-chromium-wTogtCYW',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\emoji-regex-xs': 'D:\\My Project\\haui-1602\\node_modules\\.emoji-regex-xs-DSS6sHRZ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-abstract': 'D:\\My Project\\haui-1602\\node_modules\\.es-abstract-YypY3xah',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-iterator-helpers': 'D:\\My Project\\haui-1602\\node_modules\\.es-iterator-helpers-5XMBhft1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-module-lexer': 'D:\\My Project\\haui-1602\\node_modules\\.es-module-lexer-ymtM3IPf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-shim-unscopables': 'D:\\My Project\\haui-1602\\node_modules\\.es-shim-unscopables-AMwyuY53',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\error-stack-parser-es': 'D:\\My Project\\haui-1602\\node_modules\\.error-stack-parser-es-OPJlesz9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\esbuild': 'D:\\My Project\\haui-1602\\node_modules\\.esbuild-Wupzt1DM',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-gkqH3QvJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-config-next': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-config-next-3TFlLcDK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-to-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.es-to-primitive-sVAkWQFQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-typescript': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-import-resolver-typescript-lBCbKCOx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-module-utils': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-module-utils-BHQYLget',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-node': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-import-resolver-node-tFFyZLH3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-import': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-import-mptuoU6y',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-jsx-a11y': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-jsx-a11y-Z4Knn0I0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-react': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-react-UlIH3Xik',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\estree-walker': 'D:\\My Project\\haui-1602\\node_modules\\.estree-walker-k9DAgI5V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\fast-glob': 'D:\\My Project\\haui-1602\\node_modules\\.fast-glob-c956t7dY',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\fflate': 'D:\\My Project\\haui-1602\\node_modules\\.fflate-DPvMDF5M',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\function.prototype.name': 'D:\\My Project\\haui-1602\\node_modules\\.function.prototype.name-4oh9uclf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\functions-have-names': 'D:\\My Project\\haui-1602\\node_modules\\.functions-have-names-uhaGPsEr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\get-symbol-description': 'D:\\My Project\\haui-1602\\node_modules\\.get-symbol-description-Om3G8daI',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\get-tsconfig': 'D:\\My Project\\haui-1602\\node_modules\\.get-tsconfig-7FFqBb2Q',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\globalthis': 'D:\\My Project\\haui-1602\\node_modules\\.globalthis-tC4s9vJj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\globrex': 'D:\\My Project\\haui-1602\\node_modules\\.globrex-KpuyqBCK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\has-bigints': 'D:\\My Project\\haui-1602\\node_modules\\.has-bigints-ZvRCLe3H',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\has-proto': 'D:\\My Project\\haui-1602\\node_modules\\.has-proto-dVk5xI8w',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\hex-rgb': 'D:\\My Project\\haui-1602\\node_modules\\.hex-rgb-wukElRKG',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\image-size': 'D:\\My Project\\haui-1602\\node_modules\\.image-size-pcOex8cS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\internal-slot': 'D:\\My Project\\haui-1602\\node_modules\\.internal-slot-l6MTtq6k',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.is-array-buffer-W6ht3vg1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-async-function': 'D:\\My Project\\haui-1602\\node_modules\\.is-async-function-ZurrDBqT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-bigint': 'D:\\My Project\\haui-1602\\node_modules\\.is-bigint-GqmBLVwX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-boolean-object': 'D:\\My Project\\haui-1602\\node_modules\\.is-boolean-object-y3V7NkiF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-bun-module': 'D:\\My Project\\haui-1602\\node_modules\\.is-bun-module-2YYLITCJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-data-view': 'D:\\My Project\\haui-1602\\node_modules\\.is-data-view-uBZPnz7v',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-finalizationregistry': 'D:\\My Project\\haui-1602\\node_modules\\.is-finalizationregistry-hOhrSHNe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-map': 'D:\\My Project\\haui-1602\\node_modules\\.is-map-dqS1rv0I',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-negative-zero': 'D:\\My Project\\haui-1602\\node_modules\\.is-negative-zero-23244oFg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-number-object': 'D:\\My Project\\haui-1602\\node_modules\\.is-number-object-td0kXsmS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-shared-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.is-shared-array-buffer-IcxiHFjy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-string': 'D:\\My Project\\haui-1602\\node_modules\\.is-string-ACA0fGdj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-symbol': 'D:\\My Project\\haui-1602\\node_modules\\.is-symbol-16KGGUs5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakmap': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakmap-Yi2jiqvg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-set': 'D:\\My Project\\haui-1602\\node_modules\\.is-set-ngT2iGSY',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakref': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakref-1HqpFVRy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakset': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakset-VuftHS2V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\iterator.prototype': 'D:\\My Project\\haui-1602\\node_modules\\.iterator.prototype-UWZG8HB9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\isarray': 'D:\\My Project\\haui-1602\\node_modules\\.isarray-yZZozvuA',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jiti': 'D:\\My Project\\haui-1602\\node_modules\\.jiti-2dQGnSPH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\js-yaml': 'D:\\My Project\\haui-1602\\node_modules\\.js-yaml-4GM4uDRK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jsesc': 'D:\\My Project\\haui-1602\\node_modules\\.jsesc-nhdGUKhT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\json5': 'D:\\My Project\\haui-1602\\node_modules\\.json5-qihIBaPE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\language-subtag-registry': 'D:\\My Project\\haui-1602\\node_modules\\.language-subtag-registry-RmVsP99l',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jsx-ast-utils': 'D:\\My Project\\haui-1602\\node_modules\\.jsx-ast-utils-jPjtY3r3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\language-tags': 'D:\\My Project\\haui-1602\\node_modules\\.language-tags-8bNI1Eer',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss': 'D:\\My Project\\haui-1602\\node_modules\\.lightningcss-xvtESW6D',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\linebreak': 'D:\\My Project\\haui-1602\\node_modules\\.linebreak-4qJAZw1t',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\.lightningcss-win32-x64-msvc-ecFd40KE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\loose-envify': 'D:\\My Project\\haui-1602\\node_modules\\.loose-envify-WzUnc0qH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\miniflare': 'D:\\My Project\\haui-1602\\node_modules\\.miniflare-299wRgQQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\nanoid': 'D:\\My Project\\haui-1602\\node_modules\\.nanoid-Bf3HCW5o',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\napi-postinstall': 'D:\\My Project\\haui-1602\\node_modules\\.napi-postinstall-83LskEMF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\next': 'D:\\My Project\\haui-1602\\node_modules\\.next-IZs08TAe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\node-exports-info': 'D:\\My Project\\haui-1602\\node_modules\\.node-exports-info-y3l3dEzH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object-keys': 'D:\\My Project\\haui-1602\\node_modules\\.object-keys-ZbPidYW5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.assign': 'D:\\My Project\\haui-1602\\node_modules\\.object.assign-ACe2gFek',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.entries': 'D:\\My Project\\haui-1602\\node_modules\\.object.entries-K9XCNTTX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.fromentries': 'D:\\My Project\\haui-1602\\node_modules\\.object.fromentries-ZtnM3V1h',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.groupby': 'D:\\My Project\\haui-1602\\node_modules\\.object.groupby-xWqWaD3K',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.values': 'D:\\My Project\\haui-1602\\node_modules\\.object.values-FNTG1FHV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\own-keys': 'D:\\My Project\\haui-1602\\node_modules\\.own-keys-6TYZcSHB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\pako': 'D:\\My Project\\haui-1602\\node_modules\\.pako-yN978GJT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\parse-css-color': 'D:\\My Project\\haui-1602\\node_modules\\.parse-css-color-pJx6Xg51',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\postcss-value-parser': 'D:\\My Project\\haui-1602\\node_modules\\.postcss-value-parser-0J5wOk6N',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\react-server-dom-webpack': 'D:\\My Project\\haui-1602\\node_modules\\.react-server-dom-webpack-FTFb4iWe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\reflect.getprototypeof': 'D:\\My Project\\haui-1602\\node_modules\\.reflect.getprototypeof-tQ2aFSxk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\regexp.prototype.flags': 'D:\\My Project\\haui-1602\\node_modules\\.regexp.prototype.flags-AODzaN9J',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\react-loading-skeleton': 'D:\\My Project\\haui-1602\\node_modules\\.react-loading-skeleton-4CiyK1m1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\resolve': 'D:\\My Project\\haui-1602\\node_modules\\.resolve-D96nryCs',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\rolldown': 'D:\\My Project\\haui-1602\\node_modules\\.rolldown-btNz36IA',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\resolve-pkg-maps': 'D:\\My Project\\haui-1602\\node_modules\\.resolve-pkg-maps-3odc2D1H',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\safe-push-apply': 'D:\\My Project\\haui-1602\\node_modules\\.safe-push-apply-JE9Ptgx6',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\safe-array-concat': 'D:\\My Project\\haui-1602\\node_modules\\.safe-array-concat-Kvm89xBH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\satori': 'D:\\My Project\\haui-1602\\node_modules\\.satori-DcE8PVPT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\semver': 'D:\\My Project\\haui-1602\\node_modules\\.semver-X7Tfmhxj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\set-function-name': 'D:\\My Project\\haui-1602\\node_modules\\.set-function-name-UOU4faiK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\sharp': 'D:\\My Project\\haui-1602\\node_modules\\.sharp-bQQ1ALZF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\set-proto': 'D:\\My Project\\haui-1602\\node_modules\\.set-proto-3H4wLZ3W',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\srvx': 'D:\\My Project\\haui-1602\\node_modules\\.srvx-dIUbtEyu',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\stable-hash': 'D:\\My Project\\haui-1602\\node_modules\\.stable-hash-VerHrGbM',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.codepointat': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.codepointat-irlWT0eJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\stop-iteration-iterator': 'D:\\My Project\\haui-1602\\node_modules\\.stop-iteration-iterator-5w4WGARN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.matchall': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.matchall-X3HImLQy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.repeat': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.repeat-PCRfbuGj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimend': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trimend-oiMyqgBk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.includes': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.includes-nEwUbgXI',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trim': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trim-f9BQLkQx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimstart': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trimstart-ATMybjfO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\styled-jsx': 'D:\\My Project\\haui-1602\\node_modules\\.styled-jsx-AgpmZRxR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tailwindcss': 'D:\\My Project\\haui-1602\\node_modules\\.tailwindcss-hmanOQ3h',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\strip-literal': 'D:\\My Project\\haui-1602\\node_modules\\.strip-literal-CoimUycn',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\terser': 'D:\\My Project\\haui-1602\\node_modules\\.terser-oHOn2qGS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\terser-webpack-plugin': 'D:\\My Project\\haui-1602\\node_modules\\.terser-webpack-plugin-Q4Htjj6V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tiny-inflate': 'D:\\My Project\\haui-1602\\node_modules\\.tiny-inflate-BoqPVimH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsconfck': 'D:\\My Project\\haui-1602\\node_modules\\.tsconfck-AWQlJmul',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsconfig-paths': 'D:\\My Project\\haui-1602\\node_modules\\.tsconfig-paths-onCjV9e3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\turbo-stream': 'D:\\My Project\\haui-1602\\node_modules\\.turbo-stream-H1LB5Uo9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-buffer-pR18hcfh',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-byte-length-RlYInHFt',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsx': 'D:\\My Project\\haui-1602\\node_modules\\.tsx-ejZEj5tR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-offset': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-byte-offset-sPGyVZbx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-length': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-length-feofLvdy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unbox-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.unbox-primitive-0r1kZCOV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typescript': 'D:\\My Project\\haui-1602\\node_modules\\.typescript-SFwHfQ54',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\undici': 'D:\\My Project\\haui-1602\\node_modules\\.undici-E3lH2oJx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unicode-trie': 'D:\\My Project\\haui-1602\\node_modules\\.unicode-trie-XBCU28rf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unrs-resolver': 'D:\\My Project\\haui-1602\\node_modules\\.unrs-resolver-x29pCync',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unenv': 'D:\\My Project\\haui-1602\\node_modules\\.unenv-2XnRH12s',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unpic': 'D:\\My Project\\haui-1602\\node_modules\\.unpic-1wH5Fevx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\update-browserslist-db': 'D:\\My Project\\haui-1602\\node_modules\\.update-browserslist-db-FjXsNvvk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-commonjs': 'D:\\My Project\\haui-1602\\node_modules\\.vite-plugin-commonjs-ybXitk5r',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vinext': 'D:\\My Project\\haui-1602\\node_modules\\.vinext-1JAtVbRp',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-dynamic-import': 'D:\\My Project\\haui-1602\\node_modules\\.vite-plugin-dynamic-import-xVXC9mw9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vitefu': 'D:\\My Project\\haui-1602\\node_modules\\.vitefu-xKkeC39q',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite': 'D:\\My Project\\haui-1602\\node_modules\\.vite-OVeI1F42',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-tsconfig-paths': 'D:\\My Project\\haui-1602\\node_modules\\.vite-tsconfig-paths-VLeocL4g',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\webpack': 'D:\\My Project\\haui-1602\\node_modules\\.webpack-nnjgrf43',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\web-vitals': 'D:\\My Project\\haui-1602\\node_modules\\.web-vitals-og2XqZnr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which': 'D:\\My Project\\haui-1602\\node_modules\\.which-ES66GZn6',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-boxed-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.which-boxed-primitive-scHunEsv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-builtin-type': 'D:\\My Project\\haui-1602\\node_modules\\.which-builtin-type-EB1AWLKb',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-collection': 'D:\\My Project\\haui-1602\\node_modules\\.which-collection-m6AWtiR4',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\workerd': 'D:\\My Project\\haui-1602\\node_modules\\.workerd-tDMeoGaX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\wrangler': 'D:\\My Project\\haui-1602\\node_modules\\.wrangler-9PW9kfFF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\yoga-layout': 'D:\\My Project\\haui-1602\\node_modules\\.yoga-layout-E8Tw5jbb',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\youch-core': 'D:\\My Project\\haui-1602\\node_modules\\.youch-core-212ypudv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\youch': 'D:\\My Project\\haui-1602\\node_modules\\.youch-1SdBVbHs',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@alloc\\quick-lru': 'D:\\My Project\\haui-1602\\node_modules\\@alloc\\.quick-lru-QECyvaRm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\brocli': 'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\.brocli-hoqmNv5A',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\ws': 'D:\\My Project\\haui-1602\\node_modules\\.ws-Ym8hszPp',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\kv-asset-handler': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.kv-asset-handler-MlX5pwJ8',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@babel\\parser': 'D:\\My Project\\haui-1602\\node_modules\\@babel\\.parser-q9d8YQwk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\unenv-preset': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.unenv-preset-813mmJZK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\workerd-windows-64': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.workerd-windows-64-bPpPlbEN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\vite-plugin': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.vite-plugin-nctgePh2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\win32-x64': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\.win32-x64-s9OwslJm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\esm-loader': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\.esm-loader-rYGSS4aV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\core-utils': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\.core-utils-8gDYU1Ow',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@img\\colour': 'D:\\My Project\\haui-1602\\node_modules\\@img\\.colour-9reXdpRo',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\env': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.env-Ufgx2DCn',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\eslint-plugin-next': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.eslint-plugin-next-6u6yDFlE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\swc-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.swc-win32-x64-msvc-fH0q0yNu',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@img\\sharp-win32-x64': 'D:\\My Project\\haui-1602\\node_modules\\@img\\.sharp-win32-x64-R0dY00ub',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\dumper': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.dumper-I6t7I7Bv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\is-core-module': 'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\.is-core-module-sl4jxdjz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\colors': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.colors-2Emxyfgg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\exception': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.exception-j4ikOYzD',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\scc': 'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\.scc-VxOpIu15',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\is': 'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\.is-FZ1JfnS3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\core': 'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\.core-FlhrsTjO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@resvg\\resvg-wasm': 'D:\\My Project\\haui-1602\\node_modules\\@resvg\\.resvg-wasm-ICKQLYBU',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@shuding\\opentype.js': 'D:\\My Project\\haui-1602\\node_modules\\@shuding\\.opentype.js-Vyf7AjKT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@swc\\helpers': 'D:\\My Project\\haui-1602\\node_modules\\@swc\\.helpers-Qm7WVYFN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\node': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.node-lAadreLv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.oxide-KqIt6IWO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.oxide-win32-x64-msvc-Si7zQXrl',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\postcss': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.postcss-xKwUejWS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@types\\json5': 'D:\\My Project\\haui-1602\\node_modules\\@types\\.json5-rvyZQdI0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@types\\node': 'D:\\My Project\\haui-1602\\node_modules\\@types\\.node-G0QckDo7',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unpic\\core': 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\.core-TQBp2nkx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unpic\\react': 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\.react-z1U9Rm2W',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unrs\\resolver-binding-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@unrs\\.resolver-binding-win32-x64-msvc-gTgvW8UT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@vercel\\og': 'D:\\My Project\\haui-1602\\node_modules\\@vercel\\.og-Bf58Ndpz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\plugin-rsc': 'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\.plugin-rsc-oUod4nKR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver': 'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.semver-SgI6ig3o'
+227 silly reify }
+228 verbose stack Error: EPERM: operation not permitted, rmdir 'D:\My Project\haui-1602\node_modules\acorn-loose'
+229 error code EPERM
+230 error syscall rmdir
+231 error path D:\My Project\haui-1602\node_modules\acorn-loose
+232 error errno -4048
+233 error [Error: EPERM: operation not permitted, rmdir 'D:\My Project\haui-1602\node_modules\acorn-loose'] {
+233 error   errno: -4048,
+233 error   code: 'EPERM',
+233 error   syscall: 'rmdir',
+233 error   path: 'D:\\My Project\\haui-1602\\node_modules\\acorn-loose'
+233 error }
+234 error
+234 error The operation was rejected by your operating system.
+234 error It's possible that the file was already in use (by a text editor or antivirus), or that you lack permissions to access it.
+234 error
+234 error If you believe this might be a permissions issue, please double-check the permissions of the file and its containing directories, or try running the command again as root/Administrator.
+235 silly unfinished npm timer reify 1784284642871
+236 silly unfinished npm timer reify:retireShallow 1784284643107
+237 verbose cwd D:\My Project\haui-1602
+238 verbose os Windows_NT 10.0.26200
+239 verbose node v26.1.0
+240 verbose npm  v11.13.0
+241 verbose exit -4048
+242 verbose code -4048
+243 error A complete log of this run can be found in: D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_37_22_300Z-debug-0.log

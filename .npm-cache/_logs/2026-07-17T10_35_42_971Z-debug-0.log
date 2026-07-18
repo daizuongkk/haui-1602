@@ -1,0 +1,1731 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v26.1.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\My Project\haui-1602\.npmrc
+5 silly config load:file:C:\Users\Admin\.npmrc
+6 silly config load:file:C:\Users\Admin\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_35_42_971Z-
+10 verbose logfile D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_35_42_971Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4395630592 maxSize:1098907648 maxEntrySize:549453824
+13 silly idealTree buildDeps
+14 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\acorn-import-phases' ]
+15 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\acorn-loose' ]
+16 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\aria-query' ]
+17 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array-buffer-byte-length' ]
+18 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array-includes' ]
+19 silly reify mark retired [
+19 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlastindex'
+19 silly reify ]
+20 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlast' ]
+21 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flat' ]
+22 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flatmap' ]
+23 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\array.prototype.tosorted' ]
+24 silly reify mark retired [
+24 silly reify   'D:\\My Project\\haui-1602\\node_modules\\arraybuffer.prototype.slice'
+24 silly reify ]
+25 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\ast-types-flow' ]
+26 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\async-function' ]
+27 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\axe-core' ]
+28 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\axobject-query' ]
+29 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\base64-js' ]
+30 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\baseline-browser-mapping' ]
+31 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\blake3-wasm' ]
+32 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\camelize' ]
+33 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\caniuse-lite' ]
+34 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\client-only' ]
+35 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-background-parser' ]
+36 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-box-shadow' ]
+37 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-color-keywords' ]
+38 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-gradient-parser' ]
+39 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\css-to-react-native' ]
+40 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\damerau-levenshtein' ]
+41 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-buffer' ]
+42 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-length' ]
+43 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-offset' ]
+44 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\define-properties' ]
+45 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\doctrine' ]
+46 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\drizzle-kit' ]
+47 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\drizzle-orm' ]
+48 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\electron-to-chromium' ]
+49 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\emoji-regex-xs' ]
+50 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\error-stack-parser-es' ]
+51 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-abstract' ]
+52 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-iterator-helpers' ]
+53 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-module-lexer' ]
+54 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-shim-unscopables' ]
+55 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\es-to-primitive' ]
+56 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\esbuild' ]
+57 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-config-next' ]
+58 silly reify mark retired [
+58 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-node'
+58 silly reify ]
+59 silly reify mark retired [
+59 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-typescript'
+59 silly reify ]
+60 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-module-utils' ]
+61 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-import' ]
+62 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-jsx-a11y' ]
+63 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-react' ]
+64 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\estree-walker' ]
+65 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\fast-glob' ]
+66 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\fflate' ]
+67 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\function.prototype.name' ]
+68 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\functions-have-names' ]
+69 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\get-symbol-description' ]
+70 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\get-tsconfig' ]
+71 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\globalthis' ]
+72 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\globrex' ]
+73 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\has-bigints' ]
+74 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\has-proto' ]
+75 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\hex-rgb' ]
+76 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\image-size' ]
+77 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\internal-slot' ]
+78 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-array-buffer' ]
+79 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-async-function' ]
+80 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-bigint' ]
+81 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-boolean-object' ]
+82 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-bun-module' ]
+83 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-data-view' ]
+84 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-finalizationregistry' ]
+85 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-map' ]
+86 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-negative-zero' ]
+87 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-number-object' ]
+88 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-set' ]
+89 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-shared-array-buffer' ]
+90 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-string' ]
+91 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-symbol' ]
+92 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakmap' ]
+93 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakref' ]
+94 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\is-weakset' ]
+95 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\isarray' ]
+96 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\iterator.prototype' ]
+97 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\jsx-ast-utils' ]
+98 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\language-subtag-registry' ]
+99 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\language-tags' ]
+100 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\lightningcss' ]
+101 silly reify mark retired [
+101 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss-win32-x64-msvc'
+101 silly reify ]
+102 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\linebreak' ]
+103 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\miniflare' ]
+104 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\napi-postinstall' ]
+105 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\next' ]
+106 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\node-exports-info' ]
+107 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object-keys' ]
+108 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.assign' ]
+109 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.entries' ]
+110 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.fromentries' ]
+111 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.groupby' ]
+112 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\object.values' ]
+113 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\own-keys' ]
+114 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\pako' ]
+115 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\parse-css-color' ]
+116 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\postcss-value-parser' ]
+117 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\react-loading-skeleton' ]
+118 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\react-server-dom-webpack' ]
+119 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\reflect.getprototypeof' ]
+120 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\regexp.prototype.flags' ]
+121 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\resolve' ]
+122 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\resolve-pkg-maps' ]
+123 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\safe-array-concat' ]
+124 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\safe-push-apply' ]
+125 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\satori' ]
+126 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\set-function-name' ]
+127 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\set-proto' ]
+128 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\sharp' ]
+129 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\srvx' ]
+130 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\stable-hash' ]
+131 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\stop-iteration-iterator' ]
+132 silly reify mark retired [
+132 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.codepointat'
+132 silly reify ]
+133 silly reify mark retired [
+133 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.includes'
+133 silly reify ]
+134 silly reify mark retired [
+134 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.matchall'
+134 silly reify ]
+135 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.repeat' ]
+136 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trim' ]
+137 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimend' ]
+138 silly reify mark retired [
+138 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimstart'
+138 silly reify ]
+139 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\strip-literal' ]
+140 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\styled-jsx' ]
+141 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tailwindcss' ]
+142 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\terser' ]
+143 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\terser-webpack-plugin' ]
+144 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tiny-inflate' ]
+145 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsconfck' ]
+146 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsconfig-paths' ]
+147 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\tsx' ]
+148 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\turbo-stream' ]
+149 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-buffer' ]
+150 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-length' ]
+151 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-offset' ]
+152 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\typed-array-length' ]
+153 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unbox-primitive' ]
+154 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\undici' ]
+155 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unenv' ]
+156 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unicode-trie' ]
+157 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unpic' ]
+158 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\unrs-resolver' ]
+159 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vinext' ]
+160 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-commonjs' ]
+161 silly reify mark retired [
+161 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-dynamic-import'
+161 silly reify ]
+162 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vite-tsconfig-paths' ]
+163 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\vitefu' ]
+164 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\web-vitals' ]
+165 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\webpack' ]
+166 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-boxed-primitive' ]
+167 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-builtin-type' ]
+168 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\which-collection' ]
+169 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\workerd' ]
+170 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\wrangler' ]
+171 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\ws' ]
+172 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\yoga-layout' ]
+173 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\youch' ]
+174 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\youch-core' ]
+175 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@alloc\\quick-lru' ]
+176 silly reify mark retired [
+176 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\kv-asset-handler'
+176 silly reify ]
+177 silly reify mark retired [
+177 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\unenv-preset'
+177 silly reify ]
+178 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\vite-plugin' ]
+179 silly reify mark retired [
+179 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\workerd-windows-64'
+179 silly reify ]
+180 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\brocli' ]
+181 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\win32-x64' ]
+182 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\core-utils' ]
+183 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\esm-loader' ]
+184 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@img\\colour' ]
+185 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@img\\sharp-win32-x64' ]
+186 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@next\\env' ]
+187 silly reify mark retired [
+187 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\eslint-plugin-next'
+187 silly reify ]
+188 silly reify mark retired [
+188 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\swc-win32-x64-msvc'
+188 silly reify ]
+189 silly reify mark retired [
+189 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\is-core-module'
+189 silly reify ]
+190 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\colors' ]
+191 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\dumper' ]
+192 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\exception' ]
+193 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@resvg\\resvg-wasm' ]
+194 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\scc' ]
+195 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@shuding\\opentype.js' ]
+196 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\is' ]
+197 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@swc\\helpers' ]
+198 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\core' ]
+199 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\node' ]
+200 silly reify mark retired [
+200 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc'
+200 silly reify ]
+201 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\postcss' ]
+202 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@types\\json5' ]
+203 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@types\\node' ]
+204 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\core' ]
+205 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\react' ]
+206 silly reify mark retired [
+206 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unrs\\resolver-binding-win32-x64-msvc'
+206 silly reify ]
+207 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@vercel\\og' ]
+208 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\plugin-rsc' ]
+209 silly reify mark retired [ 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide' ]
+210 silly reify mark retired [
+210 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn',
+210 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn',
+210 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn.cmd',
+210 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn.ps1'
+210 silly reify ]
+211 silly reify mark retired [
+211 silly reify   'D:\\My Project\\haui-1602\\node_modules\\browserslist',
+211 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist',
+211 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist.cmd',
+211 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist.ps1'
+211 silly reify ]
+212 silly reify mark retired [
+212 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint',
+212 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint',
+212 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint.cmd',
+212 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint.ps1'
+212 silly reify ]
+213 silly reify mark retired [
+213 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jiti',
+213 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti',
+213 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti.cmd',
+213 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti.ps1'
+213 silly reify ]
+214 silly reify mark retired [
+214 silly reify   'D:\\My Project\\haui-1602\\node_modules\\js-yaml',
+214 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml',
+214 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml.cmd',
+214 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml.ps1'
+214 silly reify ]
+215 silly reify mark retired [
+215 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jsesc',
+215 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc',
+215 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc.cmd',
+215 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc.ps1'
+215 silly reify ]
+216 silly reify mark retired [
+216 silly reify   'D:\\My Project\\haui-1602\\node_modules\\json5',
+216 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5',
+216 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5.cmd',
+216 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5.ps1'
+216 silly reify ]
+217 silly reify mark retired [
+217 silly reify   'D:\\My Project\\haui-1602\\node_modules\\loose-envify',
+217 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify',
+217 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify.cmd',
+217 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify.ps1'
+217 silly reify ]
+218 silly reify mark retired [
+218 silly reify   'D:\\My Project\\haui-1602\\node_modules\\nanoid',
+218 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid',
+218 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid.cmd',
+218 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid.ps1'
+218 silly reify ]
+219 silly reify mark retired [
+219 silly reify   'D:\\My Project\\haui-1602\\node_modules\\rolldown',
+219 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown',
+219 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown.cmd',
+219 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown.ps1'
+219 silly reify ]
+220 silly reify mark retired [
+220 silly reify   'D:\\My Project\\haui-1602\\node_modules\\semver',
+220 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver',
+220 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver.cmd',
+220 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver.ps1'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typescript',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc.cmd',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc.ps1',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver.cmd',
+221 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver.ps1'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   'D:\\My Project\\haui-1602\\node_modules\\update-browserslist-db',
+222 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db',
+222 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db.cmd',
+222 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db.ps1'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite',
+223 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite',
+223 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite.cmd',
+223 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite.ps1'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which',
+224 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which',
+224 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which.cmd',
+224 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which.ps1'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@babel\\parser',
+225 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser',
+225 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser.cmd',
+225 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser.ps1'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver',
+226 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver',
+226 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.cmd',
+226 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.ps1'
+226 silly reify ]
+227 silly reify moves {
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn-import-phases': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-import-phases-3H192pQ2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn-loose': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-loose-gckeAV6Y',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\aria-query': 'D:\\My Project\\haui-1602\\node_modules\\.aria-query-geCJ6UyK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array-buffer-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.array-buffer-byte-length-FCngkLds',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array-includes': 'D:\\My Project\\haui-1602\\node_modules\\.array-includes-3Vku7yAQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlastindex': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.findlastindex-zyse1rGJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.findlast': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.findlast-G4hHj25F',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flat': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.flat-PyzLQqXc',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.flatmap': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.flatmap-NxAsiiar',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\array.prototype.tosorted': 'D:\\My Project\\haui-1602\\node_modules\\.array.prototype.tosorted-3swau2QF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\arraybuffer.prototype.slice': 'D:\\My Project\\haui-1602\\node_modules\\.arraybuffer.prototype.slice-GJS5vN9J',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\ast-types-flow': 'D:\\My Project\\haui-1602\\node_modules\\.ast-types-flow-s69XUrQ3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\async-function': 'D:\\My Project\\haui-1602\\node_modules\\.async-function-6P84BUWx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\axe-core': 'D:\\My Project\\haui-1602\\node_modules\\.axe-core-oEt4LnBh',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\axobject-query': 'D:\\My Project\\haui-1602\\node_modules\\.axobject-query-Yw6eC4DS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\base64-js': 'D:\\My Project\\haui-1602\\node_modules\\.base64-js-sSFkKEzK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\baseline-browser-mapping': 'D:\\My Project\\haui-1602\\node_modules\\.baseline-browser-mapping-L5nHaxx2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\blake3-wasm': 'D:\\My Project\\haui-1602\\node_modules\\.blake3-wasm-FAVEs18X',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\camelize': 'D:\\My Project\\haui-1602\\node_modules\\.camelize-2yrZecdj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\caniuse-lite': 'D:\\My Project\\haui-1602\\node_modules\\.caniuse-lite-rpsVZxgm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\client-only': 'D:\\My Project\\haui-1602\\node_modules\\.client-only-bwngD96d',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-background-parser': 'D:\\My Project\\haui-1602\\node_modules\\.css-background-parser-6TrpaP1n',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-box-shadow': 'D:\\My Project\\haui-1602\\node_modules\\.css-box-shadow-LSx1BIJP',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-color-keywords': 'D:\\My Project\\haui-1602\\node_modules\\.css-color-keywords-b00aDmpP',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-gradient-parser': 'D:\\My Project\\haui-1602\\node_modules\\.css-gradient-parser-OzEoMeFU',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\css-to-react-native': 'D:\\My Project\\haui-1602\\node_modules\\.css-to-react-native-9i7vgmFJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\damerau-levenshtein': 'D:\\My Project\\haui-1602\\node_modules\\.damerau-levenshtein-25ZgIHyz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-buffer-0vVo2ZcW',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-byte-length-5LBSLulB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\data-view-byte-offset': 'D:\\My Project\\haui-1602\\node_modules\\.data-view-byte-offset-EmhLaXW3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\define-properties': 'D:\\My Project\\haui-1602\\node_modules\\.define-properties-g4IQQBV5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\doctrine': 'D:\\My Project\\haui-1602\\node_modules\\.doctrine-QmdgTRBN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\drizzle-kit': 'D:\\My Project\\haui-1602\\node_modules\\.drizzle-kit-E48sSWbT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\drizzle-orm': 'D:\\My Project\\haui-1602\\node_modules\\.drizzle-orm-QNwVZ6TH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\electron-to-chromium': 'D:\\My Project\\haui-1602\\node_modules\\.electron-to-chromium-wTogtCYW',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\emoji-regex-xs': 'D:\\My Project\\haui-1602\\node_modules\\.emoji-regex-xs-DSS6sHRZ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\error-stack-parser-es': 'D:\\My Project\\haui-1602\\node_modules\\.error-stack-parser-es-OPJlesz9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-abstract': 'D:\\My Project\\haui-1602\\node_modules\\.es-abstract-YypY3xah',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-iterator-helpers': 'D:\\My Project\\haui-1602\\node_modules\\.es-iterator-helpers-5XMBhft1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-module-lexer': 'D:\\My Project\\haui-1602\\node_modules\\.es-module-lexer-ymtM3IPf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-shim-unscopables': 'D:\\My Project\\haui-1602\\node_modules\\.es-shim-unscopables-AMwyuY53',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\es-to-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.es-to-primitive-sVAkWQFQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\esbuild': 'D:\\My Project\\haui-1602\\node_modules\\.esbuild-Wupzt1DM',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-config-next': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-config-next-3TFlLcDK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-node': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-import-resolver-node-tFFyZLH3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-import-resolver-typescript': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-import-resolver-typescript-lBCbKCOx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-module-utils': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-module-utils-BHQYLget',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-import': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-import-mptuoU6y',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-jsx-a11y': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-jsx-a11y-Z4Knn0I0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint-plugin-react': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-plugin-react-UlIH3Xik',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\estree-walker': 'D:\\My Project\\haui-1602\\node_modules\\.estree-walker-k9DAgI5V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\fast-glob': 'D:\\My Project\\haui-1602\\node_modules\\.fast-glob-c956t7dY',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\fflate': 'D:\\My Project\\haui-1602\\node_modules\\.fflate-DPvMDF5M',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\function.prototype.name': 'D:\\My Project\\haui-1602\\node_modules\\.function.prototype.name-4oh9uclf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\functions-have-names': 'D:\\My Project\\haui-1602\\node_modules\\.functions-have-names-uhaGPsEr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\get-symbol-description': 'D:\\My Project\\haui-1602\\node_modules\\.get-symbol-description-Om3G8daI',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\get-tsconfig': 'D:\\My Project\\haui-1602\\node_modules\\.get-tsconfig-7FFqBb2Q',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\globalthis': 'D:\\My Project\\haui-1602\\node_modules\\.globalthis-tC4s9vJj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\globrex': 'D:\\My Project\\haui-1602\\node_modules\\.globrex-KpuyqBCK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\has-bigints': 'D:\\My Project\\haui-1602\\node_modules\\.has-bigints-ZvRCLe3H',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\has-proto': 'D:\\My Project\\haui-1602\\node_modules\\.has-proto-dVk5xI8w',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\hex-rgb': 'D:\\My Project\\haui-1602\\node_modules\\.hex-rgb-wukElRKG',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\image-size': 'D:\\My Project\\haui-1602\\node_modules\\.image-size-pcOex8cS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\internal-slot': 'D:\\My Project\\haui-1602\\node_modules\\.internal-slot-l6MTtq6k',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.is-array-buffer-W6ht3vg1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-async-function': 'D:\\My Project\\haui-1602\\node_modules\\.is-async-function-ZurrDBqT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-bigint': 'D:\\My Project\\haui-1602\\node_modules\\.is-bigint-GqmBLVwX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-boolean-object': 'D:\\My Project\\haui-1602\\node_modules\\.is-boolean-object-y3V7NkiF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-bun-module': 'D:\\My Project\\haui-1602\\node_modules\\.is-bun-module-2YYLITCJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-data-view': 'D:\\My Project\\haui-1602\\node_modules\\.is-data-view-uBZPnz7v',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-finalizationregistry': 'D:\\My Project\\haui-1602\\node_modules\\.is-finalizationregistry-hOhrSHNe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-map': 'D:\\My Project\\haui-1602\\node_modules\\.is-map-dqS1rv0I',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-negative-zero': 'D:\\My Project\\haui-1602\\node_modules\\.is-negative-zero-23244oFg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-number-object': 'D:\\My Project\\haui-1602\\node_modules\\.is-number-object-td0kXsmS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-set': 'D:\\My Project\\haui-1602\\node_modules\\.is-set-ngT2iGSY',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-shared-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.is-shared-array-buffer-IcxiHFjy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-string': 'D:\\My Project\\haui-1602\\node_modules\\.is-string-ACA0fGdj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-symbol': 'D:\\My Project\\haui-1602\\node_modules\\.is-symbol-16KGGUs5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakmap': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakmap-Yi2jiqvg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakref': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakref-1HqpFVRy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\is-weakset': 'D:\\My Project\\haui-1602\\node_modules\\.is-weakset-VuftHS2V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\isarray': 'D:\\My Project\\haui-1602\\node_modules\\.isarray-yZZozvuA',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\iterator.prototype': 'D:\\My Project\\haui-1602\\node_modules\\.iterator.prototype-UWZG8HB9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jsx-ast-utils': 'D:\\My Project\\haui-1602\\node_modules\\.jsx-ast-utils-jPjtY3r3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\language-subtag-registry': 'D:\\My Project\\haui-1602\\node_modules\\.language-subtag-registry-RmVsP99l',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\language-tags': 'D:\\My Project\\haui-1602\\node_modules\\.language-tags-8bNI1Eer',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss': 'D:\\My Project\\haui-1602\\node_modules\\.lightningcss-xvtESW6D',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\lightningcss-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\.lightningcss-win32-x64-msvc-ecFd40KE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\linebreak': 'D:\\My Project\\haui-1602\\node_modules\\.linebreak-4qJAZw1t',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\miniflare': 'D:\\My Project\\haui-1602\\node_modules\\.miniflare-299wRgQQ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\napi-postinstall': 'D:\\My Project\\haui-1602\\node_modules\\.napi-postinstall-83LskEMF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\next': 'D:\\My Project\\haui-1602\\node_modules\\.next-IZs08TAe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\node-exports-info': 'D:\\My Project\\haui-1602\\node_modules\\.node-exports-info-y3l3dEzH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object-keys': 'D:\\My Project\\haui-1602\\node_modules\\.object-keys-ZbPidYW5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.assign': 'D:\\My Project\\haui-1602\\node_modules\\.object.assign-ACe2gFek',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.entries': 'D:\\My Project\\haui-1602\\node_modules\\.object.entries-K9XCNTTX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.fromentries': 'D:\\My Project\\haui-1602\\node_modules\\.object.fromentries-ZtnM3V1h',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.groupby': 'D:\\My Project\\haui-1602\\node_modules\\.object.groupby-xWqWaD3K',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\object.values': 'D:\\My Project\\haui-1602\\node_modules\\.object.values-FNTG1FHV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\own-keys': 'D:\\My Project\\haui-1602\\node_modules\\.own-keys-6TYZcSHB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\pako': 'D:\\My Project\\haui-1602\\node_modules\\.pako-yN978GJT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\parse-css-color': 'D:\\My Project\\haui-1602\\node_modules\\.parse-css-color-pJx6Xg51',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\postcss-value-parser': 'D:\\My Project\\haui-1602\\node_modules\\.postcss-value-parser-0J5wOk6N',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\react-loading-skeleton': 'D:\\My Project\\haui-1602\\node_modules\\.react-loading-skeleton-4CiyK1m1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\react-server-dom-webpack': 'D:\\My Project\\haui-1602\\node_modules\\.react-server-dom-webpack-FTFb4iWe',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\reflect.getprototypeof': 'D:\\My Project\\haui-1602\\node_modules\\.reflect.getprototypeof-tQ2aFSxk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\regexp.prototype.flags': 'D:\\My Project\\haui-1602\\node_modules\\.regexp.prototype.flags-AODzaN9J',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\resolve': 'D:\\My Project\\haui-1602\\node_modules\\.resolve-D96nryCs',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\resolve-pkg-maps': 'D:\\My Project\\haui-1602\\node_modules\\.resolve-pkg-maps-3odc2D1H',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\safe-array-concat': 'D:\\My Project\\haui-1602\\node_modules\\.safe-array-concat-Kvm89xBH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\safe-push-apply': 'D:\\My Project\\haui-1602\\node_modules\\.safe-push-apply-JE9Ptgx6',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\satori': 'D:\\My Project\\haui-1602\\node_modules\\.satori-DcE8PVPT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\set-function-name': 'D:\\My Project\\haui-1602\\node_modules\\.set-function-name-UOU4faiK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\set-proto': 'D:\\My Project\\haui-1602\\node_modules\\.set-proto-3H4wLZ3W',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\sharp': 'D:\\My Project\\haui-1602\\node_modules\\.sharp-bQQ1ALZF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\srvx': 'D:\\My Project\\haui-1602\\node_modules\\.srvx-dIUbtEyu',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\stable-hash': 'D:\\My Project\\haui-1602\\node_modules\\.stable-hash-VerHrGbM',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\stop-iteration-iterator': 'D:\\My Project\\haui-1602\\node_modules\\.stop-iteration-iterator-5w4WGARN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.codepointat': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.codepointat-irlWT0eJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.includes': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.includes-nEwUbgXI',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.matchall': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.matchall-X3HImLQy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.repeat': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.repeat-PCRfbuGj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trim': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trim-f9BQLkQx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimend': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trimend-oiMyqgBk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\string.prototype.trimstart': 'D:\\My Project\\haui-1602\\node_modules\\.string.prototype.trimstart-ATMybjfO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\strip-literal': 'D:\\My Project\\haui-1602\\node_modules\\.strip-literal-CoimUycn',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\styled-jsx': 'D:\\My Project\\haui-1602\\node_modules\\.styled-jsx-AgpmZRxR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tailwindcss': 'D:\\My Project\\haui-1602\\node_modules\\.tailwindcss-hmanOQ3h',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\terser': 'D:\\My Project\\haui-1602\\node_modules\\.terser-oHOn2qGS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\terser-webpack-plugin': 'D:\\My Project\\haui-1602\\node_modules\\.terser-webpack-plugin-Q4Htjj6V',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tiny-inflate': 'D:\\My Project\\haui-1602\\node_modules\\.tiny-inflate-BoqPVimH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsconfck': 'D:\\My Project\\haui-1602\\node_modules\\.tsconfck-AWQlJmul',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsconfig-paths': 'D:\\My Project\\haui-1602\\node_modules\\.tsconfig-paths-onCjV9e3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\tsx': 'D:\\My Project\\haui-1602\\node_modules\\.tsx-ejZEj5tR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\turbo-stream': 'D:\\My Project\\haui-1602\\node_modules\\.turbo-stream-H1LB5Uo9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-buffer': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-buffer-pR18hcfh',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-length': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-byte-length-RlYInHFt',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-byte-offset': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-byte-offset-sPGyVZbx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typed-array-length': 'D:\\My Project\\haui-1602\\node_modules\\.typed-array-length-feofLvdy',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unbox-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.unbox-primitive-0r1kZCOV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\undici': 'D:\\My Project\\haui-1602\\node_modules\\.undici-E3lH2oJx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unenv': 'D:\\My Project\\haui-1602\\node_modules\\.unenv-2XnRH12s',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unicode-trie': 'D:\\My Project\\haui-1602\\node_modules\\.unicode-trie-XBCU28rf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unpic': 'D:\\My Project\\haui-1602\\node_modules\\.unpic-1wH5Fevx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\unrs-resolver': 'D:\\My Project\\haui-1602\\node_modules\\.unrs-resolver-x29pCync',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vinext': 'D:\\My Project\\haui-1602\\node_modules\\.vinext-1JAtVbRp',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-commonjs': 'D:\\My Project\\haui-1602\\node_modules\\.vite-plugin-commonjs-ybXitk5r',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-plugin-dynamic-import': 'D:\\My Project\\haui-1602\\node_modules\\.vite-plugin-dynamic-import-xVXC9mw9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite-tsconfig-paths': 'D:\\My Project\\haui-1602\\node_modules\\.vite-tsconfig-paths-VLeocL4g',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vitefu': 'D:\\My Project\\haui-1602\\node_modules\\.vitefu-xKkeC39q',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\web-vitals': 'D:\\My Project\\haui-1602\\node_modules\\.web-vitals-og2XqZnr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\webpack': 'D:\\My Project\\haui-1602\\node_modules\\.webpack-nnjgrf43',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-boxed-primitive': 'D:\\My Project\\haui-1602\\node_modules\\.which-boxed-primitive-scHunEsv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-builtin-type': 'D:\\My Project\\haui-1602\\node_modules\\.which-builtin-type-EB1AWLKb',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which-collection': 'D:\\My Project\\haui-1602\\node_modules\\.which-collection-m6AWtiR4',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\workerd': 'D:\\My Project\\haui-1602\\node_modules\\.workerd-tDMeoGaX',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\wrangler': 'D:\\My Project\\haui-1602\\node_modules\\.wrangler-9PW9kfFF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\ws': 'D:\\My Project\\haui-1602\\node_modules\\.ws-Ym8hszPp',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\yoga-layout': 'D:\\My Project\\haui-1602\\node_modules\\.yoga-layout-E8Tw5jbb',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\youch': 'D:\\My Project\\haui-1602\\node_modules\\.youch-1SdBVbHs',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\youch-core': 'D:\\My Project\\haui-1602\\node_modules\\.youch-core-212ypudv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@alloc\\quick-lru': 'D:\\My Project\\haui-1602\\node_modules\\@alloc\\.quick-lru-QECyvaRm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\kv-asset-handler': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.kv-asset-handler-MlX5pwJ8',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\unenv-preset': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.unenv-preset-813mmJZK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\vite-plugin': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.vite-plugin-nctgePh2',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\workerd-windows-64': 'D:\\My Project\\haui-1602\\node_modules\\@cloudflare\\.workerd-windows-64-bPpPlbEN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\brocli': 'D:\\My Project\\haui-1602\\node_modules\\@drizzle-team\\.brocli-hoqmNv5A',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\win32-x64': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild\\.win32-x64-s9OwslJm',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\core-utils': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\.core-utils-8gDYU1Ow',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\esm-loader': 'D:\\My Project\\haui-1602\\node_modules\\@esbuild-kit\\.esm-loader-rYGSS4aV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@img\\colour': 'D:\\My Project\\haui-1602\\node_modules\\@img\\.colour-9reXdpRo',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@img\\sharp-win32-x64': 'D:\\My Project\\haui-1602\\node_modules\\@img\\.sharp-win32-x64-R0dY00ub',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\env': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.env-Ufgx2DCn',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\eslint-plugin-next': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.eslint-plugin-next-6u6yDFlE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@next\\swc-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@next\\.swc-win32-x64-msvc-fH0q0yNu',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\is-core-module': 'D:\\My Project\\haui-1602\\node_modules\\@nolyfill\\.is-core-module-sl4jxdjz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\colors': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.colors-2Emxyfgg',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\dumper': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.dumper-I6t7I7Bv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\exception': 'D:\\My Project\\haui-1602\\node_modules\\@poppinss\\.exception-j4ikOYzD',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@resvg\\resvg-wasm': 'D:\\My Project\\haui-1602\\node_modules\\@resvg\\.resvg-wasm-ICKQLYBU',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\scc': 'D:\\My Project\\haui-1602\\node_modules\\@rtsao\\.scc-VxOpIu15',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@shuding\\opentype.js': 'D:\\My Project\\haui-1602\\node_modules\\@shuding\\.opentype.js-Vyf7AjKT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\is': 'D:\\My Project\\haui-1602\\node_modules\\@sindresorhus\\.is-FZ1JfnS3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@swc\\helpers': 'D:\\My Project\\haui-1602\\node_modules\\@swc\\.helpers-Qm7WVYFN',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\core': 'D:\\My Project\\haui-1602\\node_modules\\@speed-highlight\\.core-FlhrsTjO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\node': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.node-lAadreLv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.oxide-win32-x64-msvc-Si7zQXrl',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\postcss': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.postcss-xKwUejWS',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@types\\json5': 'D:\\My Project\\haui-1602\\node_modules\\@types\\.json5-rvyZQdI0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@types\\node': 'D:\\My Project\\haui-1602\\node_modules\\@types\\.node-G0QckDo7',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unpic\\core': 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\.core-TQBp2nkx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unpic\\react': 'D:\\My Project\\haui-1602\\node_modules\\@unpic\\.react-z1U9Rm2W',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@unrs\\resolver-binding-win32-x64-msvc': 'D:\\My Project\\haui-1602\\node_modules\\@unrs\\.resolver-binding-win32-x64-msvc-gTgvW8UT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@vercel\\og': 'D:\\My Project\\haui-1602\\node_modules\\@vercel\\.og-Bf58Ndpz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\plugin-rsc': 'D:\\My Project\\haui-1602\\node_modules\\@vitejs\\.plugin-rsc-oUod4nKR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\oxide': 'D:\\My Project\\haui-1602\\node_modules\\@tailwindcss\\.oxide-KqIt6IWO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\acorn': 'D:\\My Project\\haui-1602\\node_modules\\.acorn-IEXRuSeB',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.acorn-eHCaRZgv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.acorn.cmd-udlN1HMc',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\acorn.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.acorn.ps1-VcT7n4cR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\browserslist': 'D:\\My Project\\haui-1602\\node_modules\\.browserslist-49yQbZZr',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.browserslist-e01K85Jk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.browserslist.cmd-4Zv1lHZF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\browserslist.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.browserslist.ps1-9EwC6adl',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\eslint': 'D:\\My Project\\haui-1602\\node_modules\\.eslint-gkqH3QvJ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.eslint-4io4s38L',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.eslint.cmd-EoyvoAu4',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\eslint.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.eslint.ps1-4ItIBIY0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jiti': 'D:\\My Project\\haui-1602\\node_modules\\.jiti-2dQGnSPH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jiti-OE2vANxq',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jiti.cmd-xcwWo0dO',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jiti.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jiti.ps1-5LixnUZv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\js-yaml': 'D:\\My Project\\haui-1602\\node_modules\\.js-yaml-4GM4uDRK',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.js-yaml-D33lZjdu',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.js-yaml.cmd-HrEGfYXp',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\js-yaml.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.js-yaml.ps1-3aZ6mzjV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\jsesc': 'D:\\My Project\\haui-1602\\node_modules\\.jsesc-nhdGUKhT',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jsesc-DAPLM8jf',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jsesc.cmd-uSh1j7Ce',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\jsesc.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.jsesc.ps1-G9GWaIFV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\json5': 'D:\\My Project\\haui-1602\\node_modules\\.json5-qihIBaPE',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.json5-Dxdy6DaV',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.json5.cmd-UvKmOsq5',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\json5.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.json5.ps1-yyLhNSj8',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\loose-envify': 'D:\\My Project\\haui-1602\\node_modules\\.loose-envify-WzUnc0qH',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.loose-envify-oPIQpsq9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.loose-envify.cmd-skJjf2aW',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\loose-envify.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.loose-envify.ps1-uUqp9xGP',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\nanoid': 'D:\\My Project\\haui-1602\\node_modules\\.nanoid-Bf3HCW5o',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.nanoid-wv6TxtZi',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.nanoid.cmd-ulP582Ky',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\nanoid.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.nanoid.ps1-XbYl9E5R',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\rolldown': 'D:\\My Project\\haui-1602\\node_modules\\.rolldown-btNz36IA',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.rolldown-MSIA68tD',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.rolldown.cmd-H5c5Yk6T',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\rolldown.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.rolldown.ps1-JRygpup1',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\semver': 'D:\\My Project\\haui-1602\\node_modules\\.semver-X7Tfmhxj',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.semver-Dv6c80ih',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.semver.cmd-EwIiPtz9',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\semver.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.semver.ps1-pGBeymXz',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\typescript': 'D:\\My Project\\haui-1602\\node_modules\\.typescript-SFwHfQ54',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsc-jgpA6D3k',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsc.cmd-vbyttMF3',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsc.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsc.ps1-cEmYTSZv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsserver-7IyA7JaF',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsserver.cmd-hsL2yxvv',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\tsserver.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.tsserver.ps1-JwHyLH66',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\update-browserslist-db': 'D:\\My Project\\haui-1602\\node_modules\\.update-browserslist-db-FjXsNvvk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.update-browserslist-db-xuLnLqcR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.update-browserslist-db.cmd-P575Bbgt',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\update-browserslist-db.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.update-browserslist-db.ps1-lGfGT9JZ',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\vite': 'D:\\My Project\\haui-1602\\node_modules\\.vite-OVeI1F42',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.vite-Jyo1qxuU',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.vite.cmd-fd6KIzRx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\vite.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.vite.ps1-ePwUlktR',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\which': 'D:\\My Project\\haui-1602\\node_modules\\.which-ES66GZn6',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.node-which-OnG2ktxx',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.node-which.cmd-EpEkDt0T',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\node-which.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.node-which.ps1-L0ekST3f',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@babel\\parser': 'D:\\My Project\\haui-1602\\node_modules\\@babel\\.parser-q9d8YQwk',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.parser-VlT1pCZ7',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser.cmd': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.parser.cmd-oVKGJax0',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\.bin\\parser.ps1': 'D:\\My Project\\haui-1602\\node_modules\\.bin\\.parser.ps1-hFbzZISq',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\semver': 'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.semver-SgI6ig3o',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver': 'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver-kYtFWt3o',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.cmd': 'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver.cmd-GJNzaSkA',
+227 silly reify   'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\semver.ps1': 'D:\\My Project\\haui-1602\\node_modules\\@typescript-eslint\\typescript-estree\\node_modules\\.bin\\.semver.ps1-DnUf9kX2'
+227 silly reify }
+228 silly audit bulk request {
+228 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+228 silly audit   '@babel/code-frame': [ '7.29.0' ],
+228 silly audit   '@babel/compat-data': [ '7.29.3' ],
+228 silly audit   '@babel/core': [ '7.29.0' ],
+228 silly audit   '@babel/generator': [ '7.29.1' ],
+228 silly audit   '@babel/helper-compilation-targets': [ '7.28.6' ],
+228 silly audit   '@babel/helper-globals': [ '7.28.0' ],
+228 silly audit   '@babel/helper-module-imports': [ '7.28.6' ],
+228 silly audit   '@babel/helper-module-transforms': [ '7.28.6' ],
+228 silly audit   '@babel/helper-string-parser': [ '7.27.1' ],
+228 silly audit   '@babel/helper-validator-identifier': [ '7.28.5' ],
+228 silly audit   '@babel/helper-validator-option': [ '7.27.1' ],
+228 silly audit   '@babel/helpers': [ '7.29.2' ],
+228 silly audit   '@babel/parser': [ '7.29.3' ],
+228 silly audit   '@babel/template': [ '7.28.6' ],
+228 silly audit   '@babel/traverse': [ '7.29.0' ],
+228 silly audit   '@babel/types': [ '7.29.0' ],
+228 silly audit   '@cloudflare/kv-asset-handler': [ '0.5.0' ],
+228 silly audit   '@cloudflare/unenv-preset': [ '2.16.1' ],
+228 silly audit   '@cloudflare/vite-plugin': [ '1.37.1' ],
+228 silly audit   '@cloudflare/workerd-darwin-64': [ '1.20260515.1' ],
+228 silly audit   '@cloudflare/workerd-darwin-arm64': [ '1.20260515.1' ],
+228 silly audit   '@cloudflare/workerd-linux-64': [ '1.20260515.1' ],
+228 silly audit   '@cloudflare/workerd-linux-arm64': [ '1.20260515.1' ],
+228 silly audit   '@cloudflare/workerd-windows-64': [ '1.20260515.1' ],
+228 silly audit   '@cspotcode/source-map-support': [ '0.8.1' ],
+228 silly audit   '@jridgewell/trace-mapping': [ '0.3.9', '0.3.31' ],
+228 silly audit   '@drizzle-team/brocli': [ '0.10.2' ],
+228 silly audit   '@emnapi/core': [ '1.10.0', '1.8.1' ],
+228 silly audit   '@emnapi/runtime': [ '1.10.0', '1.8.1' ],
+228 silly audit   '@emnapi/wasi-threads': [ '1.2.1', '1.1.0' ],
+228 silly audit   '@esbuild-kit/core-utils': [ '3.3.2' ],
+228 silly audit   '@esbuild/android-arm': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/android-arm64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/android-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/darwin-arm64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/darwin-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/freebsd-arm64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/freebsd-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-arm': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-arm64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-ia32': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-loong64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-mips64el': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-ppc64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-riscv64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-s390x': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/linux-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/netbsd-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/openbsd-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/sunos-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/win32-arm64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/win32-ia32': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/win32-x64': [ '0.18.20', '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   esbuild: [ '0.18.20', '0.25.12', '0.28.0', '0.27.3' ],
+228 silly audit   '@esbuild-kit/esm-loader': [ '2.6.5' ],
+228 silly audit   '@esbuild/aix-ppc64': [ '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/netbsd-arm64': [ '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/openbsd-arm64': [ '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@esbuild/openharmony-arm64': [ '0.28.0', '0.25.12', '0.27.3' ],
+228 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+228 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+228 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+228 silly audit   '@eslint/config-array': [ '0.21.2' ],
+228 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+228 silly audit   '@eslint/core': [ '0.17.0' ],
+228 silly audit   '@eslint/eslintrc': [ '3.3.5' ],
+228 silly audit   '@eslint/js': [ '9.39.4' ],
+228 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+228 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+228 silly audit   '@humanfs/core': [ '0.19.2' ],
+228 silly audit   '@humanfs/node': [ '0.16.8' ],
+228 silly audit   '@humanfs/types': [ '0.15.0' ],
+228 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+228 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+228 silly audit   '@img/colour': [ '1.1.0' ],
+228 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+228 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+228 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+228 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+228 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+228 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+228 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+228 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+228 silly audit   '@jridgewell/source-map': [ '0.3.11' ],
+228 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+228 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12', '1.1.4', '1.1.1' ],
+228 silly audit   '@next/env': [ '16.2.6' ],
+228 silly audit   '@next/eslint-plugin-next': [ '16.2.6' ],
+228 silly audit   '@next/swc-darwin-arm64': [ '16.2.6' ],
+228 silly audit   '@next/swc-darwin-x64': [ '16.2.6' ],
+228 silly audit   '@next/swc-linux-arm64-gnu': [ '16.2.6' ],
+228 silly audit   '@next/swc-linux-arm64-musl': [ '16.2.6' ],
+228 silly audit   '@next/swc-linux-x64-gnu': [ '16.2.6' ],
+228 silly audit   '@next/swc-linux-x64-musl': [ '16.2.6' ],
+228 silly audit   '@next/swc-win32-arm64-msvc': [ '16.2.6' ],
+228 silly audit   '@next/swc-win32-x64-msvc': [ '16.2.6' ],
+228 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+228 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+228 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+228 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+228 silly audit   '@oxc-project/types': [ '0.130.0' ],
+228 silly audit   '@poppinss/colors': [ '4.1.6' ],
+228 silly audit   '@poppinss/dumper': [ '0.6.5' ],
+228 silly audit   'supports-color': [ '10.2.2', '8.1.1', '7.2.0' ],
+228 silly audit   '@poppinss/exception': [ '1.2.3' ],
+228 silly audit   '@resvg/resvg-wasm': [ '2.4.0' ],
+228 silly audit   '@rolldown/binding-android-arm64': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.1' ],
+228 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.1' ],
+228 silly audit   '@rolldown/pluginutils': [ '1.0.1', '1.0.0-rc.18' ],
+228 silly audit   '@rtsao/scc': [ '1.1.0' ],
+228 silly audit   '@shuding/opentype.js': [ '1.4.0-beta.0' ],
+228 silly audit   '@sindresorhus/is': [ '7.2.0' ],
+228 silly audit   '@speed-highlight/core': [ '1.2.15' ],
+228 silly audit   '@swc/helpers': [ '0.5.15' ],
+228 silly audit   '@tailwindcss/node': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.1' ],
+228 silly audit   '@tybys/wasm-util': [ '0.10.1', '0.10.2' ],
+228 silly audit   tslib: [ '2.8.1' ],
+228 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.1' ],
+228 silly audit   '@tailwindcss/postcss': [ '4.2.1' ],
+228 silly audit   '@types/eslint': [ '9.6.1' ],
+228 silly audit   '@types/eslint-scope': [ '3.7.7' ],
+228 silly audit   '@types/estree': [ '1.0.9' ],
+228 silly audit   '@types/json-schema': [ '7.0.15' ],
+228 silly audit   '@types/json5': [ '0.0.29' ],
+228 silly audit   '@types/node': [ '22.19.19' ],
+228 silly audit   '@types/react': [ '19.2.14' ],
+228 silly audit   '@types/react-dom': [ '19.2.3' ],
+228 silly audit   '@typescript-eslint/eslint-plugin': [ '8.59.3' ],
+228 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+228 silly audit   '@typescript-eslint/parser': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/project-service': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/scope-manager': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/type-utils': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/types': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/typescript-estree': [ '8.59.3' ],
+228 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+228 silly audit   'brace-expansion': [ '5.0.6', '1.1.14' ],
+228 silly audit   minimatch: [ '10.2.5', '3.1.5' ],
+228 silly audit   semver: [ '7.8.0', '6.3.1' ],
+228 silly audit   '@typescript-eslint/utils': [ '8.59.3' ],
+228 silly audit   '@typescript-eslint/visitor-keys': [ '8.59.3' ],
+228 silly audit   '@unpic/core': [ '1.0.3' ],
+228 silly audit   '@unpic/react': [ '1.0.2' ],
+228 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+228 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+228 silly audit   '@vercel/og': [ '0.8.6' ],
+228 silly audit   '@vitejs/plugin-react': [ '6.0.2' ],
+228 silly audit   '@vitejs/plugin-rsc': [ '0.5.26' ],
+228 silly audit   '@webassemblyjs/ast': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/floating-point-hex-parser': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/helper-api-error': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/helper-buffer': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/helper-numbers': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/helper-wasm-bytecode': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/helper-wasm-section': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/ieee754': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/leb128': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/utf8': [ '1.13.2' ],
+228 silly audit   '@webassemblyjs/wasm-edit': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/wasm-gen': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/wasm-opt': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/wasm-parser': [ '1.14.1' ],
+228 silly audit   '@webassemblyjs/wast-printer': [ '1.14.1' ],
+228 silly audit   '@xtuc/ieee754': [ '1.2.0' ],
+228 silly audit   '@xtuc/long': [ '4.2.2' ],
+228 silly audit   acorn: [ '8.16.0' ],
+228 silly audit   'acorn-import-phases': [ '1.0.4' ],
+228 silly audit   'acorn-jsx': [ '5.3.2' ],
+228 silly audit   'acorn-loose': [ '8.5.2' ],
+228 silly audit   ajv: [ '6.15.0', '8.20.0' ],
+228 silly audit   'ajv-formats': [ '2.1.1' ],
+228 silly audit   'json-schema-traverse': [ '1.0.0', '0.4.1' ],
+228 silly audit   'ansi-styles': [ '4.3.0' ],
+228 silly audit   argparse: [ '2.0.1' ],
+228 silly audit   'aria-query': [ '5.3.2' ],
+228 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+228 silly audit   'array-includes': [ '3.1.9' ],
+228 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+228 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+228 silly audit   'array.prototype.flat': [ '1.3.3' ],
+228 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+228 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+228 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+228 silly audit   'ast-types-flow': [ '0.0.8' ],
+228 silly audit   'async-function': [ '1.0.0' ],
+228 silly audit   'available-typed-arrays': [ '1.0.7' ],
+228 silly audit   'axe-core': [ '4.11.4' ],
+228 silly audit   'axobject-query': [ '4.1.0' ],
+228 silly audit   'base64-js': [ '0.0.8' ],
+228 silly audit   'baseline-browser-mapping': [ '2.10.30' ],
+228 silly audit   'blake3-wasm': [ '2.1.5' ],
+228 silly audit   braces: [ '3.0.3' ],
+228 silly audit   browserslist: [ '4.28.2' ],
+228 silly audit   'buffer-from': [ '1.1.2' ],
+228 silly audit   'call-bind': [ '1.0.9' ],
+228 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+228 silly audit   'call-bound': [ '1.0.4' ],
+228 silly audit   callsites: [ '3.1.0' ],
+228 silly audit   camelize: [ '1.0.1' ],
+228 silly audit   'caniuse-lite': [ '1.0.30001793' ],
+228 silly audit   chalk: [ '4.1.2' ],
+228 silly audit   'chrome-trace-event': [ '1.0.4' ],
+228 silly audit   'client-only': [ '0.0.1' ],
+228 silly audit   'color-convert': [ '2.0.1' ],
+228 silly audit   'color-name': [ '1.1.4' ],
+228 silly audit   commander: [ '2.20.3' ],
+228 silly audit   'concat-map': [ '0.0.1' ],
+228 silly audit   'convert-source-map': [ '2.0.0' ],
+228 silly audit   cookie: [ '1.1.1' ],
+228 silly audit   'cross-spawn': [ '7.0.6' ],
+228 silly audit   'css-background-parser': [ '0.1.0' ],
+228 silly audit   'css-box-shadow': [ '1.0.0-3' ],
+228 silly audit   'css-color-keywords': [ '1.0.0' ],
+228 silly audit   'css-gradient-parser': [ '0.0.16' ],
+228 silly audit   'css-to-react-native': [ '3.2.0' ],
+228 silly audit   csstype: [ '3.2.3' ],
+228 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+228 silly audit   'data-view-buffer': [ '1.0.2' ],
+228 silly audit   'data-view-byte-length': [ '1.0.2' ],
+228 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+228 silly audit   debug: [ '4.4.3', '3.2.7' ],
+228 silly audit   'deep-is': [ '0.1.4' ],
+228 silly audit   'define-data-property': [ '1.1.4' ],
+228 silly audit   'define-properties': [ '1.2.1' ],
+228 silly audit   'detect-libc': [ '2.1.2' ],
+228 silly audit   doctrine: [ '2.1.0' ],
+228 silly audit   'drizzle-kit': [ '0.31.10' ],
+228 silly audit   'drizzle-orm': [ '0.45.2' ],
+228 silly audit   'dunder-proto': [ '1.0.1' ],
+228 silly audit   'electron-to-chromium': [ '1.5.358' ],
+228 silly audit   'emoji-regex': [ '9.2.2' ],
+228 silly audit   'emoji-regex-xs': [ '2.0.1' ],
+228 silly audit   'enhanced-resolve': [ '5.21.3' ],
+228 silly audit   'error-stack-parser-es': [ '1.0.5' ],
+228 silly audit   'es-abstract': [ '1.24.2' ],
+228 silly audit   'es-define-property': [ '1.0.1' ],
+228 silly audit   'es-errors': [ '1.3.0' ],
+228 silly audit   'es-iterator-helpers': [ '1.3.2' ],
+228 silly audit   'es-module-lexer': [ '2.1.0', '1.7.0' ],
+228 silly audit   'es-object-atoms': [ '1.1.1' ],
+228 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+228 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+228 silly audit   'es-to-primitive': [ '1.3.0' ],
+228 silly audit   escalade: [ '3.2.0' ],
+228 silly audit   'escape-html': [ '1.0.3' ],
+228 silly audit   'escape-string-regexp': [ '4.0.0' ],
+228 silly audit   eslint: [ '9.39.4' ],
+228 silly audit   'eslint-config-next': [ '16.2.6' ],
+228 silly audit   globals: [ '16.4.0', '14.0.0' ],
+228 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+228 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+228 silly audit   'eslint-module-utils': [ '2.12.1' ],
+228 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+228 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+228 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+228 silly audit   'eslint-plugin-react-hooks': [ '7.1.1' ],
+228 silly audit   'eslint-scope': [ '8.4.0', '5.1.1' ],
+228 silly audit   espree: [ '10.4.0' ],
+228 silly audit   esquery: [ '1.7.0' ],
+228 silly audit   esrecurse: [ '4.3.0' ],
+228 silly audit   estraverse: [ '5.3.0', '4.3.0' ],
+228 silly audit   'estree-walker': [ '3.0.3' ],
+228 silly audit   esutils: [ '2.0.3' ],
+228 silly audit   events: [ '3.3.0' ],
+228 silly audit   'fast-deep-equal': [ '3.1.3' ],
+228 silly audit   'fast-glob': [ '3.3.1', '3.3.3' ],
+228 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+228 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+228 silly audit   'fast-levenshtein': [ '2.0.6' ],
+228 silly audit   'fast-uri': [ '3.1.2' ],
+228 silly audit   fastq: [ '1.20.1' ],
+228 silly audit   fflate: [ '0.7.4' ],
+228 silly audit   'file-entry-cache': [ '8.0.0' ],
+228 silly audit   'fill-range': [ '7.1.1' ],
+228 silly audit   'find-up': [ '5.0.0' ],
+228 silly audit   'flat-cache': [ '4.0.1' ],
+228 silly audit   flatted: [ '3.4.2' ],
+228 silly audit   'for-each': [ '0.3.5' ],
+228 silly audit   fsevents: [ '2.3.3' ],
+228 silly audit   'function-bind': [ '1.1.2' ],
+228 silly audit   'function.prototype.name': [ '1.1.8' ],
+228 silly audit   'functions-have-names': [ '1.2.3' ],
+228 silly audit   'generator-function': [ '2.0.1' ],
+228 silly audit   gensync: [ '1.0.0-beta.2' ],
+228 silly audit   'get-intrinsic': [ '1.3.0' ],
+228 silly audit   'get-proto': [ '1.0.1' ],
+228 silly audit   'get-symbol-description': [ '1.1.0' ],
+228 silly audit   'get-tsconfig': [ '4.14.0' ],
+228 silly audit   'glob-to-regexp': [ '0.4.1' ],
+228 silly audit   globalthis: [ '1.0.4' ],
+228 silly audit   globrex: [ '0.1.2' ],
+228 silly audit   gopd: [ '1.2.0' ],
+228 silly audit   'graceful-fs': [ '4.2.11' ],
+228 silly audit   'has-bigints': [ '1.1.0' ],
+228 silly audit   'has-flag': [ '4.0.0' ],
+228 silly audit   'has-property-descriptors': [ '1.0.2' ],
+228 silly audit   'has-proto': [ '1.2.0' ],
+228 silly audit   'has-symbols': [ '1.1.0' ],
+228 silly audit   'has-tostringtag': [ '1.0.2' ],
+228 silly audit   hasown: [ '2.0.3' ],
+228 silly audit   'hermes-estree': [ '0.25.1' ],
+228 silly audit   'hermes-parser': [ '0.25.1' ],
+228 silly audit   'hex-rgb': [ '4.3.0' ],
+228 silly audit   'image-size': [ '2.0.2' ],
+228 silly audit   'import-fresh': [ '3.3.1' ],
+228 silly audit   imurmurhash: [ '0.1.4' ],
+228 silly audit   'internal-slot': [ '1.1.0' ],
+228 silly audit   'ipaddr.js': [ '2.4.0' ],
+228 silly audit   'is-array-buffer': [ '3.0.5' ],
+228 silly audit   'is-async-function': [ '2.1.1' ],
+228 silly audit   'is-bigint': [ '1.1.0' ],
+228 silly audit   'is-boolean-object': [ '1.2.2' ],
+228 silly audit   'is-bun-module': [ '2.0.0' ],
+228 silly audit   'is-callable': [ '1.2.7' ],
+228 silly audit   'is-core-module': [ '2.16.2' ],
+228 silly audit   'is-data-view': [ '1.0.2' ],
+228 silly audit   'is-date-object': [ '1.1.0' ],
+228 silly audit   'is-extglob': [ '2.1.1' ],
+228 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+228 silly audit   'is-generator-function': [ '1.1.2' ],
+228 silly audit   'is-glob': [ '4.0.3' ],
+228 silly audit   'is-map': [ '2.0.3' ],
+228 silly audit   'is-negative-zero': [ '2.0.3' ],
+228 silly audit   'is-number': [ '7.0.0' ],
+228 silly audit   'is-number-object': [ '1.1.1' ],
+228 silly audit   'is-regex': [ '1.2.1' ],
+228 silly audit   'is-set': [ '2.0.3' ],
+228 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+228 silly audit   'is-string': [ '1.1.1' ],
+228 silly audit   'is-symbol': [ '1.1.1' ],
+228 silly audit   'is-typed-array': [ '1.1.15' ],
+228 silly audit   'is-weakmap': [ '2.0.2' ],
+228 silly audit   'is-weakref': [ '1.1.1' ],
+228 silly audit   'is-weakset': [ '2.0.4' ],
+228 silly audit   isarray: [ '2.0.5' ],
+228 silly audit   isexe: [ '2.0.0' ],
+228 silly audit   'iterator.prototype': [ '1.1.5' ],
+228 silly audit   'jest-worker': [ '27.5.1' ],
+228 silly audit   jiti: [ '2.7.0' ],
+228 silly audit   'js-tokens': [ '4.0.0', '9.0.1' ],
+228 silly audit   'js-yaml': [ '4.1.1' ],
+228 silly audit   jsesc: [ '3.1.0' ],
+228 silly audit   'json-buffer': [ '3.0.1' ],
+228 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+228 silly audit   json5: [ '2.2.3', '1.0.2' ],
+228 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+228 silly audit   keyv: [ '4.5.4' ],
+228 silly audit   kleur: [ '4.1.5' ],
+228 silly audit   'language-subtag-registry': [ '0.3.23' ],
+228 silly audit   'language-tags': [ '1.0.9' ],
+228 silly audit   levn: [ '0.4.1' ],
+228 silly audit   lightningcss: [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-android-arm64': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-darwin-arm64': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-darwin-x64': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-freebsd-x64': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-linux-arm64-gnu': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-linux-arm64-musl': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-linux-x64-gnu': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-linux-x64-musl': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-win32-arm64-msvc': [ '1.31.1', '1.32.0' ],
+228 silly audit   'lightningcss-win32-x64-msvc': [ '1.31.1', '1.32.0' ],
+228 silly audit   linebreak: [ '1.1.0' ],
+228 silly audit   'loader-runner': [ '4.3.2' ],
+228 silly audit   'locate-path': [ '6.0.0' ],
+228 silly audit   'lodash.merge': [ '4.6.2' ],
+228 silly audit   'loose-envify': [ '1.4.0' ],
+228 silly audit   'lru-cache': [ '5.1.1' ],
+228 silly audit   'magic-string': [ '0.30.21' ],
+228 silly audit   'math-intrinsics': [ '1.1.0' ],
+228 silly audit   'merge-stream': [ '2.0.0' ],
+228 silly audit   merge2: [ '1.4.1' ],
+228 silly audit   micromatch: [ '4.0.8' ],
+228 silly audit   'mime-db': [ '1.54.0' ],
+228 silly audit   miniflare: [ '4.20260515.0' ],
+228 silly audit   minimist: [ '1.2.8' ],
+228 silly audit   ms: [ '2.1.3' ],
+228 silly audit   nanoid: [ '3.3.12' ],
+228 silly audit   'napi-postinstall': [ '0.3.4' ],
+228 silly audit   'natural-compare': [ '1.4.0' ],
+228 silly audit   'neo-async': [ '2.6.2' ],
+228 silly audit   next: [ '16.2.6' ],
+228 silly audit   postcss: [ '8.4.31', '8.5.14' ],
+228 silly audit   'node-exports-info': [ '1.6.0' ],
+228 silly audit   'node-releases': [ '2.0.44' ],
+228 silly audit   'object-assign': [ '4.1.1' ],
+228 silly audit   'object-inspect': [ '1.13.4' ],
+228 silly audit   'object-keys': [ '1.1.1' ],
+228 silly audit   'object.assign': [ '4.1.7' ],
+228 silly audit   'object.entries': [ '1.1.9' ],
+228 silly audit   'object.fromentries': [ '2.0.8' ],
+228 silly audit   'object.groupby': [ '1.0.3' ],
+228 silly audit   'object.values': [ '1.2.1' ],
+228 silly audit   optionator: [ '0.9.4' ],
+228 silly audit   'own-keys': [ '1.0.1' ],
+228 silly audit   'p-limit': [ '3.1.0' ],
+228 silly audit   'p-locate': [ '5.0.0' ],
+228 silly audit   pako: [ '0.2.9' ],
+228 silly audit   'parent-module': [ '1.0.1' ],
+228 silly audit   'parse-css-color': [ '0.2.1' ],
+228 silly audit   'path-exists': [ '4.0.0' ],
+228 silly audit   'path-key': [ '3.1.1' ],
+228 silly audit   'path-parse': [ '1.0.7' ],
+228 silly audit   'path-to-regexp': [ '6.3.0' ],
+228 silly audit   pathe: [ '2.0.3' ],
+228 silly audit   picocolors: [ '1.1.1' ],
+228 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+228 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+228 silly audit   'postcss-value-parser': [ '4.2.0' ],
+228 silly audit   'prelude-ls': [ '1.2.1' ],
+228 silly audit   'prop-types': [ '15.8.1' ],
+228 silly audit   punycode: [ '2.3.1' ],
+228 silly audit   'queue-microtask': [ '1.2.3' ],
+228 silly audit   react: [ '19.2.6' ],
+228 silly audit   'react-dom': [ '19.2.6' ],
+228 silly audit   'react-is': [ '16.13.1' ],
+228 silly audit   'react-loading-skeleton': [ '3.5.0' ],
+228 silly audit   'react-server-dom-webpack': [ '19.2.6' ],
+228 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+228 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+228 silly audit   'require-from-string': [ '2.0.2' ],
+228 silly audit   resolve: [ '2.0.0-next.7' ],
+228 silly audit   'resolve-from': [ '4.0.0' ],
+228 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+228 silly audit   reusify: [ '1.1.0' ],
+228 silly audit   rolldown: [ '1.0.1' ],
+228 silly audit   'run-parallel': [ '1.2.0' ],
+228 silly audit   'safe-array-concat': [ '1.1.4' ],
+228 silly audit   'safe-push-apply': [ '1.0.0' ],
+228 silly audit   'safe-regex-test': [ '1.1.0' ],
+228 silly audit   satori: [ '0.16.0' ],
+228 silly audit   scheduler: [ '0.27.0' ],
+228 silly audit   'schema-utils': [ '4.3.3' ],
+228 silly audit   'ajv-keywords': [ '5.1.0' ],
+228 silly audit   'set-function-length': [ '1.2.2' ],
+228 silly audit   'set-function-name': [ '2.0.2' ],
+228 silly audit   'set-proto': [ '1.0.0' ],
+228 silly audit   sharp: [ '0.34.5' ],
+228 silly audit   'shebang-command': [ '2.0.0' ],
+228 silly audit   'shebang-regex': [ '3.0.0' ],
+228 silly audit   'side-channel': [ '1.1.0' ],
+228 silly audit   'side-channel-list': [ '1.0.1' ],
+228 silly audit   'side-channel-map': [ '1.0.1' ],
+228 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+228 silly audit   'source-map': [ '0.6.1' ],
+228 silly audit   'source-map-js': [ '1.2.1' ],
+228 silly audit   'source-map-support': [ '0.5.21' ],
+228 silly audit   srvx: [ '0.11.15' ],
+228 silly audit   'stable-hash': [ '0.0.5' ],
+228 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+228 silly audit   'string.prototype.codepointat': [ '0.2.1' ],
+228 silly audit   'string.prototype.includes': [ '2.0.1' ],
+228 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+228 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+228 silly audit   'string.prototype.trim': [ '1.2.10' ],
+228 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+228 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+228 silly audit   'strip-bom': [ '3.0.0' ],
+228 silly audit   'strip-json-comments': [ '3.1.1' ],
+228 silly audit   'strip-literal': [ '3.1.0' ],
+228 silly audit   'styled-jsx': [ '5.1.6' ],
+228 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+228 silly audit   tailwindcss: [ '4.2.1' ],
+228 silly audit   tapable: [ '2.3.3' ],
+228 silly audit   terser: [ '5.47.1' ],
+228 silly audit   'terser-webpack-plugin': [ '5.6.0' ],
+228 silly audit   'tiny-inflate': [ '1.0.3' ],
+228 silly audit   tinyglobby: [ '0.2.16' ],
+228 silly audit   fdir: [ '6.5.0' ],
+228 silly audit   'to-regex-range': [ '5.0.1' ],
+228 silly audit   'ts-api-utils': [ '2.5.0' ],
+228 silly audit   tsconfck: [ '3.1.6' ],
+228 silly audit   'tsconfig-paths': [ '3.15.0' ],
+228 silly audit   tsx: [ '4.22.1' ],
+228 silly audit   'turbo-stream': [ '3.2.0' ],
+228 silly audit   'type-check': [ '0.4.0' ],
+228 silly audit   'typed-array-buffer': [ '1.0.3' ],
+228 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+228 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+228 silly audit   'typed-array-length': [ '1.0.7' ],
+228 silly audit   typescript: [ '5.9.3' ],
+228 silly audit   'typescript-eslint': [ '8.59.3' ],
+228 silly audit   'unbox-primitive': [ '1.1.0' ],
+228 silly audit   undici: [ '7.24.8' ],
+228 silly audit   'undici-types': [ '6.21.0' ],
+228 silly audit   unenv: [ '2.0.0-rc.24' ],
+228 silly audit   'unicode-trie': [ '2.0.0' ],
+228 silly audit   unpic: [ '4.2.2' ],
+228 silly audit   'unrs-resolver': [ '1.11.1' ],
+228 silly audit   'update-browserslist-db': [ '1.2.3' ],
+228 silly audit   'uri-js': [ '4.4.1' ],
+228 silly audit   vinext: [ '0.0.50' ],
+228 silly audit   vite: [ '8.0.13' ],
+228 silly audit   'vite-plugin-commonjs': [ '0.10.4' ],
+228 silly audit   'vite-plugin-dynamic-import': [ '1.6.0' ],
+228 silly audit   'vite-tsconfig-paths': [ '6.1.1' ],
+228 silly audit   vitefu: [ '1.1.3' ],
+228 silly audit   watchpack: [ '2.5.1' ],
+228 silly audit   'web-vitals': [ '4.2.4' ],
+228 silly audit   webpack: [ '5.106.2' ],
+228 silly audit   'webpack-sources': [ '3.4.1' ],
+228 silly audit   which: [ '2.0.2' ],
+228 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+228 silly audit   'which-builtin-type': [ '1.2.1' ],
+228 silly audit   'which-collection': [ '1.0.2' ],
+228 silly audit   'which-typed-array': [ '1.1.20' ],
+228 silly audit   'word-wrap': [ '1.2.5' ],
+228 silly audit   workerd: [ '1.20260515.1' ],
+228 silly audit   wrangler: [ '4.92.0' ],
+228 silly audit   ws: [ '8.18.0' ],
+228 silly audit   yallist: [ '3.1.1' ],
+228 silly audit   'yocto-queue': [ '0.1.0' ],
+228 silly audit   'yoga-layout': [ '3.2.1' ],
+228 silly audit   youch: [ '4.1.0-beta.10' ],
+228 silly audit   'youch-core': [ '0.3.3' ],
+228 silly audit   zod: [ '4.4.3' ],
+228 silly audit   'zod-validation-error': [ '4.0.2' ]
+228 silly audit }
+229 verbose audit error FetchError: request to https://registry.npmjs.org/-/npm/v1/security/advisories/bulk failed, reason: 
+229 verbose audit error     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\minipass-fetch\lib\index.js:130:14)
+229 verbose audit error     at ClientRequest.emit (node:events:509:20)
+229 verbose audit error     at emitErrorEvent (node:_http_client:109:11)
+229 verbose audit error     at _destroy (node:_http_client:993:9)
+229 verbose audit error     at onSocketNT (node:_http_client:1014:5)
+229 verbose audit error     at process.processTicksAndRejections (node:internal/process/task_queues:91:21) {
+229 verbose audit error   code: 'EACCES',
+229 verbose audit error   errno: 'EACCES',
+229 verbose audit error   type: 'system'
+229 verbose audit error }
+230 silly audit error undefined
+231 silly audit report null
+232 http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz 0ms (cache hit)
+233 http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 0ms (cache hit)
+234 http cache vite@https://registry.npmjs.org/vite/-/vite-8.0.13.tgz 0ms (cache hit)
+235 http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+236 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+237 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 0ms (cache hit)
+238 http cache rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.0.1.tgz 0ms (cache hit)
+239 http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 0ms (cache hit)
+240 http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+241 http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+242 http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz 0ms (cache hit)
+243 http cache @tailwindcss/oxide@https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz 0ms (cache hit)
+244 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz 0ms (cache hit)
+245 http cache eslint@https://registry.npmjs.org/eslint/-/eslint-9.39.4.tgz 0ms (cache hit)
+246 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz 0ms (cache hit)
+247 http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+248 http cache @vitejs/plugin-rsc@https://registry.npmjs.org/@vitejs/plugin-rsc/-/plugin-rsc-0.5.26.tgz 0ms (cache hit)
+249 http cache @vercel/og@https://registry.npmjs.org/@vercel/og/-/og-0.8.6.tgz 0ms (cache hit)
+250 http cache @types/node@https://registry.npmjs.org/@types/node/-/node-22.19.19.tgz 0ms (cache hit)
+251 http cache @tailwindcss/postcss@https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.2.1.tgz 0ms (cache hit)
+252 http cache @speed-highlight/core@https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.15.tgz 0ms (cache hit)
+253 http cache @unpic/core@https://registry.npmjs.org/@unpic/core/-/core-1.0.3.tgz 0ms (cache hit)
+254 http cache @tailwindcss/oxide-win32-x64-msvc@https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.2.1.tgz 0ms (cache hit)
+255 http cache @types/json5@https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz 0ms (cache hit)
+256 http cache @tailwindcss/node@https://registry.npmjs.org/@tailwindcss/node/-/node-4.2.1.tgz 0ms (cache hit)
+257 http cache @sindresorhus/is@https://registry.npmjs.org/@sindresorhus/is/-/is-7.2.0.tgz 0ms (cache hit)
+258 http cache @resvg/resvg-wasm@https://registry.npmjs.org/@resvg/resvg-wasm/-/resvg-wasm-2.4.0.tgz 0ms (cache hit)
+259 http cache @shuding/opentype.js@https://registry.npmjs.org/@shuding/opentype.js/-/opentype.js-1.4.0-beta.0.tgz 0ms (cache hit)
+260 http cache @rtsao/scc@https://registry.npmjs.org/@rtsao/scc/-/scc-1.1.0.tgz 0ms (cache hit)
+261 http cache @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz 0ms (cache hit)
+262 http cache @poppinss/exception@https://registry.npmjs.org/@poppinss/exception/-/exception-1.2.3.tgz 0ms (cache hit)
+263 http cache @poppinss/colors@https://registry.npmjs.org/@poppinss/colors/-/colors-4.1.6.tgz 0ms (cache hit)
+264 http cache @poppinss/dumper@https://registry.npmjs.org/@poppinss/dumper/-/dumper-0.6.5.tgz 0ms (cache hit)
+265 http cache @next/swc-win32-x64-msvc@https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.2.6.tgz 0ms (cache hit)
+266 http cache @next/eslint-plugin-next@https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-16.2.6.tgz 0ms (cache hit)
+267 http cache @next/env@https://registry.npmjs.org/@next/env/-/env-16.2.6.tgz 0ms (cache hit)
+268 http cache @img/sharp-win32-x64@https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz 0ms (cache hit)
+269 http cache @nolyfill/is-core-module@https://registry.npmjs.org/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz 0ms (cache hit)
+270 http cache @esbuild-kit/esm-loader@https://registry.npmjs.org/@esbuild-kit/esm-loader/-/esm-loader-2.6.5.tgz 0ms (cache hit)
+271 http cache @esbuild-kit/core-utils@https://registry.npmjs.org/@esbuild-kit/core-utils/-/core-utils-3.3.2.tgz 0ms (cache hit)
+272 http cache @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz 0ms (cache hit)
+273 http cache @img/colour@https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz 0ms (cache hit)
+274 http cache @cloudflare/workerd-windows-64@https://registry.npmjs.org/@cloudflare/workerd-windows-64/-/workerd-windows-64-1.20260515.1.tgz 0ms (cache hit)
+275 http cache @cloudflare/vite-plugin@https://registry.npmjs.org/@cloudflare/vite-plugin/-/vite-plugin-1.37.1.tgz 0ms (cache hit)
+276 http cache @cloudflare/unenv-preset@https://registry.npmjs.org/@cloudflare/unenv-preset/-/unenv-preset-2.16.1.tgz 0ms (cache hit)
+277 http cache @unrs/resolver-binding-win32-x64-msvc@https://registry.npmjs.org/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.11.1.tgz 0ms (cache hit)
+278 http cache @cloudflare/kv-asset-handler@https://registry.npmjs.org/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.5.0.tgz 0ms (cache hit)
+279 http cache @unpic/react@https://registry.npmjs.org/@unpic/react/-/react-1.0.2.tgz 0ms (cache hit)
+280 http cache @drizzle-team/brocli@https://registry.npmjs.org/@drizzle-team/brocli/-/brocli-0.10.2.tgz 0ms (cache hit)
+281 http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz 0ms (cache hit)
+282 http cache youch@https://registry.npmjs.org/youch/-/youch-4.1.0-beta.10.tgz 0ms (cache hit)
+283 http cache yoga-layout@https://registry.npmjs.org/yoga-layout/-/yoga-layout-3.2.1.tgz 0ms (cache hit)
+284 http cache @alloc/quick-lru@https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz 0ms (cache hit)
+285 http cache ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz 0ms (cache hit)
+286 http cache youch-core@https://registry.npmjs.org/youch-core/-/youch-core-0.3.3.tgz 0ms (cache hit)
+287 http cache wrangler@https://registry.npmjs.org/wrangler/-/wrangler-4.92.0.tgz 0ms (cache hit)
+288 http cache which-collection@https://registry.npmjs.org/which-collection/-/which-collection-1.0.2.tgz 0ms (cache hit)
+289 http cache which-builtin-type@https://registry.npmjs.org/which-builtin-type/-/which-builtin-type-1.2.1.tgz 0ms (cache hit)
+290 http cache which-boxed-primitive@https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.1.1.tgz 0ms (cache hit)
+291 http cache webpack@https://registry.npmjs.org/webpack/-/webpack-5.106.2.tgz 0ms (cache hit)
+292 http cache workerd@https://registry.npmjs.org/workerd/-/workerd-1.20260515.1.tgz 0ms (cache hit)
+293 http cache web-vitals@https://registry.npmjs.org/web-vitals/-/web-vitals-4.2.4.tgz 0ms (cache hit)
+294 http cache vite-tsconfig-paths@https://registry.npmjs.org/vite-tsconfig-paths/-/vite-tsconfig-paths-6.1.1.tgz 0ms (cache hit)
+295 http cache vite-plugin-commonjs@https://registry.npmjs.org/vite-plugin-commonjs/-/vite-plugin-commonjs-0.10.4.tgz 0ms (cache hit)
+296 http cache vite-plugin-dynamic-import@https://registry.npmjs.org/vite-plugin-dynamic-import/-/vite-plugin-dynamic-import-1.6.0.tgz 0ms (cache hit)
+297 http cache unpic@https://registry.npmjs.org/unpic/-/unpic-4.2.2.tgz 0ms (cache hit)
+298 http cache unrs-resolver@https://registry.npmjs.org/unrs-resolver/-/unrs-resolver-1.11.1.tgz 0ms (cache hit)
+299 http cache vinext@https://registry.npmjs.org/vinext/-/vinext-0.0.50.tgz 0ms (cache hit)
+300 http cache vitefu@https://registry.npmjs.org/vitefu/-/vitefu-1.1.3.tgz 0ms (cache hit)
+301 http cache unicode-trie@https://registry.npmjs.org/unicode-trie/-/unicode-trie-2.0.0.tgz 0ms (cache hit)
+302 http cache unenv@https://registry.npmjs.org/unenv/-/unenv-2.0.0-rc.24.tgz 0ms (cache hit)
+303 http cache unbox-primitive@https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.1.0.tgz 0ms (cache hit)
+304 http cache typed-array-length@https://registry.npmjs.org/typed-array-length/-/typed-array-length-1.0.7.tgz 0ms (cache hit)
+305 http cache typed-array-byte-length@https://registry.npmjs.org/typed-array-byte-length/-/typed-array-byte-length-1.0.3.tgz 0ms (cache hit)
+306 http cache typed-array-buffer@https://registry.npmjs.org/typed-array-buffer/-/typed-array-buffer-1.0.3.tgz 0ms (cache hit)
+307 http cache typed-array-byte-offset@https://registry.npmjs.org/typed-array-byte-offset/-/typed-array-byte-offset-1.0.4.tgz 0ms (cache hit)
+308 http cache undici@https://registry.npmjs.org/undici/-/undici-7.24.8.tgz 0ms (cache hit)
+309 http cache tsconfck@https://registry.npmjs.org/tsconfck/-/tsconfck-3.1.6.tgz 0ms (cache hit)
+310 http cache tsx@https://registry.npmjs.org/tsx/-/tsx-4.22.1.tgz 0ms (cache hit)
+311 http cache turbo-stream@https://registry.npmjs.org/turbo-stream/-/turbo-stream-3.2.0.tgz 0ms (cache hit)
+312 http cache tiny-inflate@https://registry.npmjs.org/tiny-inflate/-/tiny-inflate-1.0.3.tgz 0ms (cache hit)
+313 http cache terser-webpack-plugin@https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.6.0.tgz 0ms (cache hit)
+314 http cache terser@https://registry.npmjs.org/terser/-/terser-5.47.1.tgz 0ms (cache hit)
+315 http cache styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz 0ms (cache hit)
+316 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.2.1.tgz 0ms (cache hit)
+317 http cache string.prototype.trimstart@https://registry.npmjs.org/string.prototype.trimstart/-/string.prototype.trimstart-1.0.8.tgz 0ms (cache hit)
+318 http cache tsconfig-paths@https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.15.0.tgz 0ms (cache hit)
+319 http cache string.prototype.trimend@https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.9.tgz 0ms (cache hit)
+320 http cache strip-literal@https://registry.npmjs.org/strip-literal/-/strip-literal-3.1.0.tgz 0ms (cache hit)
+321 http cache string.prototype.repeat@https://registry.npmjs.org/string.prototype.repeat/-/string.prototype.repeat-1.0.0.tgz 0ms (cache hit)
+322 http cache string.prototype.matchall@https://registry.npmjs.org/string.prototype.matchall/-/string.prototype.matchall-4.0.12.tgz 0ms (cache hit)
+323 http cache string.prototype.trim@https://registry.npmjs.org/string.prototype.trim/-/string.prototype.trim-1.2.10.tgz 0ms (cache hit)
+324 http cache string.prototype.includes@https://registry.npmjs.org/string.prototype.includes/-/string.prototype.includes-2.0.1.tgz 0ms (cache hit)
+325 http cache string.prototype.codepointat@https://registry.npmjs.org/string.prototype.codepointat/-/string.prototype.codepointat-0.2.1.tgz 0ms (cache hit)
+326 http cache stop-iteration-iterator@https://registry.npmjs.org/stop-iteration-iterator/-/stop-iteration-iterator-1.1.0.tgz 0ms (cache hit)
+327 http cache stable-hash@https://registry.npmjs.org/stable-hash/-/stable-hash-0.0.5.tgz 0ms (cache hit)
+328 http cache srvx@https://registry.npmjs.org/srvx/-/srvx-0.11.15.tgz 0ms (cache hit)
+329 http cache sharp@https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz 0ms (cache hit)
+330 http cache set-proto@https://registry.npmjs.org/set-proto/-/set-proto-1.0.0.tgz 0ms (cache hit)
+331 http cache set-function-name@https://registry.npmjs.org/set-function-name/-/set-function-name-2.0.2.tgz 0ms (cache hit)
+332 http cache satori@https://registry.npmjs.org/satori/-/satori-0.16.0.tgz 0ms (cache hit)
+333 http cache safe-push-apply@https://registry.npmjs.org/safe-push-apply/-/safe-push-apply-1.0.0.tgz 0ms (cache hit)
+334 http cache safe-array-concat@https://registry.npmjs.org/safe-array-concat/-/safe-array-concat-1.1.4.tgz 0ms (cache hit)
+335 http cache resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz 0ms (cache hit)
+336 http cache regexp.prototype.flags@https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz 0ms (cache hit)
+337 http cache reflect.getprototypeof@https://registry.npmjs.org/reflect.getprototypeof/-/reflect.getprototypeof-1.0.10.tgz 0ms (cache hit)
+338 http cache react-server-dom-webpack@https://registry.npmjs.org/react-server-dom-webpack/-/react-server-dom-webpack-19.2.6.tgz 0ms (cache hit)
+339 http cache resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.7.tgz 0ms (cache hit)
+340 http cache react-loading-skeleton@https://registry.npmjs.org/react-loading-skeleton/-/react-loading-skeleton-3.5.0.tgz 0ms (cache hit)
+341 http cache postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz 0ms (cache hit)
+342 http cache pako@https://registry.npmjs.org/pako/-/pako-0.2.9.tgz 0ms (cache hit)
+343 http cache parse-css-color@https://registry.npmjs.org/parse-css-color/-/parse-css-color-0.2.1.tgz 0ms (cache hit)
+344 http cache own-keys@https://registry.npmjs.org/own-keys/-/own-keys-1.0.1.tgz 0ms (cache hit)
+345 http cache object.values@https://registry.npmjs.org/object.values/-/object.values-1.2.1.tgz 0ms (cache hit)
+346 http cache object.groupby@https://registry.npmjs.org/object.groupby/-/object.groupby-1.0.3.tgz 0ms (cache hit)
+347 http cache object.fromentries@https://registry.npmjs.org/object.fromentries/-/object.fromentries-2.0.8.tgz 1ms (cache hit)
+348 http cache object.entries@https://registry.npmjs.org/object.entries/-/object.entries-1.1.9.tgz 0ms (cache hit)
+349 http cache object.assign@https://registry.npmjs.org/object.assign/-/object.assign-4.1.7.tgz 0ms (cache hit)
+350 http cache object-keys@https://registry.npmjs.org/object-keys/-/object-keys-1.1.1.tgz 0ms (cache hit)
+351 http cache node-exports-info@https://registry.npmjs.org/node-exports-info/-/node-exports-info-1.6.0.tgz 0ms (cache hit)
+352 http cache napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz 0ms (cache hit)
+353 http cache next@https://registry.npmjs.org/next/-/next-16.2.6.tgz 0ms (cache hit)
+354 http cache linebreak@https://registry.npmjs.org/linebreak/-/linebreak-1.1.0.tgz 0ms (cache hit)
+355 http cache lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz 0ms (cache hit)
+356 http cache miniflare@https://registry.npmjs.org/miniflare/-/miniflare-4.20260515.0.tgz 0ms (cache hit)
+357 http cache lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz 0ms (cache hit)
+358 http cache language-subtag-registry@https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.23.tgz 0ms (cache hit)
+359 http cache jsx-ast-utils@https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.5.tgz 0ms (cache hit)
+360 http cache iterator.prototype@https://registry.npmjs.org/iterator.prototype/-/iterator.prototype-1.1.5.tgz 0ms (cache hit)
+361 http cache is-weakset@https://registry.npmjs.org/is-weakset/-/is-weakset-2.0.4.tgz 0ms (cache hit)
+362 http cache language-tags@https://registry.npmjs.org/language-tags/-/language-tags-1.0.9.tgz 0ms (cache hit)
+363 http cache is-weakref@https://registry.npmjs.org/is-weakref/-/is-weakref-1.1.1.tgz 0ms (cache hit)
+364 http cache isarray@https://registry.npmjs.org/isarray/-/isarray-2.0.5.tgz 0ms (cache hit)
+365 http cache is-symbol@https://registry.npmjs.org/is-symbol/-/is-symbol-1.1.1.tgz 0ms (cache hit)
+366 http cache is-weakmap@https://registry.npmjs.org/is-weakmap/-/is-weakmap-2.0.2.tgz 0ms (cache hit)
+367 http cache is-string@https://registry.npmjs.org/is-string/-/is-string-1.1.1.tgz 0ms (cache hit)
+368 http cache is-shared-array-buffer@https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.4.tgz 0ms (cache hit)
+369 http cache is-set@https://registry.npmjs.org/is-set/-/is-set-2.0.3.tgz 0ms (cache hit)
+370 http cache is-number-object@https://registry.npmjs.org/is-number-object/-/is-number-object-1.1.1.tgz 0ms (cache hit)
+371 http cache is-negative-zero@https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.3.tgz 0ms (cache hit)
+372 http cache is-map@https://registry.npmjs.org/is-map/-/is-map-2.0.3.tgz 0ms (cache hit)
+373 http cache is-finalizationregistry@https://registry.npmjs.org/is-finalizationregistry/-/is-finalizationregistry-1.1.1.tgz 0ms (cache hit)
+374 http cache is-boolean-object@https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-1.2.2.tgz 0ms (cache hit)
+375 http cache is-data-view@https://registry.npmjs.org/is-data-view/-/is-data-view-1.0.2.tgz 0ms (cache hit)
+376 http cache is-bun-module@https://registry.npmjs.org/is-bun-module/-/is-bun-module-2.0.0.tgz 0ms (cache hit)
+377 http cache is-bigint@https://registry.npmjs.org/is-bigint/-/is-bigint-1.1.0.tgz 0ms (cache hit)
+378 http cache is-array-buffer@https://registry.npmjs.org/is-array-buffer/-/is-array-buffer-3.0.5.tgz 0ms (cache hit)
+379 http cache is-async-function@https://registry.npmjs.org/is-async-function/-/is-async-function-2.1.1.tgz 0ms (cache hit)
+380 http cache image-size@https://registry.npmjs.org/image-size/-/image-size-2.0.2.tgz 0ms (cache hit)
+381 http cache has-proto@https://registry.npmjs.org/has-proto/-/has-proto-1.2.0.tgz 0ms (cache hit)
+382 http cache hex-rgb@https://registry.npmjs.org/hex-rgb/-/hex-rgb-4.3.0.tgz 0ms (cache hit)
+383 http cache internal-slot@https://registry.npmjs.org/internal-slot/-/internal-slot-1.1.0.tgz 0ms (cache hit)
+384 http cache has-bigints@https://registry.npmjs.org/has-bigints/-/has-bigints-1.1.0.tgz 0ms (cache hit)
+385 http cache globrex@https://registry.npmjs.org/globrex/-/globrex-0.1.2.tgz 0ms (cache hit)
+386 http cache globalthis@https://registry.npmjs.org/globalthis/-/globalthis-1.0.4.tgz 0ms (cache hit)
+387 http cache get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.14.0.tgz 0ms (cache hit)
+388 http cache get-symbol-description@https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.1.0.tgz 0ms (cache hit)
+389 http cache function.prototype.name@https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.8.tgz 0ms (cache hit)
+390 http cache functions-have-names@https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz 0ms (cache hit)
+391 http cache fflate@https://registry.npmjs.org/fflate/-/fflate-0.7.4.tgz 0ms (cache hit)
+392 http cache fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz 0ms (cache hit)
+393 http cache eslint-plugin-jsx-a11y@https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz 0ms (cache hit)
+394 http cache estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz 0ms (cache hit)
+395 http cache eslint-plugin-react@https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.37.5.tgz 0ms (cache hit)
+396 http cache eslint-plugin-import@https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.32.0.tgz 0ms (cache hit)
+397 http cache eslint-module-utils@https://registry.npmjs.org/eslint-module-utils/-/eslint-module-utils-2.12.1.tgz 0ms (cache hit)
+398 http cache eslint-import-resolver-typescript@https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-3.10.1.tgz 0ms (cache hit)
+399 http cache eslint-import-resolver-node@https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.10.tgz 0ms (cache hit)
+400 http cache es-to-primitive@https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.3.0.tgz 0ms (cache hit)
+401 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.28.0.tgz 0ms (cache hit)
+402 http cache eslint-config-next@https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-16.2.6.tgz 0ms (cache hit)
+403 http cache es-shim-unscopables@https://registry.npmjs.org/es-shim-unscopables/-/es-shim-unscopables-1.1.0.tgz 0ms (cache hit)
+404 http cache es-module-lexer@https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.1.0.tgz 0ms (cache hit)
+405 http cache es-iterator-helpers@https://registry.npmjs.org/es-iterator-helpers/-/es-iterator-helpers-1.3.2.tgz 0ms (cache hit)
+406 http cache es-abstract@https://registry.npmjs.org/es-abstract/-/es-abstract-1.24.2.tgz 0ms (cache hit)
+407 http cache error-stack-parser-es@https://registry.npmjs.org/error-stack-parser-es/-/error-stack-parser-es-1.0.5.tgz 0ms (cache hit)
+408 http cache emoji-regex-xs@https://registry.npmjs.org/emoji-regex-xs/-/emoji-regex-xs-2.0.1.tgz 0ms (cache hit)
+409 http cache electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.358.tgz 0ms (cache hit)
+410 http cache drizzle-orm@https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.45.2.tgz 0ms (cache hit)
+411 http cache doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz 0ms (cache hit)
+412 http cache define-properties@https://registry.npmjs.org/define-properties/-/define-properties-1.2.1.tgz 0ms (cache hit)
+413 http cache data-view-byte-offset@https://registry.npmjs.org/data-view-byte-offset/-/data-view-byte-offset-1.0.1.tgz 0ms (cache hit)
+414 http cache drizzle-kit@https://registry.npmjs.org/drizzle-kit/-/drizzle-kit-0.31.10.tgz 0ms (cache hit)
+415 http cache data-view-byte-length@https://registry.npmjs.org/data-view-byte-length/-/data-view-byte-length-1.0.2.tgz 0ms (cache hit)
+416 http cache data-view-buffer@https://registry.npmjs.org/data-view-buffer/-/data-view-buffer-1.0.2.tgz 0ms (cache hit)
+417 http cache damerau-levenshtein@https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz 0ms (cache hit)
+418 http cache css-to-react-native@https://registry.npmjs.org/css-to-react-native/-/css-to-react-native-3.2.0.tgz 0ms (cache hit)
+419 http cache css-color-keywords@https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz 0ms (cache hit)
+420 http cache css-gradient-parser@https://registry.npmjs.org/css-gradient-parser/-/css-gradient-parser-0.0.16.tgz 0ms (cache hit)
+421 http cache css-box-shadow@https://registry.npmjs.org/css-box-shadow/-/css-box-shadow-1.0.0-3.tgz 0ms (cache hit)
+422 http cache css-background-parser@https://registry.npmjs.org/css-background-parser/-/css-background-parser-0.1.0.tgz 0ms (cache hit)
+423 http cache client-only@https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz 0ms (cache hit)
+424 http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001793.tgz 0ms (cache hit)
+425 http cache camelize@https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz 0ms (cache hit)
+426 http cache blake3-wasm@https://registry.npmjs.org/blake3-wasm/-/blake3-wasm-2.1.5.tgz 0ms (cache hit)
+427 http cache base64-js@https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz 0ms (cache hit)
+428 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.30.tgz 0ms (cache hit)
+429 http cache axe-core@https://registry.npmjs.org/axe-core/-/axe-core-4.11.4.tgz 0ms (cache hit)
+430 http cache axobject-query@https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz 0ms (cache hit)
+431 http cache async-function@https://registry.npmjs.org/async-function/-/async-function-1.0.0.tgz 0ms (cache hit)
+432 http cache ast-types-flow@https://registry.npmjs.org/ast-types-flow/-/ast-types-flow-0.0.8.tgz 0ms (cache hit)
+433 http cache array.prototype.tosorted@https://registry.npmjs.org/array.prototype.tosorted/-/array.prototype.tosorted-1.1.4.tgz 0ms (cache hit)
+434 http cache array.prototype.flatmap@https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz 0ms (cache hit)
+435 http cache arraybuffer.prototype.slice@https://registry.npmjs.org/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.4.tgz 0ms (cache hit)
+436 http cache array.prototype.flat@https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.3.tgz 0ms (cache hit)
+437 http cache array.prototype.findlast@https://registry.npmjs.org/array.prototype.findlast/-/array.prototype.findlast-1.2.5.tgz 1ms (cache hit)
+438 http cache array-buffer-byte-length@https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz 0ms (cache hit)
+439 http cache array.prototype.findlastindex@https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.6.tgz 0ms (cache hit)
+440 http cache array-includes@https://registry.npmjs.org/array-includes/-/array-includes-3.1.9.tgz 0ms (cache hit)
+441 http cache aria-query@https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz 0ms (cache hit)
+442 http cache semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz 0ms (cache hit)
+443 http cache @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.18.tgz 0ms (cache hit)
+444 http cache acorn-import-phases@https://registry.npmjs.org/acorn-import-phases/-/acorn-import-phases-1.0.4.tgz 0ms (cache hit)
+445 http cache @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz 0ms (cache hit)
+446 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.18.20.tgz 0ms (cache hit)
+447 http cache @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.27.3.tgz 0ms (cache hit)
+448 http cache acorn-loose@https://registry.npmjs.org/acorn-loose/-/acorn-loose-8.5.2.tgz 0ms (cache hit)
+449 http cache json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz 0ms (cache hit)
+450 http cache supports-color@https://registry.npmjs.org/supports-color/-/supports-color-10.2.2.tgz 0ms (cache hit)
+451 http cache semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz 0ms (cache hit)
+452 http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz 0ms (cache hit)
+453 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.27.3.tgz 0ms (cache hit)
+454 http cache globals@https://registry.npmjs.org/globals/-/globals-16.4.0.tgz 0ms (cache hit)
+455 http cache semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz 0ms (cache hit)
+456 http cache js-tokens@https://registry.npmjs.org/js-tokens/-/js-tokens-9.0.1.tgz 0ms (cache hit)
+457 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+458 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+459 http cache debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz 0ms (cache hit)
+460 http cache @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.12.tgz 0ms (cache hit)
+461 silly tarball no local data for @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz. Extracting by manifest.
+462 silly tarball no local data for which@https://registry.npmjs.org/which/-/which-2.0.2.tgz. Extracting by manifest.
+463 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-8.0.13.tgz. Extracting by manifest.
+464 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz. Extracting by manifest.
+465 silly tarball no local data for typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz. Extracting by manifest.
+466 silly tarball no local data for nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz. Extracting by manifest.
+467 http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz 0ms (cache hit)
+468 silly tarball no local data for rolldown@https://registry.npmjs.org/rolldown/-/rolldown-1.0.1.tgz. Extracting by manifest.
+469 silly tarball no local data for update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz. Extracting by manifest.
+470 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz. Extracting by manifest.
+471 silly tarball no local data for jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz. Extracting by manifest.
+472 silly tarball no local data for js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz. Extracting by manifest.
+473 silly tarball no local data for @tailwindcss/oxide@https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz. Extracting by manifest.
+474 silly tarball no local data for browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz. Extracting by manifest.
+475 silly tarball no local data for eslint@https://registry.npmjs.org/eslint/-/eslint-9.39.4.tgz. Extracting by manifest.
+476 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz. Extracting by manifest.
+477 silly tarball no local data for loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz. Extracting by manifest.
+478 silly tarball no local data for @vitejs/plugin-rsc@https://registry.npmjs.org/@vitejs/plugin-rsc/-/plugin-rsc-0.5.26.tgz. Extracting by manifest.
+479 silly tarball no local data for @vercel/og@https://registry.npmjs.org/@vercel/og/-/og-0.8.6.tgz. Extracting by manifest.
+480 silly tarball no local data for @types/node@https://registry.npmjs.org/@types/node/-/node-22.19.19.tgz. Extracting by manifest.
+481 silly tarball no local data for @tailwindcss/postcss@https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.2.1.tgz. Extracting by manifest.
+482 silly tarball no local data for @speed-highlight/core@https://registry.npmjs.org/@speed-highlight/core/-/core-1.2.15.tgz. Extracting by manifest.
+483 silly tarball no local data for @unpic/core@https://registry.npmjs.org/@unpic/core/-/core-1.0.3.tgz. Extracting by manifest.
+484 silly tarball no local data for @tailwindcss/oxide-win32-x64-msvc@https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.2.1.tgz. Extracting by manifest.
+485 silly tarball no local data for @types/json5@https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz. Extracting by manifest.
+486 silly tarball no local data for @tailwindcss/node@https://registry.npmjs.org/@tailwindcss/node/-/node-4.2.1.tgz. Extracting by manifest.
+487 silly tarball no local data for @sindresorhus/is@https://registry.npmjs.org/@sindresorhus/is/-/is-7.2.0.tgz. Extracting by manifest.
+488 silly tarball no local data for @resvg/resvg-wasm@https://registry.npmjs.org/@resvg/resvg-wasm/-/resvg-wasm-2.4.0.tgz. Extracting by manifest.
+489 silly tarball no local data for @shuding/opentype.js@https://registry.npmjs.org/@shuding/opentype.js/-/opentype.js-1.4.0-beta.0.tgz. Extracting by manifest.
+490 silly tarball no local data for @rtsao/scc@https://registry.npmjs.org/@rtsao/scc/-/scc-1.1.0.tgz. Extracting by manifest.
+491 silly tarball no local data for @swc/helpers@https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz. Extracting by manifest.
+492 silly tarball no local data for @poppinss/exception@https://registry.npmjs.org/@poppinss/exception/-/exception-1.2.3.tgz. Extracting by manifest.
+493 silly tarball no local data for @poppinss/colors@https://registry.npmjs.org/@poppinss/colors/-/colors-4.1.6.tgz. Extracting by manifest.
+494 silly tarball no local data for @poppinss/dumper@https://registry.npmjs.org/@poppinss/dumper/-/dumper-0.6.5.tgz. Extracting by manifest.
+495 silly tarball no local data for @next/swc-win32-x64-msvc@https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.2.6.tgz. Extracting by manifest.
+496 silly tarball no local data for @next/eslint-plugin-next@https://registry.npmjs.org/@next/eslint-plugin-next/-/eslint-plugin-next-16.2.6.tgz. Extracting by manifest.
+497 silly tarball no local data for @next/env@https://registry.npmjs.org/@next/env/-/env-16.2.6.tgz. Extracting by manifest.
+498 silly tarball no local data for @img/sharp-win32-x64@https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz. Extracting by manifest.
+499 silly tarball no local data for @nolyfill/is-core-module@https://registry.npmjs.org/@nolyfill/is-core-module/-/is-core-module-1.0.39.tgz. Extracting by manifest.
+500 silly tarball no local data for @esbuild-kit/esm-loader@https://registry.npmjs.org/@esbuild-kit/esm-loader/-/esm-loader-2.6.5.tgz. Extracting by manifest.
+501 silly tarball no local data for @esbuild-kit/core-utils@https://registry.npmjs.org/@esbuild-kit/core-utils/-/core-utils-3.3.2.tgz. Extracting by manifest.
+502 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz. Extracting by manifest.
+503 silly tarball no local data for @img/colour@https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz. Extracting by manifest.
+504 silly tarball no local data for @cloudflare/workerd-windows-64@https://registry.npmjs.org/@cloudflare/workerd-windows-64/-/workerd-windows-64-1.20260515.1.tgz. Extracting by manifest.
+505 silly tarball no local data for @cloudflare/vite-plugin@https://registry.npmjs.org/@cloudflare/vite-plugin/-/vite-plugin-1.37.1.tgz. Extracting by manifest.
+506 silly tarball no local data for @cloudflare/unenv-preset@https://registry.npmjs.org/@cloudflare/unenv-preset/-/unenv-preset-2.16.1.tgz. Extracting by manifest.
+507 silly tarball no local data for @unrs/resolver-binding-win32-x64-msvc@https://registry.npmjs.org/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.11.1.tgz. Extracting by manifest.
+508 silly tarball no local data for @cloudflare/kv-asset-handler@https://registry.npmjs.org/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.5.0.tgz. Extracting by manifest.
+509 silly tarball no local data for @unpic/react@https://registry.npmjs.org/@unpic/react/-/react-1.0.2.tgz. Extracting by manifest.
+510 silly tarball no local data for @drizzle-team/brocli@https://registry.npmjs.org/@drizzle-team/brocli/-/brocli-0.10.2.tgz. Extracting by manifest.
+511 silly tarball no local data for acorn@https://registry.npmjs.org/acorn/-/acorn-8.16.0.tgz. Extracting by manifest.
+512 silly tarball no local data for youch@https://registry.npmjs.org/youch/-/youch-4.1.0-beta.10.tgz. Extracting by manifest.
+513 silly tarball no local data for yoga-layout@https://registry.npmjs.org/yoga-layout/-/yoga-layout-3.2.1.tgz. Extracting by manifest.
+514 silly tarball no local data for @alloc/quick-lru@https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz. Extracting by manifest.
+515 silly tarball no local data for ws@https://registry.npmjs.org/ws/-/ws-8.18.0.tgz. Extracting by manifest.
+516 silly tarball no local data for youch-core@https://registry.npmjs.org/youch-core/-/youch-core-0.3.3.tgz. Extracting by manifest.
+517 silly tarball no local data for wrangler@https://registry.npmjs.org/wrangler/-/wrangler-4.92.0.tgz. Extracting by manifest.
+518 silly tarball no local data for which-collection@https://registry.npmjs.org/which-collection/-/which-collection-1.0.2.tgz. Extracting by manifest.
+519 silly tarball no local data for which-builtin-type@https://registry.npmjs.org/which-builtin-type/-/which-builtin-type-1.2.1.tgz. Extracting by manifest.
+520 silly tarball no local data for which-boxed-primitive@https://registry.npmjs.org/which-boxed-primitive/-/which-boxed-primitive-1.1.1.tgz. Extracting by manifest.
+521 silly tarball no local data for webpack@https://registry.npmjs.org/webpack/-/webpack-5.106.2.tgz. Extracting by manifest.
+522 silly tarball no local data for workerd@https://registry.npmjs.org/workerd/-/workerd-1.20260515.1.tgz. Extracting by manifest.
+523 silly tarball no local data for web-vitals@https://registry.npmjs.org/web-vitals/-/web-vitals-4.2.4.tgz. Extracting by manifest.
+524 silly tarball no local data for vite-tsconfig-paths@https://registry.npmjs.org/vite-tsconfig-paths/-/vite-tsconfig-paths-6.1.1.tgz. Extracting by manifest.
+525 silly tarball no local data for vite-plugin-commonjs@https://registry.npmjs.org/vite-plugin-commonjs/-/vite-plugin-commonjs-0.10.4.tgz. Extracting by manifest.
+526 silly tarball no local data for vite-plugin-dynamic-import@https://registry.npmjs.org/vite-plugin-dynamic-import/-/vite-plugin-dynamic-import-1.6.0.tgz. Extracting by manifest.
+527 silly tarball no local data for unpic@https://registry.npmjs.org/unpic/-/unpic-4.2.2.tgz. Extracting by manifest.
+528 silly tarball no local data for unrs-resolver@https://registry.npmjs.org/unrs-resolver/-/unrs-resolver-1.11.1.tgz. Extracting by manifest.
+529 silly tarball no local data for vinext@https://registry.npmjs.org/vinext/-/vinext-0.0.50.tgz. Extracting by manifest.
+530 silly tarball no local data for vitefu@https://registry.npmjs.org/vitefu/-/vitefu-1.1.3.tgz. Extracting by manifest.
+531 silly tarball no local data for unicode-trie@https://registry.npmjs.org/unicode-trie/-/unicode-trie-2.0.0.tgz. Extracting by manifest.
+532 silly tarball no local data for unenv@https://registry.npmjs.org/unenv/-/unenv-2.0.0-rc.24.tgz. Extracting by manifest.
+533 silly tarball no local data for unbox-primitive@https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.1.0.tgz. Extracting by manifest.
+534 silly tarball no local data for typed-array-length@https://registry.npmjs.org/typed-array-length/-/typed-array-length-1.0.7.tgz. Extracting by manifest.
+535 silly tarball no local data for typed-array-byte-length@https://registry.npmjs.org/typed-array-byte-length/-/typed-array-byte-length-1.0.3.tgz. Extracting by manifest.
+536 silly tarball no local data for typed-array-buffer@https://registry.npmjs.org/typed-array-buffer/-/typed-array-buffer-1.0.3.tgz. Extracting by manifest.
+537 silly tarball no local data for typed-array-byte-offset@https://registry.npmjs.org/typed-array-byte-offset/-/typed-array-byte-offset-1.0.4.tgz. Extracting by manifest.
+538 silly tarball no local data for undici@https://registry.npmjs.org/undici/-/undici-7.24.8.tgz. Extracting by manifest.
+539 silly tarball no local data for tsconfck@https://registry.npmjs.org/tsconfck/-/tsconfck-3.1.6.tgz. Extracting by manifest.
+540 silly tarball no local data for tsx@https://registry.npmjs.org/tsx/-/tsx-4.22.1.tgz. Extracting by manifest.
+541 silly tarball no local data for turbo-stream@https://registry.npmjs.org/turbo-stream/-/turbo-stream-3.2.0.tgz. Extracting by manifest.
+542 silly tarball no local data for tiny-inflate@https://registry.npmjs.org/tiny-inflate/-/tiny-inflate-1.0.3.tgz. Extracting by manifest.
+543 silly tarball no local data for terser-webpack-plugin@https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.6.0.tgz. Extracting by manifest.
+544 silly tarball no local data for terser@https://registry.npmjs.org/terser/-/terser-5.47.1.tgz. Extracting by manifest.
+545 silly tarball no local data for styled-jsx@https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz. Extracting by manifest.
+546 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.2.1.tgz. Extracting by manifest.
+547 silly tarball no local data for string.prototype.trimstart@https://registry.npmjs.org/string.prototype.trimstart/-/string.prototype.trimstart-1.0.8.tgz. Extracting by manifest.
+548 silly tarball no local data for tsconfig-paths@https://registry.npmjs.org/tsconfig-paths/-/tsconfig-paths-3.15.0.tgz. Extracting by manifest.
+549 silly tarball no local data for string.prototype.trimend@https://registry.npmjs.org/string.prototype.trimend/-/string.prototype.trimend-1.0.9.tgz. Extracting by manifest.
+550 silly tarball no local data for strip-literal@https://registry.npmjs.org/strip-literal/-/strip-literal-3.1.0.tgz. Extracting by manifest.
+551 silly tarball no local data for string.prototype.repeat@https://registry.npmjs.org/string.prototype.repeat/-/string.prototype.repeat-1.0.0.tgz. Extracting by manifest.
+552 silly tarball no local data for string.prototype.matchall@https://registry.npmjs.org/string.prototype.matchall/-/string.prototype.matchall-4.0.12.tgz. Extracting by manifest.
+553 silly tarball no local data for string.prototype.trim@https://registry.npmjs.org/string.prototype.trim/-/string.prototype.trim-1.2.10.tgz. Extracting by manifest.
+554 silly tarball no local data for string.prototype.includes@https://registry.npmjs.org/string.prototype.includes/-/string.prototype.includes-2.0.1.tgz. Extracting by manifest.
+555 silly tarball no local data for string.prototype.codepointat@https://registry.npmjs.org/string.prototype.codepointat/-/string.prototype.codepointat-0.2.1.tgz. Extracting by manifest.
+556 silly tarball no local data for stop-iteration-iterator@https://registry.npmjs.org/stop-iteration-iterator/-/stop-iteration-iterator-1.1.0.tgz. Extracting by manifest.
+557 silly tarball no local data for stable-hash@https://registry.npmjs.org/stable-hash/-/stable-hash-0.0.5.tgz. Extracting by manifest.
+558 silly tarball no local data for srvx@https://registry.npmjs.org/srvx/-/srvx-0.11.15.tgz. Extracting by manifest.
+559 silly tarball no local data for sharp@https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz. Extracting by manifest.
+560 silly tarball no local data for set-proto@https://registry.npmjs.org/set-proto/-/set-proto-1.0.0.tgz. Extracting by manifest.
+561 silly tarball no local data for set-function-name@https://registry.npmjs.org/set-function-name/-/set-function-name-2.0.2.tgz. Extracting by manifest.
+562 silly tarball no local data for satori@https://registry.npmjs.org/satori/-/satori-0.16.0.tgz. Extracting by manifest.
+563 silly tarball no local data for safe-push-apply@https://registry.npmjs.org/safe-push-apply/-/safe-push-apply-1.0.0.tgz. Extracting by manifest.
+564 silly tarball no local data for safe-array-concat@https://registry.npmjs.org/safe-array-concat/-/safe-array-concat-1.1.4.tgz. Extracting by manifest.
+565 silly tarball no local data for resolve-pkg-maps@https://registry.npmjs.org/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz. Extracting by manifest.
+566 silly tarball no local data for regexp.prototype.flags@https://registry.npmjs.org/regexp.prototype.flags/-/regexp.prototype.flags-1.5.4.tgz. Extracting by manifest.
+567 silly tarball no local data for reflect.getprototypeof@https://registry.npmjs.org/reflect.getprototypeof/-/reflect.getprototypeof-1.0.10.tgz. Extracting by manifest.
+568 silly tarball no local data for react-server-dom-webpack@https://registry.npmjs.org/react-server-dom-webpack/-/react-server-dom-webpack-19.2.6.tgz. Extracting by manifest.
+569 silly tarball no local data for resolve@https://registry.npmjs.org/resolve/-/resolve-2.0.0-next.7.tgz. Extracting by manifest.
+570 silly tarball no local data for react-loading-skeleton@https://registry.npmjs.org/react-loading-skeleton/-/react-loading-skeleton-3.5.0.tgz. Extracting by manifest.
+571 silly tarball no local data for postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz. Extracting by manifest.
+572 silly tarball no local data for pako@https://registry.npmjs.org/pako/-/pako-0.2.9.tgz. Extracting by manifest.
+573 silly tarball no local data for parse-css-color@https://registry.npmjs.org/parse-css-color/-/parse-css-color-0.2.1.tgz. Extracting by manifest.
+574 silly tarball no local data for own-keys@https://registry.npmjs.org/own-keys/-/own-keys-1.0.1.tgz. Extracting by manifest.
+575 silly tarball no local data for object.values@https://registry.npmjs.org/object.values/-/object.values-1.2.1.tgz. Extracting by manifest.
+576 silly tarball no local data for object.groupby@https://registry.npmjs.org/object.groupby/-/object.groupby-1.0.3.tgz. Extracting by manifest.
+577 silly tarball no local data for object.fromentries@https://registry.npmjs.org/object.fromentries/-/object.fromentries-2.0.8.tgz. Extracting by manifest.
+578 silly tarball no local data for object.entries@https://registry.npmjs.org/object.entries/-/object.entries-1.1.9.tgz. Extracting by manifest.
+579 silly tarball no local data for object.assign@https://registry.npmjs.org/object.assign/-/object.assign-4.1.7.tgz. Extracting by manifest.
+580 silly tarball no local data for object-keys@https://registry.npmjs.org/object-keys/-/object-keys-1.1.1.tgz. Extracting by manifest.
+581 silly tarball no local data for node-exports-info@https://registry.npmjs.org/node-exports-info/-/node-exports-info-1.6.0.tgz. Extracting by manifest.
+582 silly tarball no local data for napi-postinstall@https://registry.npmjs.org/napi-postinstall/-/napi-postinstall-0.3.4.tgz. Extracting by manifest.
+583 silly tarball no local data for next@https://registry.npmjs.org/next/-/next-16.2.6.tgz. Extracting by manifest.
+584 silly tarball no local data for linebreak@https://registry.npmjs.org/linebreak/-/linebreak-1.1.0.tgz. Extracting by manifest.
+585 silly tarball no local data for lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz. Extracting by manifest.
+586 silly tarball no local data for miniflare@https://registry.npmjs.org/miniflare/-/miniflare-4.20260515.0.tgz. Extracting by manifest.
+587 silly tarball no local data for lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz. Extracting by manifest.
+588 silly tarball no local data for language-subtag-registry@https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.23.tgz. Extracting by manifest.
+589 silly tarball no local data for jsx-ast-utils@https://registry.npmjs.org/jsx-ast-utils/-/jsx-ast-utils-3.3.5.tgz. Extracting by manifest.
+590 silly tarball no local data for iterator.prototype@https://registry.npmjs.org/iterator.prototype/-/iterator.prototype-1.1.5.tgz. Extracting by manifest.
+591 silly tarball no local data for is-weakset@https://registry.npmjs.org/is-weakset/-/is-weakset-2.0.4.tgz. Extracting by manifest.
+592 silly tarball no local data for language-tags@https://registry.npmjs.org/language-tags/-/language-tags-1.0.9.tgz. Extracting by manifest.
+593 silly tarball no local data for is-weakref@https://registry.npmjs.org/is-weakref/-/is-weakref-1.1.1.tgz. Extracting by manifest.
+594 silly tarball no local data for isarray@https://registry.npmjs.org/isarray/-/isarray-2.0.5.tgz. Extracting by manifest.
+595 silly tarball no local data for is-symbol@https://registry.npmjs.org/is-symbol/-/is-symbol-1.1.1.tgz. Extracting by manifest.
+596 silly tarball no local data for is-weakmap@https://registry.npmjs.org/is-weakmap/-/is-weakmap-2.0.2.tgz. Extracting by manifest.
+597 silly tarball no local data for is-string@https://registry.npmjs.org/is-string/-/is-string-1.1.1.tgz. Extracting by manifest.
+598 silly tarball no local data for is-shared-array-buffer@https://registry.npmjs.org/is-shared-array-buffer/-/is-shared-array-buffer-1.0.4.tgz. Extracting by manifest.
+599 silly tarball no local data for is-set@https://registry.npmjs.org/is-set/-/is-set-2.0.3.tgz. Extracting by manifest.
+600 silly tarball no local data for is-number-object@https://registry.npmjs.org/is-number-object/-/is-number-object-1.1.1.tgz. Extracting by manifest.
+601 silly tarball no local data for is-negative-zero@https://registry.npmjs.org/is-negative-zero/-/is-negative-zero-2.0.3.tgz. Extracting by manifest.
+602 silly tarball no local data for is-map@https://registry.npmjs.org/is-map/-/is-map-2.0.3.tgz. Extracting by manifest.
+603 silly tarball no local data for is-finalizationregistry@https://registry.npmjs.org/is-finalizationregistry/-/is-finalizationregistry-1.1.1.tgz. Extracting by manifest.
+604 silly tarball no local data for is-boolean-object@https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-1.2.2.tgz. Extracting by manifest.
+605 silly tarball no local data for is-data-view@https://registry.npmjs.org/is-data-view/-/is-data-view-1.0.2.tgz. Extracting by manifest.
+606 silly tarball no local data for is-bun-module@https://registry.npmjs.org/is-bun-module/-/is-bun-module-2.0.0.tgz. Extracting by manifest.
+607 silly tarball no local data for is-bigint@https://registry.npmjs.org/is-bigint/-/is-bigint-1.1.0.tgz. Extracting by manifest.
+608 silly tarball no local data for is-array-buffer@https://registry.npmjs.org/is-array-buffer/-/is-array-buffer-3.0.5.tgz. Extracting by manifest.
+609 silly tarball no local data for is-async-function@https://registry.npmjs.org/is-async-function/-/is-async-function-2.1.1.tgz. Extracting by manifest.
+610 silly tarball no local data for image-size@https://registry.npmjs.org/image-size/-/image-size-2.0.2.tgz. Extracting by manifest.
+611 silly tarball no local data for has-proto@https://registry.npmjs.org/has-proto/-/has-proto-1.2.0.tgz. Extracting by manifest.
+612 silly tarball no local data for hex-rgb@https://registry.npmjs.org/hex-rgb/-/hex-rgb-4.3.0.tgz. Extracting by manifest.
+613 silly tarball no local data for internal-slot@https://registry.npmjs.org/internal-slot/-/internal-slot-1.1.0.tgz. Extracting by manifest.
+614 silly tarball no local data for has-bigints@https://registry.npmjs.org/has-bigints/-/has-bigints-1.1.0.tgz. Extracting by manifest.
+615 silly tarball no local data for globrex@https://registry.npmjs.org/globrex/-/globrex-0.1.2.tgz. Extracting by manifest.
+616 silly tarball no local data for globalthis@https://registry.npmjs.org/globalthis/-/globalthis-1.0.4.tgz. Extracting by manifest.
+617 silly tarball no local data for get-tsconfig@https://registry.npmjs.org/get-tsconfig/-/get-tsconfig-4.14.0.tgz. Extracting by manifest.
+618 silly tarball no local data for get-symbol-description@https://registry.npmjs.org/get-symbol-description/-/get-symbol-description-1.1.0.tgz. Extracting by manifest.
+619 silly tarball no local data for function.prototype.name@https://registry.npmjs.org/function.prototype.name/-/function.prototype.name-1.1.8.tgz. Extracting by manifest.
+620 silly tarball no local data for functions-have-names@https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz. Extracting by manifest.
+621 silly tarball no local data for fflate@https://registry.npmjs.org/fflate/-/fflate-0.7.4.tgz. Extracting by manifest.
+622 silly tarball no local data for fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.1.tgz. Extracting by manifest.
+623 silly tarball no local data for eslint-plugin-jsx-a11y@https://registry.npmjs.org/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.10.2.tgz. Extracting by manifest.
+624 silly tarball no local data for estree-walker@https://registry.npmjs.org/estree-walker/-/estree-walker-3.0.3.tgz. Extracting by manifest.
+625 silly tarball no local data for eslint-plugin-react@https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.37.5.tgz. Extracting by manifest.
+626 silly tarball no local data for eslint-plugin-import@https://registry.npmjs.org/eslint-plugin-import/-/eslint-plugin-import-2.32.0.tgz. Extracting by manifest.
+627 silly tarball no local data for eslint-module-utils@https://registry.npmjs.org/eslint-module-utils/-/eslint-module-utils-2.12.1.tgz. Extracting by manifest.
+628 silly tarball no local data for eslint-import-resolver-typescript@https://registry.npmjs.org/eslint-import-resolver-typescript/-/eslint-import-resolver-typescript-3.10.1.tgz. Extracting by manifest.
+629 silly tarball no local data for eslint-import-resolver-node@https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.10.tgz. Extracting by manifest.
+630 silly tarball no local data for es-to-primitive@https://registry.npmjs.org/es-to-primitive/-/es-to-primitive-1.3.0.tgz. Extracting by manifest.
+631 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.28.0.tgz. Extracting by manifest.
+632 silly tarball no local data for eslint-config-next@https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-16.2.6.tgz. Extracting by manifest.
+633 silly tarball no local data for es-shim-unscopables@https://registry.npmjs.org/es-shim-unscopables/-/es-shim-unscopables-1.1.0.tgz. Extracting by manifest.
+634 silly tarball no local data for es-module-lexer@https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-2.1.0.tgz. Extracting by manifest.
+635 silly tarball no local data for es-iterator-helpers@https://registry.npmjs.org/es-iterator-helpers/-/es-iterator-helpers-1.3.2.tgz. Extracting by manifest.
+636 silly tarball no local data for es-abstract@https://registry.npmjs.org/es-abstract/-/es-abstract-1.24.2.tgz. Extracting by manifest.
+637 silly tarball no local data for error-stack-parser-es@https://registry.npmjs.org/error-stack-parser-es/-/error-stack-parser-es-1.0.5.tgz. Extracting by manifest.
+638 silly tarball no local data for emoji-regex-xs@https://registry.npmjs.org/emoji-regex-xs/-/emoji-regex-xs-2.0.1.tgz. Extracting by manifest.
+639 silly tarball no local data for electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.358.tgz. Extracting by manifest.
+640 silly tarball no local data for drizzle-orm@https://registry.npmjs.org/drizzle-orm/-/drizzle-orm-0.45.2.tgz. Extracting by manifest.
+641 silly tarball no local data for doctrine@https://registry.npmjs.org/doctrine/-/doctrine-2.1.0.tgz. Extracting by manifest.
+642 silly tarball no local data for define-properties@https://registry.npmjs.org/define-properties/-/define-properties-1.2.1.tgz. Extracting by manifest.
+643 silly tarball no local data for data-view-byte-offset@https://registry.npmjs.org/data-view-byte-offset/-/data-view-byte-offset-1.0.1.tgz. Extracting by manifest.
+644 silly tarball no local data for drizzle-kit@https://registry.npmjs.org/drizzle-kit/-/drizzle-kit-0.31.10.tgz. Extracting by manifest.
+645 silly tarball no local data for data-view-byte-length@https://registry.npmjs.org/data-view-byte-length/-/data-view-byte-length-1.0.2.tgz. Extracting by manifest.
+646 silly tarball no local data for data-view-buffer@https://registry.npmjs.org/data-view-buffer/-/data-view-buffer-1.0.2.tgz. Extracting by manifest.
+647 silly tarball no local data for damerau-levenshtein@https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz. Extracting by manifest.
+648 silly tarball no local data for css-to-react-native@https://registry.npmjs.org/css-to-react-native/-/css-to-react-native-3.2.0.tgz. Extracting by manifest.
+649 silly tarball no local data for css-color-keywords@https://registry.npmjs.org/css-color-keywords/-/css-color-keywords-1.0.0.tgz. Extracting by manifest.
+650 silly tarball no local data for css-gradient-parser@https://registry.npmjs.org/css-gradient-parser/-/css-gradient-parser-0.0.16.tgz. Extracting by manifest.
+651 silly tarball no local data for css-box-shadow@https://registry.npmjs.org/css-box-shadow/-/css-box-shadow-1.0.0-3.tgz. Extracting by manifest.
+652 silly tarball no local data for css-background-parser@https://registry.npmjs.org/css-background-parser/-/css-background-parser-0.1.0.tgz. Extracting by manifest.
+653 silly tarball no local data for client-only@https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz. Extracting by manifest.
+654 silly tarball no local data for caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001793.tgz. Extracting by manifest.
+655 silly tarball no local data for camelize@https://registry.npmjs.org/camelize/-/camelize-1.0.1.tgz. Extracting by manifest.
+656 silly tarball no local data for blake3-wasm@https://registry.npmjs.org/blake3-wasm/-/blake3-wasm-2.1.5.tgz. Extracting by manifest.
+657 silly tarball no local data for base64-js@https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz. Extracting by manifest.
+658 silly tarball no local data for baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.30.tgz. Extracting by manifest.
+659 silly tarball no local data for axe-core@https://registry.npmjs.org/axe-core/-/axe-core-4.11.4.tgz. Extracting by manifest.
+660 silly tarball no local data for axobject-query@https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz. Extracting by manifest.
+661 silly tarball no local data for async-function@https://registry.npmjs.org/async-function/-/async-function-1.0.0.tgz. Extracting by manifest.
+662 silly tarball no local data for ast-types-flow@https://registry.npmjs.org/ast-types-flow/-/ast-types-flow-0.0.8.tgz. Extracting by manifest.
+663 silly tarball no local data for array.prototype.tosorted@https://registry.npmjs.org/array.prototype.tosorted/-/array.prototype.tosorted-1.1.4.tgz. Extracting by manifest.
+664 silly tarball no local data for array.prototype.flatmap@https://registry.npmjs.org/array.prototype.flatmap/-/array.prototype.flatmap-1.3.3.tgz. Extracting by manifest.
+665 silly tarball no local data for arraybuffer.prototype.slice@https://registry.npmjs.org/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.4.tgz. Extracting by manifest.
+666 silly tarball no local data for array.prototype.flat@https://registry.npmjs.org/array.prototype.flat/-/array.prototype.flat-1.3.3.tgz. Extracting by manifest.
+667 silly tarball no local data for array.prototype.findlast@https://registry.npmjs.org/array.prototype.findlast/-/array.prototype.findlast-1.2.5.tgz. Extracting by manifest.
+668 silly tarball no local data for array-buffer-byte-length@https://registry.npmjs.org/array-buffer-byte-length/-/array-buffer-byte-length-1.0.2.tgz. Extracting by manifest.
+669 silly tarball no local data for array.prototype.findlastindex@https://registry.npmjs.org/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.6.tgz. Extracting by manifest.
+670 silly tarball no local data for array-includes@https://registry.npmjs.org/array-includes/-/array-includes-3.1.9.tgz. Extracting by manifest.
+671 silly tarball no local data for aria-query@https://registry.npmjs.org/aria-query/-/aria-query-5.3.2.tgz. Extracting by manifest.
+672 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz. Extracting by manifest.
+673 silly tarball no local data for @rolldown/pluginutils@https://registry.npmjs.org/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.18.tgz. Extracting by manifest.
+674 silly tarball no local data for acorn-import-phases@https://registry.npmjs.org/acorn-import-phases/-/acorn-import-phases-1.0.4.tgz. Extracting by manifest.
+675 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz. Extracting by manifest.
+676 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.18.20.tgz. Extracting by manifest.
+677 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.27.3.tgz. Extracting by manifest.
+678 silly tarball no local data for acorn-loose@https://registry.npmjs.org/acorn-loose/-/acorn-loose-8.5.2.tgz. Extracting by manifest.
+679 silly tarball no local data for json5@https://registry.npmjs.org/json5/-/json5-1.0.2.tgz. Extracting by manifest.
+680 silly tarball no local data for supports-color@https://registry.npmjs.org/supports-color/-/supports-color-10.2.2.tgz. Extracting by manifest.
+681 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz. Extracting by manifest.
+682 silly tarball no local data for postcss@https://registry.npmjs.org/postcss/-/postcss-8.4.31.tgz. Extracting by manifest.
+683 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.27.3.tgz. Extracting by manifest.
+684 silly tarball no local data for globals@https://registry.npmjs.org/globals/-/globals-16.4.0.tgz. Extracting by manifest.
+685 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.8.0.tgz. Extracting by manifest.
+686 silly tarball no local data for js-tokens@https://registry.npmjs.org/js-tokens/-/js-tokens-9.0.1.tgz. Extracting by manifest.
+687 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz. Extracting by manifest.
+688 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz. Extracting by manifest.
+689 silly tarball no local data for debug@https://registry.npmjs.org/debug/-/debug-3.2.7.tgz. Extracting by manifest.
+690 silly tarball no local data for @esbuild/win32-x64@https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.12.tgz. Extracting by manifest.
+691 silly tarball no local data for esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz. Extracting by manifest.
+692 http fetch GET https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz attempt 1 failed with EACCES
+693 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 1 failed with EACCES
+694 http fetch GET https://registry.npmjs.org/vite/-/vite-8.0.13.tgz attempt 1 failed with EACCES
+695 http fetch GET https://registry.npmjs.org/semver/-/semver-6.3.1.tgz attempt 1 failed with EACCES
+696 http fetch GET https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz attempt 1 failed with EACCES
+697 http fetch GET https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz attempt 1 failed with EACCES
+698 http fetch GET https://registry.npmjs.org/rolldown/-/rolldown-1.0.1.tgz attempt 1 failed with EACCES
+699 http fetch GET https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 1 failed with EACCES
+700 http fetch GET https://registry.npmjs.org/json5/-/json5-2.2.3.tgz attempt 1 failed with EACCES
+701 http fetch GET https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz attempt 1 failed with EACCES
+702 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz attempt 1 failed with EACCES
+703 http fetch GET https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz attempt 1 failed with EACCES
+704 http fetch GET https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz attempt 1 failed with EACCES
+705 http fetch GET https://registry.npmjs.org/eslint/-/eslint-9.39.4.tgz attempt 1 failed with EACCES
+706 http fetch GET https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz attempt 1 failed with EACCES
+707 http fetch GET https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz attempt 2 failed with EACCES
+708 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 2 failed with EACCES
+709 http fetch GET https://registry.npmjs.org/vite/-/vite-8.0.13.tgz attempt 2 failed with EACCES
+710 http fetch GET https://registry.npmjs.org/semver/-/semver-6.3.1.tgz attempt 2 failed with EACCES
+711 http fetch GET https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz attempt 2 failed with EACCES
+712 http fetch GET https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz attempt 2 failed with EACCES
+713 http fetch GET https://registry.npmjs.org/rolldown/-/rolldown-1.0.1.tgz attempt 2 failed with EACCES
+714 http fetch GET https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 2 failed with EACCES
+715 http fetch GET https://registry.npmjs.org/json5/-/json5-2.2.3.tgz attempt 2 failed with EACCES
+716 http fetch GET https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz attempt 2 failed with EACCES
+717 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz attempt 2 failed with EACCES
+718 http fetch GET https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz attempt 2 failed with EACCES
+719 http fetch GET https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz attempt 2 failed with EACCES
+720 http fetch GET https://registry.npmjs.org/eslint/-/eslint-9.39.4.tgz attempt 2 failed with EACCES
+721 http fetch GET https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz attempt 2 failed with EACCES
+722 http fetch GET https://registry.npmjs.org/@babel/parser/-/parser-7.29.3.tgz attempt 3 failed with EACCES
+723 http fetch GET https://registry.npmjs.org/which/-/which-2.0.2.tgz attempt 3 failed with EACCES
+724 http fetch GET https://registry.npmjs.org/vite/-/vite-8.0.13.tgz attempt 3 failed with EACCES
+725 http fetch GET https://registry.npmjs.org/semver/-/semver-6.3.1.tgz attempt 3 failed with EACCES
+726 http fetch GET https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz attempt 3 failed with EACCES
+727 http fetch GET https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz attempt 3 failed with EACCES
+728 http fetch GET https://registry.npmjs.org/rolldown/-/rolldown-1.0.1.tgz attempt 3 failed with EACCES
+729 http fetch GET https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz attempt 3 failed with EACCES
+730 http fetch GET https://registry.npmjs.org/json5/-/json5-2.2.3.tgz attempt 3 failed with EACCES
+731 http fetch GET https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz attempt 3 failed with EACCES
+732 http fetch GET https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz attempt 3 failed with EACCES
+733 http fetch GET https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz attempt 3 failed with EACCES
+734 http fetch GET https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz attempt 3 failed with EACCES
+735 http fetch GET https://registry.npmjs.org/eslint/-/eslint-9.39.4.tgz attempt 3 failed with EACCES
+736 http fetch GET https://registry.npmjs.org/jiti/-/jiti-2.7.0.tgz attempt 3 failed with EACCES
+737 verbose cwd D:\My Project\haui-1602
+738 verbose os Windows_NT 10.0.26200
+739 verbose node v26.1.0
+740 verbose npm  v11.13.0
+741 error Exit handler never called!
+742 error This is an error with npm itself. Please report this error at:
+743 error   <https://github.com/npm/cli/issues>
+744 verbose exit 1
+745 verbose code 1
+746 error A complete log of this run can be found in: D:\My Project\haui-1602\.npm-cache\_logs\2026-07-17T10_35_42_971Z-debug-0.log
